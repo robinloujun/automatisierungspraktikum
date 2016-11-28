@@ -1,0 +1,1286 @@
+<Array>
+<Name>Conversion Errors</Name>
+<Dimsize>53</Dimsize>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Internal Error!</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val></Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val></Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>0</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: J_S0</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Gain2</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\f2+g2u.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>1</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: J_S0</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Gain2</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\f2+g2u.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>1</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: J_S0</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Gain2</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\f2+g2u.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>1</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Internal Error!</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val></Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val></Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>0</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Internal Error!</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val></Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val></Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>0</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: m</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Gain</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\d(f4+g4u)_dx3.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>1</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: l</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Gain</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\d(f4+g4u)_dx3.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>1</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: m</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Gain</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\d(f4+g4u)_dx3.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>1</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: l</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Gain</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\d(f4+g4u)_dx3.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>1</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: m</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Gain</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\d(f4+g4u)_dx3.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>1</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: l</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Gain</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\d(f4+g4u)_dx3.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>1</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Internal Error!</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val></Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val></Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>0</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Internal Error!</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val></Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val></Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>0</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: m</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Gain1</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\d(f2+g2u)_dx3.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>1</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: l</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Gain1</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\d(f2+g2u)_dx3.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>1</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: m</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Gain1</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\d(f2+g2u)_dx3.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>1</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: l</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Gain1</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\d(f2+g2u)_dx3.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>1</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: m</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Gain1</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\d(f2+g2u)_dx3.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>1</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: l</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Gain1</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\d(f2+g2u)_dx3.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>1</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: m</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Gain3</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\d(f2+g2u)_dx3.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>1</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: l</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Gain3</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\d(f2+g2u)_dx3.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>1</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: m</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Gain3</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\d(f2+g2u)_dx3.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>1</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: l</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Gain3</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\d(f2+g2u)_dx3.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>1</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: m</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Gain3</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\d(f2+g2u)_dx3.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>1</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: l</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Gain3</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\d(f2+g2u)_dx3.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>1</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Internal Error!</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val></Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val></Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>0</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: p</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Constant1</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\Root1.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>1</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: p</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Constant1</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\Root1.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>1</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: p</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Constant2</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\Root1.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>1</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: p</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Constant2</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\Root1.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>1</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: p</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Constant1</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\Root.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>1</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: p</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Constant1</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\Root.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>1</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: p</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Constant2</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\Root.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>1</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: p</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Constant2</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\Root.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>1</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: p</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Constant</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\NLRBeobachter.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>0</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: p</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Constant</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\NLRBeobachter.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>0</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: p</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Constant1</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\NLRBeobachter.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>0</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: p</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Constant1</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\NLRBeobachter.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>0</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: p</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Constant2</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\NLRBeobachter.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>0</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: p</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Constant2</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\NLRBeobachter.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>0</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: p</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Constant3</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\NLRBeobachter.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>0</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: p</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Constant3</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\NLRBeobachter.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>0</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: p</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Constant4</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\NLRBeobachter.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>0</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: p</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Constant4</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\NLRBeobachter.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>0</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: x3</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Integrator x3_</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\NLRBeobachter.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>0</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: x3</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Integrator x3_</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\NLRBeobachter.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>0</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Unable to evaluate expression: x3</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>Integrator x3_</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\NLRBeobachter.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>0</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Subsystem for 'd(f2+g2u)/dx3' block not found; expected at '\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\d(f2+g2u)_dx3.vi'.
+     It has been replaced with a placeholder at '\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\d(f2+g2u)_dx3.vi'.
+     If this block is from a library, please convert the library and try again.</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>d(f2+g2u)/dx3</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\NLRBeobachter.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>0</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Subsystem for 'd(f2+g2u)/dx4' block not found; expected at '\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\d(f2+g2u)_dx4.vi'.
+     It has been replaced with a placeholder at '\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\d(f2+g2u)_dx4.vi'.
+     If this block is from a library, please convert the library and try again.</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>d(f2+g2u)/dx4</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\NLRBeobachter.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>0</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Subsystem for 'd(f4+g4u)/dx3' block not found; expected at '\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\d(f4+g4u)_dx3.vi'.
+     It has been replaced with a placeholder at '\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\d(f4+g4u)_dx3.vi'.
+     If this block is from a library, please convert the library and try again.</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>d(f4+g4u)/dx3</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\NLRBeobachter.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>0</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Subsystem for 'd(f4+g4u)/dx4' block not found; expected at '\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\d(f4+g4u)_dx4.vi'.
+     It has been replaced with a placeholder at '\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\d(f4+g4u)_dx4.vi'.
+     If this block is from a library, please convert the library and try again.</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>d(f4+g4u)/dx4</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\NLRBeobachter.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>0</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Conversion Error</Name>
+<NumElts>5</NumElts>
+<String>
+<Name>error message</Name>
+<Val>Subsystem for 'f4+g4u' block not found; expected at '\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\f4+g4u.vi'.
+     It has been replaced with a placeholder at '\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\f4+g4u.vi'.
+     If this block is from a library, please convert the library and try again.</Val>
+</String>
+<String>
+<Name>node (optional)</Name>
+<Val>f4+g4u</Val>
+</String>
+<Boolean>
+<Name>warning</Name>
+<Val>0</Val>
+</Boolean>
+<Path>
+<Name>system path</Name>
+<Val>\\irs-srv-daten.irs.kit.edu\studierende$\Abschlussarbeiten\B284_Felix_Hofmann\LabView\NLRBeobachter.vi</Val>
+</Path>
+<Boolean>
+<Name>subsystem</Name>
+<Val>0</Val>
+</Boolean>
+</Cluster>
+</Array>
