@@ -1,2 +1,0 @@
-[Odometer]
-Current=555
