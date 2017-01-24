@@ -1,0 +1,7 @@
+%implements s30_b0_wabup_Update "C"
+
+%function Update(block, system) Output
+%<SLibCGIRDumpSystemUserCode(20, "Update", "Header")>\
+%<SLibCGIRDumpSystemUserCode(20, "Update", "Body")>\
+%<SLibCGIRDumpSystemUserCode(20, "Update", "Trailer")>\
+%endfunction

@@ -1,0 +1,12 @@
+%implements s30_b0_tr35p_InitializeConditions "C"
+
+%function InitializeConditions(block, system) Output
+%assign tlcInitializeConditionsFcnOfS20B5 = OpaqueTLCBlockFcn("InitializeConditions", 20, 5)
+%assign tlcInitializeConditionsFcnOfS20B27 = OpaqueTLCBlockFcn("InitializeConditions", 20, 27)
+%assign tlcInitializeConditionsFcnOfS20B95 = OpaqueTLCBlockFcn("InitializeConditions", 20, 95)
+%<SLibInsertAsyncTaskInitializeCode(system)>
+%<SLibWriteMachineInitialize()>
+%<tlcInitializeConditionsFcnOfS20B5>\
+%<tlcInitializeConditionsFcnOfS20B27>\
+%<tlcInitializeConditionsFcnOfS20B95>\
+%endfunction

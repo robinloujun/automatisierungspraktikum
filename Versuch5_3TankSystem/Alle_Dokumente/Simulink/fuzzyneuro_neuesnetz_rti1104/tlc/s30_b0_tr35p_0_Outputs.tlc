@@ -1,0 +1,9 @@
+%implements s30_b0_tr35p_0_Outputs "C"
+
+%function Outputs(block, system) Output
+%<SLibGenerateExtModeOutput(system)>
+/* Inport: '<S21>/u1' */
+*rty_u2 = rtu_0;
+%<SLibCG_TrackIArg(3, 0, 0, "")>\
+%<SLibCG_TrackOArg(3, 0, 0, "")>\
+%endfunction

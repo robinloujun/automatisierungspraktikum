@@ -1,0 +1,9418 @@
+-- ****************************************************************************
+--
+--  Trace file: FuzzyNeuro.trc
+--
+--  RTI1104 6.8 (02-Nov-2011)
+--  Mon Jun 06 10:46:29 2016
+--
+--  Used options:
+--    TRCGenerateVirtualBlocks      = 1
+--    TRCGenerateLabels             = 1
+--    TRCGenerateStates             = 0
+--    TRCGenerateDerivatives        = 0
+--    TRCGenerateParamValues        = 0
+--    TRCGenerateApplicationKeyword = 0
+--    TRCOnlyGlobals                = 0
+--    TRCIsOmitVdOn                 = 0
+--
+--  Trace file format: 2
+--
+--  (c) Copyright 2008, dSPACE GmbH. All rights reserved.
+--
+-- ****************************************************************************
+
+-- ******** Keywords **********************************************************
+
+-- _application "FuzzyNeuro.map"
+
+_genname     "RTI"
+_genversion  "6.8"
+_gendate     "06/06/2016 10:46:33"
+_description ""
+_author      "RTI1104 6.8 (02-Nov-2011)"
+_model       "FuzzyNeuro.mdl"
+
+-- Default data type formats
+_floating_point_type(64,IEEE)
+_integer_type(32)
+
+-- No Data Capture blocks within model: use base sample time as sampling period
+sampling_period[0]
+{
+  value:       0.01
+  alias:       "HostService"
+  increment:   0.01
+  unit:        "s"
+}
+
+
+
+-- Type definitions for arrays
+typedef FuzzyNeuro_ArrayDT0_2 flt(64,IEEE)[2]
+typedef FuzzyNeuro_ArrayDT0_10 flt(64,IEEE)[10]
+typedef FuzzyNeuro_ArrayDT0_101 flt(64,IEEE)[101]
+typedef FuzzyNeuro_ArrayDT0_3 flt(64,IEEE)[3]
+
+
+-- ******** Simulation control variables **************************************
+
+finalTime
+{
+ type:  flt(64,IEEE)*
+ alias: "finalTime"
+ desc:  "Simulation stop time. When reached, simState switches to STOP."
+ flags:  SYSTEM|READONLY
+ unit:  "s"
+}
+
+currentTime
+{
+ type:  flt(64,IEEE)*
+ alias: "currentTime"
+ desc:  "Current simulation time. Increments with execution of Timer Task 1."
+ flags: SYSTEM|READONLY
+ unit:  "s"
+}
+
+modelStepSize
+{
+ type:  flt(64,IEEE)
+ alias: "modelStepSize"
+ desc:  "Fixed step size of the model, sample time of Timer Task 1."
+ flags: SYSTEM|READONLY
+ unit:  "s"
+}
+
+simState
+{
+ type:  int(32)
+ alias: "simState"
+ desc:  "Simulation state: STOP=0 PAUSE=1 RUN=2"
+ flags: SYSTEM
+ unit:  "-"
+}
+
+msg_last_error_no
+{
+ type:  uint(32)
+ alias: "errorNumber"
+ desc:  "Error number of last error message (zero if no error)."
+ unit:  "-"
+ flags: SYSTEM|READONLY
+}
+
+rtiAssertionMode
+{
+ type:  int(32)
+ alias: "rtiAssertionMode"
+ desc:  "Assertion Mode: OFF=0 WARN=1 STOP=2"
+ flags: SYSTEM
+ unit:  "-"
+}
+
+
+-- ******** Model variables ***************************************************
+
+group "Model Root"
+{
+ flags: COLLAPSED
+}
+	group "Automatik" -- block-group
+	{
+	 block: "Constant"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output Out1
+		p_FuzzyNeuro_P_real_T_0[29]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Value"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Automatik"
+
+	group "Pumpe1" -- block-group
+	{
+	 block: "Constant"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output Out1
+		p_FuzzyNeuro_P_real_T_0[1126]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Value"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Pumpe1"
+
+	group "Pumpe2" -- block-group
+	{
+	 block: "Constant"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output Out1
+		p_FuzzyNeuro_P_real_T_0[1127]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Value"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Pumpe2"
+
+	group "V0" -- block-group
+	{
+	 block: "Constant"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output Out1
+		p_FuzzyNeuro_P_real_T_0[1139]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Value"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "V0"
+
+	group "V1" -- block-group
+	{
+	 block: "Constant"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output Out1
+		p_FuzzyNeuro_P_real_T_0[1132]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Value"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "V1"
+
+	group "V13o" -- block-group
+	{
+	 block: "Constant"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output Out1
+		p_FuzzyNeuro_P_real_T_0[1133]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Value"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "V13o"
+
+	group "V13u" -- block-group
+	{
+	 block: "Constant"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output Out1
+		p_FuzzyNeuro_P_real_T_0[1134]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Value"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "V13u"
+
+	group "V2" -- block-group
+	{
+	 block: "Constant"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output Out1
+		p_FuzzyNeuro_P_real_T_0[1138]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Value"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "V2"
+
+	group "V3" -- block-group
+	{
+	 block: "Constant"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output Out1
+		p_FuzzyNeuro_P_real_T_0[1135]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Value"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "V3"
+
+	group "V32o" -- block-group
+	{
+	 block: "Constant"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output Out1
+		p_FuzzyNeuro_P_real_T_0[1136]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Value"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "V32o"
+
+	group "V32u" -- block-group
+	{
+	 block: "Constant"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output Out1
+		p_FuzzyNeuro_P_real_T_0[1137]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Value"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "V32u"
+
+	group "soll1" -- block-group
+	{
+	 block: "Constant"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output Out1
+		p_FuzzyNeuro_P_real_T_0[50]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Value"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "soll1"
+
+	group "soll2" -- block-group
+	{
+	 block: "Constant"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output Out1
+		p_FuzzyNeuro_P_real_T_0[55]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Value"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "soll2"
+
+	group "Demux" -- block-group
+	{
+	 block: "Demux"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		p_FuzzyNeuro_B_real_T_0[1139]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+		p_FuzzyNeuro_B_real_T_0[1140]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out2"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+
+	endgroup -- block-group "Demux"
+
+	group "um1->q1mess" -- block-group
+	{
+	 block: "Fcn"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		p_FuzzyNeuro_B_real_T_0[1153]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+
+	endgroup -- block-group "um1->q1mess"
+
+	group "um2->q2mess" -- block-group
+	{
+	 block: "Fcn"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		p_FuzzyNeuro_B_real_T_0[1154]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+
+	endgroup -- block-group "um2->q2mess"
+
+	group "Multiport\nSwitch" -- block-group
+	{
+	 block: "MultiPortSwitch"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		p_FuzzyNeuro_B_real_T_0[1139]
+		{
+		 type:    FuzzyNeuro_ArrayDT0_2*
+		 alias:   "Out1"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+
+	endgroup -- block-group "Multiport\nSwitch"
+
+	group "Mux" -- block-group
+	{
+	 block: "Mux"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output Out1{SubArray1}
+		-- Skipping output Out1{SubArray2}
+
+
+	endgroup -- block-group "Mux"
+
+	group "Mux1" -- block-group
+	{
+	 block: "Mux"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		p_FuzzyNeuro_B_real_T_0[3]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1{SubArray1}"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+		p_FuzzyNeuro_B_real_T_0[7]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1{SubArray2}"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+
+	endgroup -- block-group "Mux1"
+
+	group "Sum1" -- block-group
+	{
+	 block: "Sum"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		p_FuzzyNeuro_B_real_T_0[3]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+
+	endgroup -- block-group "Sum1"
+
+	group "Sum2" -- block-group
+	{
+	 block: "Sum"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		p_FuzzyNeuro_B_real_T_0[7]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+
+	endgroup -- block-group "Sum2"
+
+  
+  
+	group "Feed-Forward Neural Network" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+		p_FuzzyNeuro_B_real_T_0[102]
+		{
+		 type:    FuzzyNeuro_ArrayDT0_2*
+		 alias:   "Output"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+		group "Input" -- block-group
+		{
+		 block: "Inport"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_FuzzyNeuro_B_real_T_0[3]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1{SubArray1}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_FuzzyNeuro_B_real_T_0[7]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1{SubArray2}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Input"
+
+		group " a{1} " -- block-group
+		{
+		 block: "From"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_FuzzyNeuro_B_real_T_0[84]
+			{
+			 type:    FuzzyNeuro_ArrayDT0_10*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group " a{1} "
+
+		group "a{1}" -- block-group
+		{
+		 block: "Goto"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_FuzzyNeuro_B_real_T_0[84]
+			{
+			 type:    FuzzyNeuro_ArrayDT0_10*
+			 alias:   "In1"
+			 desc:    ""
+			 flags:   SINK|READONLY
+			}
+
+
+
+		endgroup -- block-group "a{1}"
+
+  
+  
+		group "Layer 1" -- subsystem-group
+		{
+		 flags: COLLAPSED
+		 desc:  ""
+		}
+
+			p_FuzzyNeuro_B_real_T_0[84]
+			{
+			 type:    FuzzyNeuro_ArrayDT0_10*
+			 alias:   "a{1}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+			group "p{1}" -- block-group
+			{
+			 block: "Inport"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_FuzzyNeuro_B_real_T_0[12]
+				{
+				 type:    FuzzyNeuro_ArrayDT0_2*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "p{1}"
+
+			group "b{1}" -- block-group
+			{
+			 block: "Constant"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+				p_FuzzyNeuro_P_real_T_0[65]
+				{
+				 type:    FuzzyNeuro_ArrayDT0_10*
+				 alias:   "Value"
+				 flags:   PARAM
+				}
+
+
+			endgroup -- block-group "b{1}"
+
+			group "netsum" -- block-group
+			{
+			 block: "Sum"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_FuzzyNeuro_B_real_T_0[24]
+				{
+				 type:    FuzzyNeuro_ArrayDT0_10*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "netsum"
+
+  
+  
+			group "Delays 1" -- subsystem-group
+			{
+			 flags: COLLAPSED
+			 desc:  ""
+			}
+
+				p_FuzzyNeuro_B_real_T_0[12]
+				{
+				 type:    FuzzyNeuro_ArrayDT0_2*
+				 alias:   "pd{1,1}"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+				group "p{1}" -- block-group
+				{
+				 block: "Inport"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[12]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_2*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "p{1}"
+
+				group "mux" -- block-group
+				{
+				 block: "Mux"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[12]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_2*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "mux"
+
+
+
+			endgroup -- subsystem-group "Delays 1"
+  
+  
+			group "IW{1,1}" -- subsystem-group
+			{
+			 flags: COLLAPSED
+			 desc:  ""
+			}
+
+				p_FuzzyNeuro_B_real_T_0[14]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "iz{1,1}{SubArray1}"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+				p_FuzzyNeuro_B_real_T_0[16]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "iz{1,1}{SubArray2}"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+				p_FuzzyNeuro_B_real_T_0[17]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "iz{1,1}{SubArray3}"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+				p_FuzzyNeuro_B_real_T_0[18]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "iz{1,1}{SubArray4}"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+				p_FuzzyNeuro_B_real_T_0[19]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "iz{1,1}{SubArray5}"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+				p_FuzzyNeuro_B_real_T_0[20]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "iz{1,1}{SubArray6}"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+				p_FuzzyNeuro_B_real_T_0[21]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "iz{1,1}{SubArray7}"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+				p_FuzzyNeuro_B_real_T_0[22]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "iz{1,1}{SubArray8}"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+				p_FuzzyNeuro_B_real_T_0[23]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "iz{1,1}{SubArray9}"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+				p_FuzzyNeuro_B_real_T_0[15]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "iz{1,1}{SubArray10}"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+				group "pd{1,1}" -- block-group
+				{
+				 block: "Inport"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[12]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_2*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "pd{1,1}"
+
+				group "IW{1,1}(1,:)'" -- block-group
+				{
+				 block: "Constant"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					-- Skipping output Out1
+					p_FuzzyNeuro_P_real_T_0[30]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_2*
+					 alias:   "Value"
+					 flags:   PARAM
+					}
+
+
+				endgroup -- block-group "IW{1,1}(1,:)'"
+
+				group "IW{1,1}(10,:)'" -- block-group
+				{
+				 block: "Constant"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					-- Skipping output Out1
+					p_FuzzyNeuro_P_real_T_0[32]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_2*
+					 alias:   "Value"
+					 flags:   PARAM
+					}
+
+
+				endgroup -- block-group "IW{1,1}(10,:)'"
+
+				group "IW{1,1}(2,:)'" -- block-group
+				{
+				 block: "Constant"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					-- Skipping output Out1
+					p_FuzzyNeuro_P_real_T_0[34]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_2*
+					 alias:   "Value"
+					 flags:   PARAM
+					}
+
+
+				endgroup -- block-group "IW{1,1}(2,:)'"
+
+				group "IW{1,1}(3,:)'" -- block-group
+				{
+				 block: "Constant"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					-- Skipping output Out1
+					p_FuzzyNeuro_P_real_T_0[36]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_2*
+					 alias:   "Value"
+					 flags:   PARAM
+					}
+
+
+				endgroup -- block-group "IW{1,1}(3,:)'"
+
+				group "IW{1,1}(4,:)'" -- block-group
+				{
+				 block: "Constant"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					-- Skipping output Out1
+					p_FuzzyNeuro_P_real_T_0[38]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_2*
+					 alias:   "Value"
+					 flags:   PARAM
+					}
+
+
+				endgroup -- block-group "IW{1,1}(4,:)'"
+
+				group "IW{1,1}(5,:)'" -- block-group
+				{
+				 block: "Constant"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					-- Skipping output Out1
+					p_FuzzyNeuro_P_real_T_0[40]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_2*
+					 alias:   "Value"
+					 flags:   PARAM
+					}
+
+
+				endgroup -- block-group "IW{1,1}(5,:)'"
+
+				group "IW{1,1}(6,:)'" -- block-group
+				{
+				 block: "Constant"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					-- Skipping output Out1
+					p_FuzzyNeuro_P_real_T_0[42]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_2*
+					 alias:   "Value"
+					 flags:   PARAM
+					}
+
+
+				endgroup -- block-group "IW{1,1}(6,:)'"
+
+				group "IW{1,1}(7,:)'" -- block-group
+				{
+				 block: "Constant"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					-- Skipping output Out1
+					p_FuzzyNeuro_P_real_T_0[44]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_2*
+					 alias:   "Value"
+					 flags:   PARAM
+					}
+
+
+				endgroup -- block-group "IW{1,1}(7,:)'"
+
+				group "IW{1,1}(8,:)'" -- block-group
+				{
+				 block: "Constant"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					-- Skipping output Out1
+					p_FuzzyNeuro_P_real_T_0[46]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_2*
+					 alias:   "Value"
+					 flags:   PARAM
+					}
+
+
+				endgroup -- block-group "IW{1,1}(8,:)'"
+
+				group "IW{1,1}(9,:)'" -- block-group
+				{
+				 block: "Constant"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					-- Skipping output Out1
+					p_FuzzyNeuro_P_real_T_0[48]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_2*
+					 alias:   "Value"
+					 flags:   PARAM
+					}
+
+
+				endgroup -- block-group "IW{1,1}(9,:)'"
+
+				group "Mux" -- block-group
+				{
+				 block: "Mux"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[14]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1{SubArray1}"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+					p_FuzzyNeuro_B_real_T_0[16]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1{SubArray2}"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+					p_FuzzyNeuro_B_real_T_0[17]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1{SubArray3}"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+					p_FuzzyNeuro_B_real_T_0[18]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1{SubArray4}"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+					p_FuzzyNeuro_B_real_T_0[19]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1{SubArray5}"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+					p_FuzzyNeuro_B_real_T_0[20]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1{SubArray6}"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+					p_FuzzyNeuro_B_real_T_0[21]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1{SubArray7}"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+					p_FuzzyNeuro_B_real_T_0[22]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1{SubArray8}"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+					p_FuzzyNeuro_B_real_T_0[23]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1{SubArray9}"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+					p_FuzzyNeuro_B_real_T_0[15]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1{SubArray10}"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "Mux"
+
+  
+  
+				group "dotprod1" -- subsystem-group
+				{
+				 flags: COLLAPSED
+				 desc:  ""
+				}
+
+					p_FuzzyNeuro_B_real_T_0[14]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+					group "In1" -- block-group
+					{
+					 block: "Inport"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						-- Skipping output Out1
+
+
+					endgroup -- block-group "In1"
+
+					group "In2" -- block-group
+					{
+					 block: "Inport"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						p_FuzzyNeuro_B_real_T_0[12]
+						{
+						 type:    FuzzyNeuro_ArrayDT0_2*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+
+					endgroup -- block-group "In2"
+
+					group "Dot Product" -- block-group
+					{
+					 block: "DotProduct"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						p_FuzzyNeuro_B_real_T_0[14]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+
+					endgroup -- block-group "Dot Product"
+
+
+
+				endgroup -- subsystem-group "dotprod1"
+  
+  
+				group "dotprod10" -- subsystem-group
+				{
+				 flags: COLLAPSED
+				 desc:  ""
+				}
+
+					p_FuzzyNeuro_B_real_T_0[15]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+					group "In1" -- block-group
+					{
+					 block: "Inport"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						-- Skipping output Out1
+
+
+					endgroup -- block-group "In1"
+
+					group "In2" -- block-group
+					{
+					 block: "Inport"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						p_FuzzyNeuro_B_real_T_0[12]
+						{
+						 type:    FuzzyNeuro_ArrayDT0_2*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+
+					endgroup -- block-group "In2"
+
+					group "Dot Product" -- block-group
+					{
+					 block: "DotProduct"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						p_FuzzyNeuro_B_real_T_0[15]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+
+					endgroup -- block-group "Dot Product"
+
+
+
+				endgroup -- subsystem-group "dotprod10"
+  
+  
+				group "dotprod2" -- subsystem-group
+				{
+				 flags: COLLAPSED
+				 desc:  ""
+				}
+
+					p_FuzzyNeuro_B_real_T_0[16]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+					group "In1" -- block-group
+					{
+					 block: "Inport"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						-- Skipping output Out1
+
+
+					endgroup -- block-group "In1"
+
+					group "In2" -- block-group
+					{
+					 block: "Inport"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						p_FuzzyNeuro_B_real_T_0[12]
+						{
+						 type:    FuzzyNeuro_ArrayDT0_2*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+
+					endgroup -- block-group "In2"
+
+					group "Dot Product" -- block-group
+					{
+					 block: "DotProduct"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						p_FuzzyNeuro_B_real_T_0[16]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+
+					endgroup -- block-group "Dot Product"
+
+
+
+				endgroup -- subsystem-group "dotprod2"
+  
+  
+				group "dotprod3" -- subsystem-group
+				{
+				 flags: COLLAPSED
+				 desc:  ""
+				}
+
+					p_FuzzyNeuro_B_real_T_0[17]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+					group "In1" -- block-group
+					{
+					 block: "Inport"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						-- Skipping output Out1
+
+
+					endgroup -- block-group "In1"
+
+					group "In2" -- block-group
+					{
+					 block: "Inport"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						p_FuzzyNeuro_B_real_T_0[12]
+						{
+						 type:    FuzzyNeuro_ArrayDT0_2*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+
+					endgroup -- block-group "In2"
+
+					group "Dot Product" -- block-group
+					{
+					 block: "DotProduct"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						p_FuzzyNeuro_B_real_T_0[17]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+
+					endgroup -- block-group "Dot Product"
+
+
+
+				endgroup -- subsystem-group "dotprod3"
+  
+  
+				group "dotprod4" -- subsystem-group
+				{
+				 flags: COLLAPSED
+				 desc:  ""
+				}
+
+					p_FuzzyNeuro_B_real_T_0[18]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+					group "In1" -- block-group
+					{
+					 block: "Inport"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						-- Skipping output Out1
+
+
+					endgroup -- block-group "In1"
+
+					group "In2" -- block-group
+					{
+					 block: "Inport"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						p_FuzzyNeuro_B_real_T_0[12]
+						{
+						 type:    FuzzyNeuro_ArrayDT0_2*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+
+					endgroup -- block-group "In2"
+
+					group "Dot Product" -- block-group
+					{
+					 block: "DotProduct"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						p_FuzzyNeuro_B_real_T_0[18]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+
+					endgroup -- block-group "Dot Product"
+
+
+
+				endgroup -- subsystem-group "dotprod4"
+  
+  
+				group "dotprod5" -- subsystem-group
+				{
+				 flags: COLLAPSED
+				 desc:  ""
+				}
+
+					p_FuzzyNeuro_B_real_T_0[19]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+					group "In1" -- block-group
+					{
+					 block: "Inport"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						-- Skipping output Out1
+
+
+					endgroup -- block-group "In1"
+
+					group "In2" -- block-group
+					{
+					 block: "Inport"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						p_FuzzyNeuro_B_real_T_0[12]
+						{
+						 type:    FuzzyNeuro_ArrayDT0_2*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+
+					endgroup -- block-group "In2"
+
+					group "Dot Product" -- block-group
+					{
+					 block: "DotProduct"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						p_FuzzyNeuro_B_real_T_0[19]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+
+					endgroup -- block-group "Dot Product"
+
+
+
+				endgroup -- subsystem-group "dotprod5"
+  
+  
+				group "dotprod6" -- subsystem-group
+				{
+				 flags: COLLAPSED
+				 desc:  ""
+				}
+
+					p_FuzzyNeuro_B_real_T_0[20]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+					group "In1" -- block-group
+					{
+					 block: "Inport"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						-- Skipping output Out1
+
+
+					endgroup -- block-group "In1"
+
+					group "In2" -- block-group
+					{
+					 block: "Inport"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						p_FuzzyNeuro_B_real_T_0[12]
+						{
+						 type:    FuzzyNeuro_ArrayDT0_2*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+
+					endgroup -- block-group "In2"
+
+					group "Dot Product" -- block-group
+					{
+					 block: "DotProduct"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						p_FuzzyNeuro_B_real_T_0[20]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+
+					endgroup -- block-group "Dot Product"
+
+
+
+				endgroup -- subsystem-group "dotprod6"
+  
+  
+				group "dotprod7" -- subsystem-group
+				{
+				 flags: COLLAPSED
+				 desc:  ""
+				}
+
+					p_FuzzyNeuro_B_real_T_0[21]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+					group "In1" -- block-group
+					{
+					 block: "Inport"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						-- Skipping output Out1
+
+
+					endgroup -- block-group "In1"
+
+					group "In2" -- block-group
+					{
+					 block: "Inport"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						p_FuzzyNeuro_B_real_T_0[12]
+						{
+						 type:    FuzzyNeuro_ArrayDT0_2*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+
+					endgroup -- block-group "In2"
+
+					group "Dot Product" -- block-group
+					{
+					 block: "DotProduct"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						p_FuzzyNeuro_B_real_T_0[21]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+
+					endgroup -- block-group "Dot Product"
+
+
+
+				endgroup -- subsystem-group "dotprod7"
+  
+  
+				group "dotprod8" -- subsystem-group
+				{
+				 flags: COLLAPSED
+				 desc:  ""
+				}
+
+					p_FuzzyNeuro_B_real_T_0[22]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+					group "In1" -- block-group
+					{
+					 block: "Inport"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						-- Skipping output Out1
+
+
+					endgroup -- block-group "In1"
+
+					group "In2" -- block-group
+					{
+					 block: "Inport"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						p_FuzzyNeuro_B_real_T_0[12]
+						{
+						 type:    FuzzyNeuro_ArrayDT0_2*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+
+					endgroup -- block-group "In2"
+
+					group "Dot Product" -- block-group
+					{
+					 block: "DotProduct"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						p_FuzzyNeuro_B_real_T_0[22]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+
+					endgroup -- block-group "Dot Product"
+
+
+
+				endgroup -- subsystem-group "dotprod8"
+  
+  
+				group "dotprod9" -- subsystem-group
+				{
+				 flags: COLLAPSED
+				 desc:  ""
+				}
+
+					p_FuzzyNeuro_B_real_T_0[23]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+					group "In1" -- block-group
+					{
+					 block: "Inport"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						-- Skipping output Out1
+
+
+					endgroup -- block-group "In1"
+
+					group "In2" -- block-group
+					{
+					 block: "Inport"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						p_FuzzyNeuro_B_real_T_0[12]
+						{
+						 type:    FuzzyNeuro_ArrayDT0_2*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+
+					endgroup -- block-group "In2"
+
+					group "Dot Product" -- block-group
+					{
+					 block: "DotProduct"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						p_FuzzyNeuro_B_real_T_0[23]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+
+					endgroup -- block-group "Dot Product"
+
+
+
+				endgroup -- subsystem-group "dotprod9"
+
+
+			endgroup -- subsystem-group "IW{1,1}"
+  
+  
+			group "tansig" -- subsystem-group
+			{
+			 flags: COLLAPSED
+			 desc:  ""
+			}
+
+				p_FuzzyNeuro_B_real_T_0[84]
+				{
+				 type:    FuzzyNeuro_ArrayDT0_10*
+				 alias:   "a"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+				group "n" -- block-group
+				{
+				 block: "Inport"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[24]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_10*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "n"
+
+				group "one" -- block-group
+				{
+				 block: "Constant"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					-- Skipping output Out1
+					p_FuzzyNeuro_P_real_T_0[76]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Value"
+					 flags:   PARAM
+					}
+
+
+				endgroup -- block-group "one"
+
+				group "one1" -- block-group
+				{
+				 block: "Constant"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					-- Skipping output Out1
+					p_FuzzyNeuro_P_real_T_0[78]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Value"
+					 flags:   PARAM
+					}
+
+
+				endgroup -- block-group "one1"
+
+				group "Gain" -- block-group
+				{
+				 block: "Gain"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[34]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_10*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+					p_FuzzyNeuro_P_real_T_0[75]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Gain"
+					 flags:   PARAM
+					}
+
+
+				endgroup -- block-group "Gain"
+
+				group "Gain1" -- block-group
+				{
+				 block: "Gain"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[74]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_10*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+					p_FuzzyNeuro_P_real_T_0[77]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Gain"
+					 flags:   PARAM
+					}
+
+
+				endgroup -- block-group "Gain1"
+
+				group "Exp" -- block-group
+				{
+				 block: "Math"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[44]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_10*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "Exp"
+
+				group "Reciprocal" -- block-group
+				{
+				 block: "Math"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[64]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_10*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "Reciprocal"
+
+				group "Sum" -- block-group
+				{
+				 block: "Sum"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[54]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_10*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "Sum"
+
+				group "Sum1" -- block-group
+				{
+				 block: "Sum"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[84]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_10*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "Sum1"
+
+
+
+			endgroup -- subsystem-group "tansig"
+
+
+		endgroup -- subsystem-group "Layer 1"
+  
+  
+		group "Layer 2" -- subsystem-group
+		{
+		 flags: COLLAPSED
+		 desc:  ""
+		}
+
+			p_FuzzyNeuro_B_real_T_0[96]
+			{
+			 type:    FuzzyNeuro_ArrayDT0_2*
+			 alias:   "a{2}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+			group "a{1} " -- block-group
+			{
+			 block: "Inport"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_FuzzyNeuro_B_real_T_0[84]
+				{
+				 type:    FuzzyNeuro_ArrayDT0_10*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "a{1} "
+
+			group "b{2}" -- block-group
+			{
+			 block: "Constant"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+				p_FuzzyNeuro_P_real_T_0[99]
+				{
+				 type:    FuzzyNeuro_ArrayDT0_2*
+				 alias:   "Value"
+				 flags:   PARAM
+				}
+
+
+			endgroup -- block-group "b{2}"
+
+			group "netsum" -- block-group
+			{
+			 block: "Sum"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_FuzzyNeuro_B_real_T_0[96]
+				{
+				 type:    FuzzyNeuro_ArrayDT0_2*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "netsum"
+
+  
+  
+			group "Delays 1" -- subsystem-group
+			{
+			 flags: COLLAPSED
+			 desc:  ""
+			}
+
+				p_FuzzyNeuro_B_real_T_0[84]
+				{
+				 type:    FuzzyNeuro_ArrayDT0_10*
+				 alias:   "pd{2,1}"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+				group "p{2}" -- block-group
+				{
+				 block: "Inport"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[84]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_10*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "p{2}"
+
+				group "mux" -- block-group
+				{
+				 block: "Mux"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[84]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_10*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "mux"
+
+
+
+			endgroup -- subsystem-group "Delays 1"
+  
+  
+			group "LW{2,1}" -- subsystem-group
+			{
+			 flags: COLLAPSED
+			 desc:  ""
+			}
+
+				p_FuzzyNeuro_B_real_T_0[94]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "lz{2,1}{SubArray1}"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+				p_FuzzyNeuro_B_real_T_0[95]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "lz{2,1}{SubArray2}"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+				group "ad{2,1}" -- block-group
+				{
+				 block: "Inport"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[84]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_10*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "ad{2,1}"
+
+				group "IW{2,1}(1,:)'" -- block-group
+				{
+				 block: "Constant"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					-- Skipping output Out1
+					p_FuzzyNeuro_P_real_T_0[79]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_10*
+					 alias:   "Value"
+					 flags:   PARAM
+					}
+
+
+				endgroup -- block-group "IW{2,1}(1,:)'"
+
+				group "IW{2,1}(2,:)'" -- block-group
+				{
+				 block: "Constant"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					-- Skipping output Out1
+					p_FuzzyNeuro_P_real_T_0[89]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_10*
+					 alias:   "Value"
+					 flags:   PARAM
+					}
+
+
+				endgroup -- block-group "IW{2,1}(2,:)'"
+
+				group "Mux" -- block-group
+				{
+				 block: "Mux"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[94]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1{SubArray1}"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+					p_FuzzyNeuro_B_real_T_0[95]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1{SubArray2}"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "Mux"
+
+  
+  
+				group "dotprod1" -- subsystem-group
+				{
+				 flags: COLLAPSED
+				 desc:  ""
+				}
+
+					p_FuzzyNeuro_B_real_T_0[94]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+					group "In1" -- block-group
+					{
+					 block: "Inport"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						-- Skipping output Out1
+
+
+					endgroup -- block-group "In1"
+
+					group "In2" -- block-group
+					{
+					 block: "Inport"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						p_FuzzyNeuro_B_real_T_0[84]
+						{
+						 type:    FuzzyNeuro_ArrayDT0_10*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+
+					endgroup -- block-group "In2"
+
+					group "Dot Product" -- block-group
+					{
+					 block: "DotProduct"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						p_FuzzyNeuro_B_real_T_0[94]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+
+					endgroup -- block-group "Dot Product"
+
+
+
+				endgroup -- subsystem-group "dotprod1"
+  
+  
+				group "dotprod2" -- subsystem-group
+				{
+				 flags: COLLAPSED
+				 desc:  ""
+				}
+
+					p_FuzzyNeuro_B_real_T_0[95]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+					group "In1" -- block-group
+					{
+					 block: "Inport"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						-- Skipping output Out1
+
+
+					endgroup -- block-group "In1"
+
+					group "In2" -- block-group
+					{
+					 block: "Inport"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						p_FuzzyNeuro_B_real_T_0[84]
+						{
+						 type:    FuzzyNeuro_ArrayDT0_10*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+
+					endgroup -- block-group "In2"
+
+					group "Dot Product" -- block-group
+					{
+					 block: "DotProduct"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						p_FuzzyNeuro_B_real_T_0[95]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+
+					endgroup -- block-group "Dot Product"
+
+
+
+				endgroup -- subsystem-group "dotprod2"
+
+
+			endgroup -- subsystem-group "LW{2,1}"
+  
+  
+			group "purelin" -- subsystem-group
+			{
+			 flags: COLLAPSED
+			 desc:  ""
+			}
+
+				p_FuzzyNeuro_B_real_T_0[96]
+				{
+				 type:    FuzzyNeuro_ArrayDT0_2*
+				 alias:   "a"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+				group "n" -- block-group
+				{
+				 block: "Inport"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[96]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_2*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "n"
+
+
+
+			endgroup -- subsystem-group "purelin"
+
+
+		endgroup -- subsystem-group "Layer 2"
+  
+  
+		group "Process Input 1" -- subsystem-group
+		{
+		 flags: COLLAPSED
+		 desc:  ""
+		}
+
+			p_FuzzyNeuro_B_real_T_0[12]
+			{
+			 type:    FuzzyNeuro_ArrayDT0_2*
+			 alias:   "p"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+			group "x" -- block-group
+			{
+			 block: "Inport"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_FuzzyNeuro_B_real_T_0[3]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1{SubArray1}"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+				p_FuzzyNeuro_B_real_T_0[7]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1{SubArray2}"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "x"
+
+  
+  
+			group "mapminmax" -- subsystem-group
+			{
+			 flags: COLLAPSED
+			 desc:  ""
+			}
+
+				p_FuzzyNeuro_B_real_T_0[12]
+				{
+				 type:    FuzzyNeuro_ArrayDT0_2*
+				 alias:   "y"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+				group "x" -- block-group
+				{
+				 block: "Inport"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[3]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1{SubArray1}"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+					p_FuzzyNeuro_B_real_T_0[7]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1{SubArray2}"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "x"
+
+				group "Add min y" -- block-group
+				{
+				 block: "Bias"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[12]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_2*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+					p_FuzzyNeuro_P_real_T_0[64]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Bias"
+					 flags:   PARAM
+					}
+
+
+				endgroup -- block-group "Add min y"
+
+				group "Subtract min x" -- block-group
+				{
+				 block: "Bias"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[8]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_2*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+					p_FuzzyNeuro_P_real_T_0[60]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_2*
+					 alias:   "Bias"
+					 flags:   PARAM
+					}
+
+
+				endgroup -- block-group "Subtract min x"
+
+				group "range y // range x" -- block-group
+				{
+				 block: "Gain"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[10]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_2*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+					p_FuzzyNeuro_P_real_T_0[62]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_2*
+					 alias:   "Gain"
+					 flags:   PARAM
+					}
+
+
+				endgroup -- block-group "range y // range x"
+
+
+
+			endgroup -- subsystem-group "mapminmax"
+  
+  
+			group "removeconstantrows" -- subsystem-group
+			{
+			 flags: COLLAPSED
+			 desc:  ""
+			}
+
+				p_FuzzyNeuro_B_real_T_0[3]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "y{SubArray1}"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+				p_FuzzyNeuro_B_real_T_0[7]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "y{SubArray2}"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+				group "x" -- block-group
+				{
+				 block: "Inport"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[3]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1{SubArray1}"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+					p_FuzzyNeuro_B_real_T_0[7]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1{SubArray2}"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "x"
+
+				group "Selector" -- block-group
+				{
+				 block: "Selector"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[3]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1{SubArray1}"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+					p_FuzzyNeuro_B_real_T_0[7]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1{SubArray2}"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "Selector"
+
+
+
+			endgroup -- subsystem-group "removeconstantrows"
+
+
+		endgroup -- subsystem-group "Process Input 1"
+  
+  
+		group "Process Output 1" -- subsystem-group
+		{
+		 flags: COLLAPSED
+		 desc:  ""
+		}
+
+			p_FuzzyNeuro_B_real_T_0[102]
+			{
+			 type:    FuzzyNeuro_ArrayDT0_2*
+			 alias:   "y"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+			group "a" -- block-group
+			{
+			 block: "Inport"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_FuzzyNeuro_B_real_T_0[96]
+				{
+				 type:    FuzzyNeuro_ArrayDT0_2*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "a"
+
+  
+  
+			group "mapminmax_reverse" -- subsystem-group
+			{
+			 flags: COLLAPSED
+			 desc:  ""
+			}
+
+				p_FuzzyNeuro_B_real_T_0[102]
+				{
+				 type:    FuzzyNeuro_ArrayDT0_2*
+				 alias:   "x"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+				group "y" -- block-group
+				{
+				 block: "Inport"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[96]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_2*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "y"
+
+				group "Add min x" -- block-group
+				{
+				 block: "Bias"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[102]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_2*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+					p_FuzzyNeuro_P_real_T_0[104]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_2*
+					 alias:   "Bias"
+					 flags:   PARAM
+					}
+
+
+				endgroup -- block-group "Add min x"
+
+				group "Subtract min y" -- block-group
+				{
+				 block: "Bias"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[98]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_2*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+					p_FuzzyNeuro_P_real_T_0[101]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Bias"
+					 flags:   PARAM
+					}
+
+
+				endgroup -- block-group "Subtract min y"
+
+				group "Divide by range y" -- block-group
+				{
+				 block: "Gain"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[100]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_2*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+					p_FuzzyNeuro_P_real_T_0[102]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_2*
+					 alias:   "Gain"
+					 flags:   PARAM
+					}
+
+
+				endgroup -- block-group "Divide by range y"
+
+
+
+			endgroup -- subsystem-group "mapminmax_reverse"
+  
+  
+			group "removeconstantrows_reverse" -- subsystem-group
+			{
+			 flags: COLLAPSED
+			 desc:  ""
+			}
+
+				p_FuzzyNeuro_B_real_T_0[102]
+				{
+				 type:    FuzzyNeuro_ArrayDT0_2*
+				 alias:   "x"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+				group "y" -- block-group
+				{
+				 block: "Inport"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[102]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_2*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "y"
+
+				group "Constants" -- block-group
+				{
+				 block: "Constant"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[104]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+					p_FuzzyNeuro_P_real_T_0[106]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Value"
+					 flags:   PARAM
+					}
+
+
+				endgroup -- block-group "Constants"
+
+				group "Mux" -- block-group
+				{
+				 block: "Mux"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[102]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_2*
+					 alias:   "Out1{SubArray1}"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+					p_FuzzyNeuro_B_real_T_0[104]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1{SubArray2}"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "Mux"
+
+				group "Selector" -- block-group
+				{
+				 block: "Selector"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[102]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_2*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "Selector"
+
+
+
+			endgroup -- subsystem-group "removeconstantrows_reverse"
+
+
+		endgroup -- subsystem-group "Process Output 1"
+
+
+	endgroup -- subsystem-group "Feed-Forward Neural Network"
+  
+  
+	group "Fuzzy Logic \nController" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+		p_FuzzyNeuro_B_real_T_0[1157]
+		{
+		 type:    FuzzyNeuro_ArrayDT0_2*
+		 alias:   "Out1"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+		group "In1" -- block-group
+		{
+		 block: "Inport"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_FuzzyNeuro_B_real_T_0[3]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1{SubArray1}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_FuzzyNeuro_B_real_T_0[7]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1{SubArray2}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "In1"
+
+  
+  
+		group "FIS Wizard" -- subsystem-group
+		{
+		 flags: COLLAPSED
+		 desc:  ""
+		}
+
+			p_FuzzyNeuro_B_real_T_0[1157]
+			{
+			 type:    FuzzyNeuro_ArrayDT0_2*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+			group "In1" -- block-group
+			{
+			 block: "Inport"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_FuzzyNeuro_B_real_T_0[3]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1{SubArray1}"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+				p_FuzzyNeuro_B_real_T_0[7]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1{SubArray2}"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "In1"
+
+			group "MidRange" -- block-group
+			{
+			 block: "Constant"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+				p_FuzzyNeuro_P_real_T_0[921]
+				{
+				 type:    FuzzyNeuro_ArrayDT0_2*
+				 alias:   "Value"
+				 flags:   PARAM
+				}
+
+
+			endgroup -- block-group "MidRange"
+
+			group "Zero" -- block-group
+			{
+			 block: "Constant"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+				p_FuzzyNeuro_P_real_T_0[1125]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Value"
+				 flags:   PARAM
+				}
+
+
+			endgroup -- block-group "Zero"
+
+			group "Demux" -- block-group
+			{
+			 block: "Demux"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_FuzzyNeuro_B_real_T_0[3]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+				p_FuzzyNeuro_B_real_T_0[7]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out2"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "Demux"
+
+			group "cDemux1" -- block-group
+			{
+			 block: "Demux"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_FuzzyNeuro_B_real_T_0[109]
+				{
+				 type:    FuzzyNeuro_ArrayDT0_101*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "cDemux1"
+
+			group "cDemux2" -- block-group
+			{
+			 block: "Demux"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_FuzzyNeuro_B_real_T_0[213]
+				{
+				 type:    FuzzyNeuro_ArrayDT0_101*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "cDemux2"
+
+			group "cDemux3" -- block-group
+			{
+			 block: "Demux"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_FuzzyNeuro_B_real_T_0[317]
+				{
+				 type:    FuzzyNeuro_ArrayDT0_101*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "cDemux3"
+
+			group "cDemux4" -- block-group
+			{
+			 block: "Demux"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_FuzzyNeuro_B_real_T_0[523]
+				{
+				 type:    FuzzyNeuro_ArrayDT0_101*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "cDemux4"
+
+			group "cDemux5" -- block-group
+			{
+			 block: "Demux"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_FuzzyNeuro_B_real_T_0[627]
+				{
+				 type:    FuzzyNeuro_ArrayDT0_101*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "cDemux5"
+
+			group "cDemux6" -- block-group
+			{
+			 block: "Demux"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_FuzzyNeuro_B_real_T_0[731]
+				{
+				 type:    FuzzyNeuro_ArrayDT0_101*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "cDemux6"
+
+			group "AggMethod1" -- block-group
+			{
+			 block: "MinMax"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_FuzzyNeuro_B_real_T_0[418]
+				{
+				 type:    FuzzyNeuro_ArrayDT0_101*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "AggMethod1"
+
+			group "AggMethod2" -- block-group
+			{
+			 block: "MinMax"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_FuzzyNeuro_B_real_T_0[832]
+				{
+				 type:    FuzzyNeuro_ArrayDT0_101*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "AggMethod2"
+
+			group "MuxOut" -- block-group
+			{
+			 block: "Mux"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_FuzzyNeuro_B_real_T_0[1261]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1{SubArray1}"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+				p_FuzzyNeuro_B_real_T_0[1364]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1{SubArray2}"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "MuxOut"
+
+			group "aMux1" -- block-group
+			{
+			 block: "Mux"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_FuzzyNeuro_B_real_T_0[106]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "aMux1"
+
+			group "aMux2" -- block-group
+			{
+			 block: "Mux"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_FuzzyNeuro_B_real_T_0[210]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "aMux2"
+
+			group "aMux3" -- block-group
+			{
+			 block: "Mux"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_FuzzyNeuro_B_real_T_0[314]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "aMux3"
+
+			group "aMux4" -- block-group
+			{
+			 block: "Mux"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_FuzzyNeuro_B_real_T_0[520]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "aMux4"
+
+			group "aMux5" -- block-group
+			{
+			 block: "Mux"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_FuzzyNeuro_B_real_T_0[624]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "aMux5"
+
+			group "aMux6" -- block-group
+			{
+			 block: "Mux"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_FuzzyNeuro_B_real_T_0[728]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "aMux6"
+
+			group "cMux1" -- block-group
+			{
+			 block: "Mux"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "cMux1"
+
+			group "cMux2" -- block-group
+			{
+			 block: "Mux"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "cMux2"
+
+			group "cMux3" -- block-group
+			{
+			 block: "Mux"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "cMux3"
+
+			group "cMux4" -- block-group
+			{
+			 block: "Mux"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "cMux4"
+
+			group "cMux5" -- block-group
+			{
+			 block: "Mux"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "cMux5"
+
+			group "cMux6" -- block-group
+			{
+			 block: "Mux"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "cMux6"
+
+			group "Zero Firing Strength?" -- block-group
+			{
+			 block: "RelationalOperator"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_FuzzyNeuro_B_real_T_0[1156]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "Zero Firing Strength?"
+
+			group "Total Firing\nStrength" -- block-group
+			{
+			 block: "Sum"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_FuzzyNeuro_B_real_T_0[1155]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "Total Firing\nStrength"
+
+			group "Switch" -- block-group
+			{
+			 block: "Switch"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_FuzzyNeuro_B_real_T_0[1157]
+				{
+				 type:    FuzzyNeuro_ArrayDT0_2*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+				p_FuzzyNeuro_P_real_T_0[0]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Threshold"
+				 flags:   PARAM
+				}
+
+
+			endgroup -- block-group "Switch"
+
+  
+  
+			group "Defuzzification1" -- subsystem-group
+			{
+			 flags: COLLAPSED
+			 desc:  ""
+			}
+
+				p_FuzzyNeuro_B_real_T_0[1261]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "defuzzified\noutput"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+				group "MF values" -- block-group
+				{
+				 block: "Inport"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[418]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_101*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "MF values"
+
+				group "x data" -- block-group
+				{
+				 block: "Constant"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					-- Skipping output Out1
+					p_FuzzyNeuro_P_real_T_0[719]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_101*
+					 alias:   "Value"
+					 flags:   PARAM
+					}
+
+
+				endgroup -- block-group "x data"
+
+				group "If" -- block-group
+				{
+				 block: "If"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					-- Skipping output Out1
+					-- Skipping output Out2
+
+
+				endgroup -- block-group "If"
+
+				group "Merge" -- block-group
+				{
+				 block: "Merge"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[934]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "Merge"
+
+				group "Averaging\n(COA)" -- block-group
+				{
+				 block: "Product"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[1261]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "Averaging\n(COA)"
+
+				group "Product\n(COA)" -- block-group
+				{
+				 block: "Product"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[1159]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_101*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "Product\n(COA)"
+
+				group "Sum" -- block-group
+				{
+				 block: "Sum"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[1260]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "Sum"
+
+				group "Sum1" -- block-group
+				{
+				 block: "Sum"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[933]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "Sum1"
+
+  
+  
+				group "Action: One" -- subsystem-group
+				{
+				 flags: COLLAPSED
+				 desc:  ""
+				}
+
+					p_FuzzyNeuro_B_real_T_0[934]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+					group "Action Port" -- block-group
+					{
+					 block: "ActionPort"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+
+
+
+					endgroup -- block-group "Action Port"
+
+					group "One" -- block-group
+					{
+					 block: "Constant"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						p_FuzzyNeuro_B_real_T_0[934]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+						p_FuzzyNeuro_P_real_T_0[2]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Value"
+						 flags:   PARAM
+						}
+
+
+					endgroup -- block-group "One"
+
+
+
+				endgroup -- subsystem-group "Action: One"
+  
+  
+				group "Action: u1" -- subsystem-group
+				{
+				 flags: COLLAPSED
+				 desc:  ""
+				}
+
+					p_FuzzyNeuro_B_real_T_0[934]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "u2"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+					group "u1" -- block-group
+					{
+					 block: "Inport"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						p_FuzzyNeuro_B_real_T_0[934]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+
+					endgroup -- block-group "u1"
+
+					group "Action Port" -- block-group
+					{
+					 block: "ActionPort"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+
+
+
+					endgroup -- block-group "Action Port"
+
+
+
+				endgroup -- subsystem-group "Action: u1"
+
+
+			endgroup -- subsystem-group "Defuzzification1"
+  
+  
+			group "Defuzzification2" -- subsystem-group
+			{
+			 flags: COLLAPSED
+			 desc:  ""
+			}
+
+				p_FuzzyNeuro_B_real_T_0[1364]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "defuzzified\noutput"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+				group "MF values" -- block-group
+				{
+				 block: "Inport"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[832]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_101*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "MF values"
+
+				group "x data" -- block-group
+				{
+				 block: "Constant"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					-- Skipping output Out1
+					p_FuzzyNeuro_P_real_T_0[820]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_101*
+					 alias:   "Value"
+					 flags:   PARAM
+					}
+
+
+				endgroup -- block-group "x data"
+
+				group "If" -- block-group
+				{
+				 block: "If"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					-- Skipping output Out1
+					-- Skipping output Out2
+
+
+				endgroup -- block-group "If"
+
+				group "Merge" -- block-group
+				{
+				 block: "Merge"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[936]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "Merge"
+
+				group "Averaging\n(COA)" -- block-group
+				{
+				 block: "Product"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[1364]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "Averaging\n(COA)"
+
+				group "Product\n(COA)" -- block-group
+				{
+				 block: "Product"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[1262]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_101*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "Product\n(COA)"
+
+				group "Sum" -- block-group
+				{
+				 block: "Sum"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[1363]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "Sum"
+
+				group "Sum1" -- block-group
+				{
+				 block: "Sum"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[935]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "Sum1"
+
+  
+  
+				group "Action: One" -- subsystem-group
+				{
+				 flags: COLLAPSED
+				 desc:  ""
+				}
+
+					p_FuzzyNeuro_B_real_T_0[936]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+					group "Action Port" -- block-group
+					{
+					 block: "ActionPort"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+
+
+
+					endgroup -- block-group "Action Port"
+
+					group "One" -- block-group
+					{
+					 block: "Constant"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						p_FuzzyNeuro_B_real_T_0[936]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+						p_FuzzyNeuro_P_real_T_0[4]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Value"
+						 flags:   PARAM
+						}
+
+
+					endgroup -- block-group "One"
+
+
+
+				endgroup -- subsystem-group "Action: One"
+  
+  
+				group "Action: u1" -- subsystem-group
+				{
+				 flags: COLLAPSED
+				 desc:  ""
+				}
+
+					p_FuzzyNeuro_B_real_T_0[936]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "u2"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+					group "u1" -- block-group
+					{
+					 block: "Inport"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						p_FuzzyNeuro_B_real_T_0[936]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+
+					endgroup -- block-group "u1"
+
+					group "Action Port" -- block-group
+					{
+					 block: "ActionPort"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+
+
+
+					endgroup -- block-group "Action Port"
+
+
+
+				endgroup -- subsystem-group "Action: u1"
+
+
+			endgroup -- subsystem-group "Defuzzification2"
+  
+  
+			group "Hoehe1" -- subsystem-group
+			{
+			 flags: COLLAPSED
+			 desc:  ""
+			}
+
+				p_FuzzyNeuro_B_real_T_0[106]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+				p_FuzzyNeuro_B_real_T_0[210]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out2"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+				p_FuzzyNeuro_B_real_T_0[314]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out3"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+				group "In1" -- block-group
+				{
+				 block: "Inport"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[3]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "In1"
+
+				group "DataConv" -- block-group
+				{
+				 block: "DataTypeConversion"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[105]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "DataConv"
+
+  
+  
+				group "richtig" -- subsystem-group
+				{
+				 flags: COLLAPSED
+				 desc:  ""
+				}
+
+					p_FuzzyNeuro_B_real_T_0[210]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "MF"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+					group "x" -- block-group
+					{
+					 block: "Inport"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						p_FuzzyNeuro_B_real_T_0[105]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+
+					endgroup -- block-group "x"
+
+					group "If" -- block-group
+					{
+					 block: "If"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						-- Skipping output Out1
+						-- Skipping output Out2
+						-- Skipping output Out3
+						-- Skipping output Out4
+
+
+					endgroup -- block-group "If"
+
+					group "Merge" -- block-group
+					{
+					 block: "Merge"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						p_FuzzyNeuro_B_real_T_0[210]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+
+					endgroup -- block-group "Merge"
+
+  
+  
+					group "If Action\nSubsystem" -- subsystem-group
+					{
+					 flags: COLLAPSED
+					 desc:  ""
+					}
+
+						p_FuzzyNeuro_B_real_T_0[210]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+						group "Action Port" -- block-group
+						{
+						 block: "ActionPort"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+
+
+
+						endgroup -- block-group "Action Port"
+
+						group "0" -- block-group
+						{
+						 block: "Constant"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_0[210]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+							p_FuzzyNeuro_P_real_T_0[6]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Value"
+							 flags:   PARAM
+							}
+
+
+						endgroup -- block-group "0"
+
+
+
+					endgroup -- subsystem-group "If Action\nSubsystem"
+  
+  
+					group "If Action\nSubsystem1" -- subsystem-group
+					{
+					 flags: COLLAPSED
+					 desc:  ""
+					}
+
+						p_FuzzyNeuro_B_real_T_0[210]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+						group "Action Port" -- block-group
+						{
+						 block: "ActionPort"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+
+
+
+						endgroup -- block-group "Action Port"
+
+						group "0" -- block-group
+						{
+						 block: "Constant"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_0[210]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+							p_FuzzyNeuro_P_real_T_0[8]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Value"
+							 flags:   PARAM
+							}
+
+
+						endgroup -- block-group "0"
+
+
+
+					endgroup -- subsystem-group "If Action\nSubsystem1"
+  
+  
+					group "If Action\nSubsystem2" -- subsystem-group
+					{
+					 flags: COLLAPSED
+					 desc:  ""
+					}
+
+						p_FuzzyNeuro_B_real_T_0[210]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+						group "x" -- block-group
+						{
+						 block: "Inport"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_0[105]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "x"
+
+						group "Action Port" -- block-group
+						{
+						 block: "ActionPort"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+
+
+
+						endgroup -- block-group "Action Port"
+
+						group "b" -- block-group
+						{
+						 block: "Constant"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							-- Skipping output Out1
+							p_FuzzyNeuro_P_real_T_11[0]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Value"
+							 flags:   PARAM
+							}
+
+
+						endgroup -- block-group "b"
+
+						group "c" -- block-group
+						{
+						 block: "Constant"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							-- Skipping output Out1
+							p_FuzzyNeuro_P_real_T_11[1]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Value"
+							 flags:   PARAM
+							}
+
+
+						endgroup -- block-group "c"
+
+						group "Product cd\n(trimf)" -- block-group
+						{
+						 block: "Product"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_0[210]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "Product cd\n(trimf)"
+
+						group "Sum2" -- block-group
+						{
+						 block: "Sum"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_12[0]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "Sum2"
+
+						group "Sum3" -- block-group
+						{
+						 block: "Sum"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_12[1]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "Sum3"
+
+
+						p_FuzzyNeuro_B_real_T_0[210]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "(c-x)/(c-b)"
+						 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/richtig/If Action\nSubsystem2/Product cd\n(trimf)/Out1"
+						 flags:   LABEL|READONLY
+						}
+						p_FuzzyNeuro_B_real_T_12[0]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "c-b"
+						 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/richtig/If Action\nSubsystem2/Sum2/Out1"
+						 flags:   LABEL|READONLY
+						}
+						p_FuzzyNeuro_B_real_T_12[1]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "c-x"
+						 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/richtig/If Action\nSubsystem2/Sum3/Out1"
+						 flags:   LABEL|READONLY
+						}
+
+					endgroup -- subsystem-group "If Action\nSubsystem2"
+  
+  
+					group "If Action\nSubsystem3" -- subsystem-group
+					{
+					 flags: COLLAPSED
+					 desc:  ""
+					}
+
+						p_FuzzyNeuro_B_real_T_0[210]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+						group "x" -- block-group
+						{
+						 block: "Inport"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_0[105]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "x"
+
+						group "Action Port" -- block-group
+						{
+						 block: "ActionPort"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+
+
+
+						endgroup -- block-group "Action Port"
+
+						group "a" -- block-group
+						{
+						 block: "Constant"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							-- Skipping output Out1
+							p_FuzzyNeuro_P_real_T_12[0]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Value"
+							 flags:   PARAM
+							}
+
+
+						endgroup -- block-group "a"
+
+						group "b" -- block-group
+						{
+						 block: "Constant"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							-- Skipping output Out1
+							p_FuzzyNeuro_P_real_T_12[1]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Value"
+							 flags:   PARAM
+							}
+
+
+						endgroup -- block-group "b"
+
+						group "Product ab\n(trimf)" -- block-group
+						{
+						 block: "Product"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_0[210]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "Product ab\n(trimf)"
+
+						group "Sum" -- block-group
+						{
+						 block: "Sum"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_13[0]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "Sum"
+
+						group "Sum1" -- block-group
+						{
+						 block: "Sum"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_13[1]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "Sum1"
+
+
+						p_FuzzyNeuro_B_real_T_0[210]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "(x-a)/(b-a)"
+						 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/richtig/If Action\nSubsystem3/Product ab\n(trimf)/Out1"
+						 flags:   LABEL|READONLY
+						}
+						p_FuzzyNeuro_B_real_T_13[1]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "b-a"
+						 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/richtig/If Action\nSubsystem3/Sum1/Out1"
+						 flags:   LABEL|READONLY
+						}
+						p_FuzzyNeuro_B_real_T_13[0]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "x-a"
+						 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/richtig/If Action\nSubsystem3/Sum/Out1"
+						 flags:   LABEL|READONLY
+						}
+
+					endgroup -- subsystem-group "If Action\nSubsystem3"
+
+
+				endgroup -- subsystem-group "richtig"
+  
+  
+				group "zuhoch" -- subsystem-group
+				{
+				 flags: COLLAPSED
+				 desc:  ""
+				}
+
+					p_FuzzyNeuro_B_real_T_0[106]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "MF1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+					group "x" -- block-group
+					{
+					 block: "Inport"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						p_FuzzyNeuro_B_real_T_0[105]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+
+					endgroup -- block-group "x"
+
+					group "If" -- block-group
+					{
+					 block: "If"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						-- Skipping output Out1
+						-- Skipping output Out2
+						-- Skipping output Out3
+						-- Skipping output Out4
+
+
+					endgroup -- block-group "If"
+
+					group "Merge" -- block-group
+					{
+					 block: "Merge"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						p_FuzzyNeuro_B_real_T_0[106]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+
+					endgroup -- block-group "Merge"
+
+  
+  
+					group "If Action\nSubsystem" -- subsystem-group
+					{
+					 flags: COLLAPSED
+					 desc:  ""
+					}
+
+						p_FuzzyNeuro_B_real_T_0[106]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+						group "Action Port" -- block-group
+						{
+						 block: "ActionPort"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+
+
+
+						endgroup -- block-group "Action Port"
+
+						group "0" -- block-group
+						{
+						 block: "Constant"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_0[106]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+							p_FuzzyNeuro_P_real_T_0[10]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Value"
+							 flags:   PARAM
+							}
+
+
+						endgroup -- block-group "0"
+
+
+
+					endgroup -- subsystem-group "If Action\nSubsystem"
+  
+  
+					group "If Action\nSubsystem1" -- subsystem-group
+					{
+					 flags: COLLAPSED
+					 desc:  ""
+					}
+
+						p_FuzzyNeuro_B_real_T_0[106]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+						group "x" -- block-group
+						{
+						 block: "Inport"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_0[105]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "x"
+
+						group "Action Port" -- block-group
+						{
+						 block: "ActionPort"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+
+
+
+						endgroup -- block-group "Action Port"
+
+						group "a" -- block-group
+						{
+						 block: "Constant"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							-- Skipping output Out1
+							p_FuzzyNeuro_P_real_T_10[0]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Value"
+							 flags:   PARAM
+							}
+
+
+						endgroup -- block-group "a"
+
+						group "b" -- block-group
+						{
+						 block: "Constant"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							-- Skipping output Out1
+							p_FuzzyNeuro_P_real_T_10[1]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Value"
+							 flags:   PARAM
+							}
+
+
+						endgroup -- block-group "b"
+
+						group "Product ab\n(trimf)" -- block-group
+						{
+						 block: "Product"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_0[106]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "Product ab\n(trimf)"
+
+						group "Sum" -- block-group
+						{
+						 block: "Sum"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_11[0]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "Sum"
+
+						group "Sum1" -- block-group
+						{
+						 block: "Sum"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_11[1]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "Sum1"
+
+
+						p_FuzzyNeuro_B_real_T_0[106]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "(x-a)/(b-a)"
+						 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/zuhoch/If Action\nSubsystem1/Product ab\n(trimf)/Out1"
+						 flags:   LABEL|READONLY
+						}
+						p_FuzzyNeuro_B_real_T_11[1]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "b-a"
+						 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/zuhoch/If Action\nSubsystem1/Sum1/Out1"
+						 flags:   LABEL|READONLY
+						}
+						p_FuzzyNeuro_B_real_T_11[0]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "x-a"
+						 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/zuhoch/If Action\nSubsystem1/Sum/Out1"
+						 flags:   LABEL|READONLY
+						}
+
+					endgroup -- subsystem-group "If Action\nSubsystem1"
+  
+  
+					group "If Action\nSubsystem2" -- subsystem-group
+					{
+					 flags: COLLAPSED
+					 desc:  ""
+					}
+
+						p_FuzzyNeuro_B_real_T_0[106]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+						group "Action Port" -- block-group
+						{
+						 block: "ActionPort"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+
+
+
+						endgroup -- block-group "Action Port"
+
+						group "0" -- block-group
+						{
+						 block: "Constant"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_0[106]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+							p_FuzzyNeuro_P_real_T_0[12]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Value"
+							 flags:   PARAM
+							}
+
+
+						endgroup -- block-group "0"
+
+
+
+					endgroup -- subsystem-group "If Action\nSubsystem2"
+  
+  
+					group "If Action\nSubsystem3" -- subsystem-group
+					{
+					 flags: COLLAPSED
+					 desc:  ""
+					}
+
+						p_FuzzyNeuro_B_real_T_0[106]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+						group "x" -- block-group
+						{
+						 block: "Inport"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_0[105]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "x"
+
+						group "Action Port" -- block-group
+						{
+						 block: "ActionPort"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+
+
+
+						endgroup -- block-group "Action Port"
+
+						group "c" -- block-group
+						{
+						 block: "Constant"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							-- Skipping output Out1
+							p_FuzzyNeuro_P_real_T_9[0]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Value"
+							 flags:   PARAM
+							}
+
+
+						endgroup -- block-group "c"
+
+						group "d" -- block-group
+						{
+						 block: "Constant"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							-- Skipping output Out1
+							p_FuzzyNeuro_P_real_T_9[1]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Value"
+							 flags:   PARAM
+							}
+
+
+						endgroup -- block-group "d"
+
+						group "Product cd\n(trimf)" -- block-group
+						{
+						 block: "Product"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_0[106]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "Product cd\n(trimf)"
+
+						group "Sum2" -- block-group
+						{
+						 block: "Sum"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_10[0]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "Sum2"
+
+						group "Sum3" -- block-group
+						{
+						 block: "Sum"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_10[1]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "Sum3"
+
+
+						p_FuzzyNeuro_B_real_T_0[106]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "(d-x)/(d-c)"
+						 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/zuhoch/If Action\nSubsystem3/Product cd\n(trimf)/Out1"
+						 flags:   LABEL|READONLY
+						}
+						p_FuzzyNeuro_B_real_T_10[0]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "d-c"
+						 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/zuhoch/If Action\nSubsystem3/Sum2/Out1"
+						 flags:   LABEL|READONLY
+						}
+						p_FuzzyNeuro_B_real_T_10[1]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "d-x"
+						 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/zuhoch/If Action\nSubsystem3/Sum3/Out1"
+						 flags:   LABEL|READONLY
+						}
+
+					endgroup -- subsystem-group "If Action\nSubsystem3"
+
+
+				endgroup -- subsystem-group "zuhoch"
+  
+  
+				group "zuniedrig" -- subsystem-group
+				{
+				 flags: COLLAPSED
+				 desc:  ""
+				}
+
+					p_FuzzyNeuro_B_real_T_0[314]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "MF1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+					group "x" -- block-group
+					{
+					 block: "Inport"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						p_FuzzyNeuro_B_real_T_0[105]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+
+					endgroup -- block-group "x"
+
+					group "If" -- block-group
+					{
+					 block: "If"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						-- Skipping output Out1
+						-- Skipping output Out2
+						-- Skipping output Out3
+						-- Skipping output Out4
+
+
+					endgroup -- block-group "If"
+
+					group "Merge" -- block-group
+					{
+					 block: "Merge"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						p_FuzzyNeuro_B_real_T_0[314]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+
+					endgroup -- block-group "Merge"
+
+  
+  
+					group "If Action\nSubsystem" -- subsystem-group
+					{
+					 flags: COLLAPSED
+					 desc:  ""
+					}
+
+						p_FuzzyNeuro_B_real_T_0[314]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+						group "Action Port" -- block-group
+						{
+						 block: "ActionPort"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+
+
+
+						endgroup -- block-group "Action Port"
+
+						group "0" -- block-group
+						{
+						 block: "Constant"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_0[314]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+							p_FuzzyNeuro_P_real_T_0[14]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Value"
+							 flags:   PARAM
+							}
+
+
+						endgroup -- block-group "0"
+
+
+
+					endgroup -- subsystem-group "If Action\nSubsystem"
+  
+  
+					group "If Action\nSubsystem1" -- subsystem-group
+					{
+					 flags: COLLAPSED
+					 desc:  ""
+					}
+
+						p_FuzzyNeuro_B_real_T_0[314]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+						group "x" -- block-group
+						{
+						 block: "Inport"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_0[105]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "x"
+
+						group "Action Port" -- block-group
+						{
+						 block: "ActionPort"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+
+
+
+						endgroup -- block-group "Action Port"
+
+						group "a" -- block-group
+						{
+						 block: "Constant"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							-- Skipping output Out1
+							p_FuzzyNeuro_P_real_T_8[0]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Value"
+							 flags:   PARAM
+							}
+
+
+						endgroup -- block-group "a"
+
+						group "b" -- block-group
+						{
+						 block: "Constant"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							-- Skipping output Out1
+							p_FuzzyNeuro_P_real_T_8[1]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Value"
+							 flags:   PARAM
+							}
+
+
+						endgroup -- block-group "b"
+
+						group "Product ab\n(trimf)" -- block-group
+						{
+						 block: "Product"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_0[314]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "Product ab\n(trimf)"
+
+						group "Sum" -- block-group
+						{
+						 block: "Sum"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_9[0]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "Sum"
+
+						group "Sum1" -- block-group
+						{
+						 block: "Sum"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_9[1]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "Sum1"
+
+
+						p_FuzzyNeuro_B_real_T_0[314]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "(x-a)/(b-a)"
+						 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/zuniedrig/If Action\nSubsystem1/Product ab\n(trimf)/Out1"
+						 flags:   LABEL|READONLY
+						}
+						p_FuzzyNeuro_B_real_T_9[1]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "b-a"
+						 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/zuniedrig/If Action\nSubsystem1/Sum1/Out1"
+						 flags:   LABEL|READONLY
+						}
+						p_FuzzyNeuro_B_real_T_9[0]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "x-a"
+						 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/zuniedrig/If Action\nSubsystem1/Sum/Out1"
+						 flags:   LABEL|READONLY
+						}
+
+					endgroup -- subsystem-group "If Action\nSubsystem1"
+  
+  
+					group "If Action\nSubsystem2" -- subsystem-group
+					{
+					 flags: COLLAPSED
+					 desc:  ""
+					}
+
+						p_FuzzyNeuro_B_real_T_0[314]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+						group "Action Port" -- block-group
+						{
+						 block: "ActionPort"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+
+
+
+						endgroup -- block-group "Action Port"
+
+						group "0" -- block-group
+						{
+						 block: "Constant"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_0[314]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+							p_FuzzyNeuro_P_real_T_0[16]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Value"
+							 flags:   PARAM
+							}
+
+
+						endgroup -- block-group "0"
+
+
+
+					endgroup -- subsystem-group "If Action\nSubsystem2"
+  
+  
+					group "If Action\nSubsystem3" -- subsystem-group
+					{
+					 flags: COLLAPSED
+					 desc:  ""
+					}
+
+						p_FuzzyNeuro_B_real_T_0[314]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+						group "x" -- block-group
+						{
+						 block: "Inport"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_0[105]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "x"
+
+						group "Action Port" -- block-group
+						{
+						 block: "ActionPort"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+
+
+
+						endgroup -- block-group "Action Port"
+
+						group "c" -- block-group
+						{
+						 block: "Constant"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							-- Skipping output Out1
+							p_FuzzyNeuro_P_real_T_7[0]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Value"
+							 flags:   PARAM
+							}
+
+
+						endgroup -- block-group "c"
+
+						group "d" -- block-group
+						{
+						 block: "Constant"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							-- Skipping output Out1
+							p_FuzzyNeuro_P_real_T_7[1]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Value"
+							 flags:   PARAM
+							}
+
+
+						endgroup -- block-group "d"
+
+						group "Product cd\n(trimf)" -- block-group
+						{
+						 block: "Product"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_0[314]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "Product cd\n(trimf)"
+
+						group "Sum2" -- block-group
+						{
+						 block: "Sum"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_8[0]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "Sum2"
+
+						group "Sum3" -- block-group
+						{
+						 block: "Sum"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_8[1]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "Sum3"
+
+
+						p_FuzzyNeuro_B_real_T_0[314]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "(d-x)/(d-c)"
+						 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/zuniedrig/If Action\nSubsystem3/Product cd\n(trimf)/Out1"
+						 flags:   LABEL|READONLY
+						}
+						p_FuzzyNeuro_B_real_T_8[0]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "d-c"
+						 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/zuniedrig/If Action\nSubsystem3/Sum2/Out1"
+						 flags:   LABEL|READONLY
+						}
+						p_FuzzyNeuro_B_real_T_8[1]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "d-x"
+						 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/zuniedrig/If Action\nSubsystem3/Sum3/Out1"
+						 flags:   LABEL|READONLY
+						}
+
+					endgroup -- subsystem-group "If Action\nSubsystem3"
+
+
+				endgroup -- subsystem-group "zuniedrig"
+
+
+			endgroup -- subsystem-group "Hoehe1"
+  
+  
+			group "Hoehe2" -- subsystem-group
+			{
+			 flags: COLLAPSED
+			 desc:  ""
+			}
+
+				p_FuzzyNeuro_B_real_T_0[520]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+				p_FuzzyNeuro_B_real_T_0[624]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out2"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+				p_FuzzyNeuro_B_real_T_0[728]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out3"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+				group "In1" -- block-group
+				{
+				 block: "Inport"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[7]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "In1"
+
+				group "DataConv" -- block-group
+				{
+				 block: "DataTypeConversion"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[519]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "DataConv"
+
+  
+  
+				group "richtig" -- subsystem-group
+				{
+				 flags: COLLAPSED
+				 desc:  ""
+				}
+
+					p_FuzzyNeuro_B_real_T_0[624]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "MF"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+					group "x" -- block-group
+					{
+					 block: "Inport"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						p_FuzzyNeuro_B_real_T_0[519]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+
+					endgroup -- block-group "x"
+
+					group "If" -- block-group
+					{
+					 block: "If"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						-- Skipping output Out1
+						-- Skipping output Out2
+						-- Skipping output Out3
+						-- Skipping output Out4
+
+
+					endgroup -- block-group "If"
+
+					group "Merge" -- block-group
+					{
+					 block: "Merge"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						p_FuzzyNeuro_B_real_T_0[624]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+
+					endgroup -- block-group "Merge"
+
+  
+  
+					group "If Action\nSubsystem" -- subsystem-group
+					{
+					 flags: COLLAPSED
+					 desc:  ""
+					}
+
+						p_FuzzyNeuro_B_real_T_0[624]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+						group "Action Port" -- block-group
+						{
+						 block: "ActionPort"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+
+
+
+						endgroup -- block-group "Action Port"
+
+						group "0" -- block-group
+						{
+						 block: "Constant"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_0[624]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+							p_FuzzyNeuro_P_real_T_0[18]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Value"
+							 flags:   PARAM
+							}
+
+
+						endgroup -- block-group "0"
+
+
+
+					endgroup -- subsystem-group "If Action\nSubsystem"
+  
+  
+					group "If Action\nSubsystem1" -- subsystem-group
+					{
+					 flags: COLLAPSED
+					 desc:  ""
+					}
+
+						p_FuzzyNeuro_B_real_T_0[624]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+						group "Action Port" -- block-group
+						{
+						 block: "ActionPort"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+
+
+
+						endgroup -- block-group "Action Port"
+
+						group "0" -- block-group
+						{
+						 block: "Constant"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_0[624]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+							p_FuzzyNeuro_P_real_T_0[20]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Value"
+							 flags:   PARAM
+							}
+
+
+						endgroup -- block-group "0"
+
+
+
+					endgroup -- subsystem-group "If Action\nSubsystem1"
+  
+  
+					group "If Action\nSubsystem2" -- subsystem-group
+					{
+					 flags: COLLAPSED
+					 desc:  ""
+					}
+
+						p_FuzzyNeuro_B_real_T_0[624]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+						group "x" -- block-group
+						{
+						 block: "Inport"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_0[519]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "x"
+
+						group "Action Port" -- block-group
+						{
+						 block: "ActionPort"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+
+
+
+						endgroup -- block-group "Action Port"
+
+						group "b" -- block-group
+						{
+						 block: "Constant"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							-- Skipping output Out1
+							p_FuzzyNeuro_P_real_T_5[0]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Value"
+							 flags:   PARAM
+							}
+
+
+						endgroup -- block-group "b"
+
+						group "c" -- block-group
+						{
+						 block: "Constant"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							-- Skipping output Out1
+							p_FuzzyNeuro_P_real_T_5[1]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Value"
+							 flags:   PARAM
+							}
+
+
+						endgroup -- block-group "c"
+
+						group "Product cd\n(trimf)" -- block-group
+						{
+						 block: "Product"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_0[624]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "Product cd\n(trimf)"
+
+						group "Sum2" -- block-group
+						{
+						 block: "Sum"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_6[0]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "Sum2"
+
+						group "Sum3" -- block-group
+						{
+						 block: "Sum"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_6[1]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "Sum3"
+
+
+						p_FuzzyNeuro_B_real_T_0[624]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "(c-x)/(c-b)"
+						 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/richtig/If Action\nSubsystem2/Product cd\n(trimf)/Out1"
+						 flags:   LABEL|READONLY
+						}
+						p_FuzzyNeuro_B_real_T_6[0]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "c-b"
+						 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/richtig/If Action\nSubsystem2/Sum2/Out1"
+						 flags:   LABEL|READONLY
+						}
+						p_FuzzyNeuro_B_real_T_6[1]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "c-x"
+						 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/richtig/If Action\nSubsystem2/Sum3/Out1"
+						 flags:   LABEL|READONLY
+						}
+
+					endgroup -- subsystem-group "If Action\nSubsystem2"
+  
+  
+					group "If Action\nSubsystem3" -- subsystem-group
+					{
+					 flags: COLLAPSED
+					 desc:  ""
+					}
+
+						p_FuzzyNeuro_B_real_T_0[624]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+						group "x" -- block-group
+						{
+						 block: "Inport"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_0[519]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "x"
+
+						group "Action Port" -- block-group
+						{
+						 block: "ActionPort"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+
+
+
+						endgroup -- block-group "Action Port"
+
+						group "a" -- block-group
+						{
+						 block: "Constant"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							-- Skipping output Out1
+							p_FuzzyNeuro_P_real_T_6[0]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Value"
+							 flags:   PARAM
+							}
+
+
+						endgroup -- block-group "a"
+
+						group "b" -- block-group
+						{
+						 block: "Constant"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							-- Skipping output Out1
+							p_FuzzyNeuro_P_real_T_6[1]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Value"
+							 flags:   PARAM
+							}
+
+
+						endgroup -- block-group "b"
+
+						group "Product ab\n(trimf)" -- block-group
+						{
+						 block: "Product"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_0[624]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "Product ab\n(trimf)"
+
+						group "Sum" -- block-group
+						{
+						 block: "Sum"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_7[0]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "Sum"
+
+						group "Sum1" -- block-group
+						{
+						 block: "Sum"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_7[1]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "Sum1"
+
+
+						p_FuzzyNeuro_B_real_T_0[624]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "(x-a)/(b-a)"
+						 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/richtig/If Action\nSubsystem3/Product ab\n(trimf)/Out1"
+						 flags:   LABEL|READONLY
+						}
+						p_FuzzyNeuro_B_real_T_7[1]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "b-a"
+						 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/richtig/If Action\nSubsystem3/Sum1/Out1"
+						 flags:   LABEL|READONLY
+						}
+						p_FuzzyNeuro_B_real_T_7[0]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "x-a"
+						 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/richtig/If Action\nSubsystem3/Sum/Out1"
+						 flags:   LABEL|READONLY
+						}
+
+					endgroup -- subsystem-group "If Action\nSubsystem3"
+
+
+				endgroup -- subsystem-group "richtig"
+  
+  
+				group "zuhoch" -- subsystem-group
+				{
+				 flags: COLLAPSED
+				 desc:  ""
+				}
+
+					p_FuzzyNeuro_B_real_T_0[520]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "MF1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+					group "x" -- block-group
+					{
+					 block: "Inport"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						p_FuzzyNeuro_B_real_T_0[519]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+
+					endgroup -- block-group "x"
+
+					group "If" -- block-group
+					{
+					 block: "If"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						-- Skipping output Out1
+						-- Skipping output Out2
+						-- Skipping output Out3
+						-- Skipping output Out4
+
+
+					endgroup -- block-group "If"
+
+					group "Merge" -- block-group
+					{
+					 block: "Merge"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						p_FuzzyNeuro_B_real_T_0[520]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+
+					endgroup -- block-group "Merge"
+
+  
+  
+					group "If Action\nSubsystem" -- subsystem-group
+					{
+					 flags: COLLAPSED
+					 desc:  ""
+					}
+
+						p_FuzzyNeuro_B_real_T_0[520]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+						group "Action Port" -- block-group
+						{
+						 block: "ActionPort"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+
+
+
+						endgroup -- block-group "Action Port"
+
+						group "0" -- block-group
+						{
+						 block: "Constant"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_0[520]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+							p_FuzzyNeuro_P_real_T_0[22]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Value"
+							 flags:   PARAM
+							}
+
+
+						endgroup -- block-group "0"
+
+
+
+					endgroup -- subsystem-group "If Action\nSubsystem"
+  
+  
+					group "If Action\nSubsystem1" -- subsystem-group
+					{
+					 flags: COLLAPSED
+					 desc:  ""
+					}
+
+						p_FuzzyNeuro_B_real_T_0[520]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+						group "x" -- block-group
+						{
+						 block: "Inport"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_0[519]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "x"
+
+						group "Action Port" -- block-group
+						{
+						 block: "ActionPort"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+
+
+
+						endgroup -- block-group "Action Port"
+
+						group "a" -- block-group
+						{
+						 block: "Constant"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							-- Skipping output Out1
+							p_FuzzyNeuro_P_real_T_4[0]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Value"
+							 flags:   PARAM
+							}
+
+
+						endgroup -- block-group "a"
+
+						group "b" -- block-group
+						{
+						 block: "Constant"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							-- Skipping output Out1
+							p_FuzzyNeuro_P_real_T_4[1]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Value"
+							 flags:   PARAM
+							}
+
+
+						endgroup -- block-group "b"
+
+						group "Product ab\n(trimf)" -- block-group
+						{
+						 block: "Product"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_0[520]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "Product ab\n(trimf)"
+
+						group "Sum" -- block-group
+						{
+						 block: "Sum"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_5[0]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "Sum"
+
+						group "Sum1" -- block-group
+						{
+						 block: "Sum"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_5[1]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "Sum1"
+
+
+						p_FuzzyNeuro_B_real_T_0[520]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "(x-a)/(b-a)"
+						 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/zuhoch/If Action\nSubsystem1/Product ab\n(trimf)/Out1"
+						 flags:   LABEL|READONLY
+						}
+						p_FuzzyNeuro_B_real_T_5[1]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "b-a"
+						 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/zuhoch/If Action\nSubsystem1/Sum1/Out1"
+						 flags:   LABEL|READONLY
+						}
+						p_FuzzyNeuro_B_real_T_5[0]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "x-a"
+						 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/zuhoch/If Action\nSubsystem1/Sum/Out1"
+						 flags:   LABEL|READONLY
+						}
+
+					endgroup -- subsystem-group "If Action\nSubsystem1"
+  
+  
+					group "If Action\nSubsystem2" -- subsystem-group
+					{
+					 flags: COLLAPSED
+					 desc:  ""
+					}
+
+						p_FuzzyNeuro_B_real_T_0[520]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+						group "Action Port" -- block-group
+						{
+						 block: "ActionPort"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+
+
+
+						endgroup -- block-group "Action Port"
+
+						group "0" -- block-group
+						{
+						 block: "Constant"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_0[520]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+							p_FuzzyNeuro_P_real_T_0[24]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Value"
+							 flags:   PARAM
+							}
+
+
+						endgroup -- block-group "0"
+
+
+
+					endgroup -- subsystem-group "If Action\nSubsystem2"
+  
+  
+					group "If Action\nSubsystem3" -- subsystem-group
+					{
+					 flags: COLLAPSED
+					 desc:  ""
+					}
+
+						p_FuzzyNeuro_B_real_T_0[520]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+						group "x" -- block-group
+						{
+						 block: "Inport"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_0[519]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "x"
+
+						group "Action Port" -- block-group
+						{
+						 block: "ActionPort"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+
+
+
+						endgroup -- block-group "Action Port"
+
+						group "c" -- block-group
+						{
+						 block: "Constant"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							-- Skipping output Out1
+							p_FuzzyNeuro_P_real_T_3[0]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Value"
+							 flags:   PARAM
+							}
+
+
+						endgroup -- block-group "c"
+
+						group "d" -- block-group
+						{
+						 block: "Constant"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							-- Skipping output Out1
+							p_FuzzyNeuro_P_real_T_3[1]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Value"
+							 flags:   PARAM
+							}
+
+
+						endgroup -- block-group "d"
+
+						group "Product cd\n(trimf)" -- block-group
+						{
+						 block: "Product"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_0[520]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "Product cd\n(trimf)"
+
+						group "Sum2" -- block-group
+						{
+						 block: "Sum"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_4[0]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "Sum2"
+
+						group "Sum3" -- block-group
+						{
+						 block: "Sum"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_4[1]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "Sum3"
+
+
+						p_FuzzyNeuro_B_real_T_0[520]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "(d-x)/(d-c)"
+						 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/zuhoch/If Action\nSubsystem3/Product cd\n(trimf)/Out1"
+						 flags:   LABEL|READONLY
+						}
+						p_FuzzyNeuro_B_real_T_4[0]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "d-c"
+						 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/zuhoch/If Action\nSubsystem3/Sum2/Out1"
+						 flags:   LABEL|READONLY
+						}
+						p_FuzzyNeuro_B_real_T_4[1]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "d-x"
+						 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/zuhoch/If Action\nSubsystem3/Sum3/Out1"
+						 flags:   LABEL|READONLY
+						}
+
+					endgroup -- subsystem-group "If Action\nSubsystem3"
+
+
+				endgroup -- subsystem-group "zuhoch"
+  
+  
+				group "zuniedrig" -- subsystem-group
+				{
+				 flags: COLLAPSED
+				 desc:  ""
+				}
+
+					p_FuzzyNeuro_B_real_T_0[728]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "MF1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+					group "x" -- block-group
+					{
+					 block: "Inport"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						p_FuzzyNeuro_B_real_T_0[519]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+
+					endgroup -- block-group "x"
+
+					group "If" -- block-group
+					{
+					 block: "If"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						-- Skipping output Out1
+						-- Skipping output Out2
+						-- Skipping output Out3
+						-- Skipping output Out4
+
+
+					endgroup -- block-group "If"
+
+					group "Merge" -- block-group
+					{
+					 block: "Merge"
+					 desc:  ""
+					 flags: BLOCK|COLLAPSED
+					}
+						p_FuzzyNeuro_B_real_T_0[728]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+
+					endgroup -- block-group "Merge"
+
+  
+  
+					group "If Action\nSubsystem" -- subsystem-group
+					{
+					 flags: COLLAPSED
+					 desc:  ""
+					}
+
+						p_FuzzyNeuro_B_real_T_0[728]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+						group "Action Port" -- block-group
+						{
+						 block: "ActionPort"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+
+
+
+						endgroup -- block-group "Action Port"
+
+						group "0" -- block-group
+						{
+						 block: "Constant"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_0[728]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+							p_FuzzyNeuro_P_real_T_0[26]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Value"
+							 flags:   PARAM
+							}
+
+
+						endgroup -- block-group "0"
+
+
+
+					endgroup -- subsystem-group "If Action\nSubsystem"
+  
+  
+					group "If Action\nSubsystem1" -- subsystem-group
+					{
+					 flags: COLLAPSED
+					 desc:  ""
+					}
+
+						p_FuzzyNeuro_B_real_T_0[728]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+						group "x" -- block-group
+						{
+						 block: "Inport"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_0[519]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "x"
+
+						group "Action Port" -- block-group
+						{
+						 block: "ActionPort"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+
+
+
+						endgroup -- block-group "Action Port"
+
+						group "a" -- block-group
+						{
+						 block: "Constant"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							-- Skipping output Out1
+							p_FuzzyNeuro_P_real_T_2[0]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Value"
+							 flags:   PARAM
+							}
+
+
+						endgroup -- block-group "a"
+
+						group "b" -- block-group
+						{
+						 block: "Constant"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							-- Skipping output Out1
+							p_FuzzyNeuro_P_real_T_2[1]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Value"
+							 flags:   PARAM
+							}
+
+
+						endgroup -- block-group "b"
+
+						group "Product ab\n(trimf)" -- block-group
+						{
+						 block: "Product"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_0[728]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "Product ab\n(trimf)"
+
+						group "Sum" -- block-group
+						{
+						 block: "Sum"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_3[0]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "Sum"
+
+						group "Sum1" -- block-group
+						{
+						 block: "Sum"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_3[1]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "Sum1"
+
+
+						p_FuzzyNeuro_B_real_T_0[728]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "(x-a)/(b-a)"
+						 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/zuniedrig/If Action\nSubsystem1/Product ab\n(trimf)/Out1"
+						 flags:   LABEL|READONLY
+						}
+						p_FuzzyNeuro_B_real_T_3[1]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "b-a"
+						 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/zuniedrig/If Action\nSubsystem1/Sum1/Out1"
+						 flags:   LABEL|READONLY
+						}
+						p_FuzzyNeuro_B_real_T_3[0]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "x-a"
+						 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/zuniedrig/If Action\nSubsystem1/Sum/Out1"
+						 flags:   LABEL|READONLY
+						}
+
+					endgroup -- subsystem-group "If Action\nSubsystem1"
+  
+  
+					group "If Action\nSubsystem2" -- subsystem-group
+					{
+					 flags: COLLAPSED
+					 desc:  ""
+					}
+
+						p_FuzzyNeuro_B_real_T_0[728]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+						group "Action Port" -- block-group
+						{
+						 block: "ActionPort"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+
+
+
+						endgroup -- block-group "Action Port"
+
+						group "0" -- block-group
+						{
+						 block: "Constant"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_0[728]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+							p_FuzzyNeuro_P_real_T_0[28]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Value"
+							 flags:   PARAM
+							}
+
+
+						endgroup -- block-group "0"
+
+
+
+					endgroup -- subsystem-group "If Action\nSubsystem2"
+  
+  
+					group "If Action\nSubsystem3" -- subsystem-group
+					{
+					 flags: COLLAPSED
+					 desc:  ""
+					}
+
+						p_FuzzyNeuro_B_real_T_0[728]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "Out1"
+						 desc:    ""
+						 flags:   OUTPUT|READONLY
+						}
+
+						group "x" -- block-group
+						{
+						 block: "Inport"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_0[519]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "x"
+
+						group "Action Port" -- block-group
+						{
+						 block: "ActionPort"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+
+
+
+						endgroup -- block-group "Action Port"
+
+						group "c" -- block-group
+						{
+						 block: "Constant"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							-- Skipping output Out1
+							p_FuzzyNeuro_P_real_T_1[0]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Value"
+							 flags:   PARAM
+							}
+
+
+						endgroup -- block-group "c"
+
+						group "d" -- block-group
+						{
+						 block: "Constant"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							-- Skipping output Out1
+							p_FuzzyNeuro_P_real_T_1[1]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Value"
+							 flags:   PARAM
+							}
+
+
+						endgroup -- block-group "d"
+
+						group "Product cd\n(trimf)" -- block-group
+						{
+						 block: "Product"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_0[728]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "Product cd\n(trimf)"
+
+						group "Sum2" -- block-group
+						{
+						 block: "Sum"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_2[0]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "Sum2"
+
+						group "Sum3" -- block-group
+						{
+						 block: "Sum"
+						 desc:  ""
+						 flags: BLOCK|COLLAPSED
+						}
+							p_FuzzyNeuro_B_real_T_2[1]
+							{
+							 type:    flt(64,IEEE)*
+							 alias:   "Out1"
+							 desc:    ""
+							 flags:   OUTPUT|READONLY
+							}
+
+
+						endgroup -- block-group "Sum3"
+
+
+						p_FuzzyNeuro_B_real_T_0[728]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "(d-x)/(d-c)"
+						 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/zuniedrig/If Action\nSubsystem3/Product cd\n(trimf)/Out1"
+						 flags:   LABEL|READONLY
+						}
+						p_FuzzyNeuro_B_real_T_2[0]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "d-c"
+						 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/zuniedrig/If Action\nSubsystem3/Sum2/Out1"
+						 flags:   LABEL|READONLY
+						}
+						p_FuzzyNeuro_B_real_T_2[1]
+						{
+						 type:    flt(64,IEEE)*
+						 alias:   "d-x"
+						 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/zuniedrig/If Action\nSubsystem3/Sum3/Out1"
+						 flags:   LABEL|READONLY
+						}
+
+					endgroup -- subsystem-group "If Action\nSubsystem3"
+
+
+				endgroup -- subsystem-group "zuniedrig"
+
+
+			endgroup -- subsystem-group "Hoehe2"
+  
+  
+			group "Pumpe1" -- subsystem-group
+			{
+			 flags: COLLAPSED
+			 desc:  ""
+			}
+
+				-- Skipping output Out1
+				-- Skipping output Out2
+				p_FuzzyNeuro_B_real_T_0[937]
+				{
+				 type:    FuzzyNeuro_ArrayDT0_101*
+				 alias:   "Out3"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+				-- Skipping output Out4
+
+				group "bissle" -- block-group
+				{
+				 block: "Constant"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					-- Skipping output Out1
+					p_FuzzyNeuro_P_real_T_0[210]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_101*
+					 alias:   "Value"
+					 flags:   PARAM
+					}
+
+
+				endgroup -- block-group "bissle"
+
+				group "ganzviel" -- block-group
+				{
+				 block: "Constant"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					-- Skipping output Out1
+					p_FuzzyNeuro_P_real_T_0[312]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_101*
+					 alias:   "Value"
+					 flags:   PARAM
+					}
+
+
+				endgroup -- block-group "ganzviel"
+
+				group "nix" -- block-group
+				{
+				 block: "Constant"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					-- Skipping output Out1
+					p_FuzzyNeuro_P_real_T_0[108]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_101*
+					 alias:   "Value"
+					 flags:   PARAM
+					}
+
+
+				endgroup -- block-group "nix"
+
+				group "viel" -- block-group
+				{
+				 block: "Constant"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[937]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_101*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+					p_FuzzyNeuro_P_real_T_0[923]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_101*
+					 alias:   "Value"
+					 flags:   PARAM
+					}
+
+
+				endgroup -- block-group "viel"
+
+
+
+			endgroup -- subsystem-group "Pumpe1"
+  
+  
+			group "Pumpe2" -- subsystem-group
+			{
+			 flags: COLLAPSED
+			 desc:  ""
+			}
+
+				-- Skipping output Out1
+				-- Skipping output Out2
+				-- Skipping output Out3
+				p_FuzzyNeuro_B_real_T_0[1038]
+				{
+				 type:    FuzzyNeuro_ArrayDT0_101*
+				 alias:   "Out4"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+				group "ganzviel" -- block-group
+				{
+				 block: "Constant"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					-- Skipping output Out1
+					p_FuzzyNeuro_P_real_T_0[618]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_101*
+					 alias:   "Value"
+					 flags:   PARAM
+					}
+
+
+				endgroup -- block-group "ganzviel"
+
+				group "nix" -- block-group
+				{
+				 block: "Constant"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					-- Skipping output Out1
+					p_FuzzyNeuro_P_real_T_0[414]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_101*
+					 alias:   "Value"
+					 flags:   PARAM
+					}
+
+
+				endgroup -- block-group "nix"
+
+				group "stationaer" -- block-group
+				{
+				 block: "Constant"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					-- Skipping output Out1
+					p_FuzzyNeuro_P_real_T_0[516]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_101*
+					 alias:   "Value"
+					 flags:   PARAM
+					}
+
+
+				endgroup -- block-group "stationaer"
+
+				group "viel" -- block-group
+				{
+				 block: "Constant"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[1038]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_101*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+					p_FuzzyNeuro_P_real_T_0[1024]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_101*
+					 alias:   "Value"
+					 flags:   PARAM
+					}
+
+
+				endgroup -- block-group "viel"
+
+
+
+			endgroup -- subsystem-group "Pumpe2"
+  
+  
+			group "Rule1" -- subsystem-group
+			{
+			 flags: COLLAPSED
+			 desc:  ""
+			}
+
+				p_FuzzyNeuro_B_real_T_0[109]
+				{
+				 type:    FuzzyNeuro_ArrayDT0_101*
+				 alias:   "Output"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+				p_FuzzyNeuro_B_real_T_0[108]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Firing Strength"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+				group "Antecedents" -- block-group
+				{
+				 block: "Inport"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[106]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "Antecedents"
+
+				group "Consequents" -- block-group
+				{
+				 block: "Inport"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					-- Skipping output Out1
+
+
+				endgroup -- block-group "Consequents"
+
+				group "Weight" -- block-group
+				{
+				 block: "Constant"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					-- Skipping output Out1
+					p_FuzzyNeuro_P_real_T_0[107]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Value"
+					 flags:   PARAM
+					}
+
+
+				endgroup -- block-group "Weight"
+
+				group "andorMethod" -- block-group
+				{
+				 block: "MinMax"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[107]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "andorMethod"
+
+				group "impMethod" -- block-group
+				{
+				 block: "MinMax"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[109]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_101*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "impMethod"
+
+				group "Weighting" -- block-group
+				{
+				 block: "Product"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[108]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "Weighting"
+
+
+
+			endgroup -- subsystem-group "Rule1"
+  
+  
+			group "Rule2" -- subsystem-group
+			{
+			 flags: COLLAPSED
+			 desc:  ""
+			}
+
+				p_FuzzyNeuro_B_real_T_0[213]
+				{
+				 type:    FuzzyNeuro_ArrayDT0_101*
+				 alias:   "Output"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+				p_FuzzyNeuro_B_real_T_0[212]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Firing Strength"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+				group "Antecedents" -- block-group
+				{
+				 block: "Inport"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[210]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "Antecedents"
+
+				group "Consequents" -- block-group
+				{
+				 block: "Inport"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					-- Skipping output Out1
+
+
+				endgroup -- block-group "Consequents"
+
+				group "Weight" -- block-group
+				{
+				 block: "Constant"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					-- Skipping output Out1
+					p_FuzzyNeuro_P_real_T_0[209]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Value"
+					 flags:   PARAM
+					}
+
+
+				endgroup -- block-group "Weight"
+
+				group "andorMethod" -- block-group
+				{
+				 block: "MinMax"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[211]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "andorMethod"
+
+				group "impMethod" -- block-group
+				{
+				 block: "MinMax"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[213]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_101*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "impMethod"
+
+				group "Weighting" -- block-group
+				{
+				 block: "Product"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[212]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "Weighting"
+
+
+
+			endgroup -- subsystem-group "Rule2"
+  
+  
+			group "Rule3" -- subsystem-group
+			{
+			 flags: COLLAPSED
+			 desc:  ""
+			}
+
+				p_FuzzyNeuro_B_real_T_0[317]
+				{
+				 type:    FuzzyNeuro_ArrayDT0_101*
+				 alias:   "Output"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+				p_FuzzyNeuro_B_real_T_0[316]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Firing Strength"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+				group "Antecedents" -- block-group
+				{
+				 block: "Inport"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[314]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "Antecedents"
+
+				group "Consequents" -- block-group
+				{
+				 block: "Inport"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					-- Skipping output Out1
+
+
+				endgroup -- block-group "Consequents"
+
+				group "Weight" -- block-group
+				{
+				 block: "Constant"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					-- Skipping output Out1
+					p_FuzzyNeuro_P_real_T_0[311]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Value"
+					 flags:   PARAM
+					}
+
+
+				endgroup -- block-group "Weight"
+
+				group "andorMethod" -- block-group
+				{
+				 block: "MinMax"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[315]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "andorMethod"
+
+				group "impMethod" -- block-group
+				{
+				 block: "MinMax"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[317]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_101*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "impMethod"
+
+				group "Weighting" -- block-group
+				{
+				 block: "Product"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[316]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "Weighting"
+
+
+
+			endgroup -- subsystem-group "Rule3"
+  
+  
+			group "Rule4" -- subsystem-group
+			{
+			 flags: COLLAPSED
+			 desc:  ""
+			}
+
+				p_FuzzyNeuro_B_real_T_0[523]
+				{
+				 type:    FuzzyNeuro_ArrayDT0_101*
+				 alias:   "Output"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+				p_FuzzyNeuro_B_real_T_0[522]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Firing Strength"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+				group "Antecedents" -- block-group
+				{
+				 block: "Inport"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[520]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "Antecedents"
+
+				group "Consequents" -- block-group
+				{
+				 block: "Inport"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					-- Skipping output Out1
+
+
+				endgroup -- block-group "Consequents"
+
+				group "Weight" -- block-group
+				{
+				 block: "Constant"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					-- Skipping output Out1
+					p_FuzzyNeuro_P_real_T_0[413]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Value"
+					 flags:   PARAM
+					}
+
+
+				endgroup -- block-group "Weight"
+
+				group "andorMethod" -- block-group
+				{
+				 block: "MinMax"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[521]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "andorMethod"
+
+				group "impMethod" -- block-group
+				{
+				 block: "MinMax"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[523]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_101*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "impMethod"
+
+				group "Weighting" -- block-group
+				{
+				 block: "Product"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[522]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "Weighting"
+
+
+
+			endgroup -- subsystem-group "Rule4"
+  
+  
+			group "Rule5" -- subsystem-group
+			{
+			 flags: COLLAPSED
+			 desc:  ""
+			}
+
+				p_FuzzyNeuro_B_real_T_0[627]
+				{
+				 type:    FuzzyNeuro_ArrayDT0_101*
+				 alias:   "Output"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+				p_FuzzyNeuro_B_real_T_0[626]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Firing Strength"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+				group "Antecedents" -- block-group
+				{
+				 block: "Inport"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[624]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "Antecedents"
+
+				group "Consequents" -- block-group
+				{
+				 block: "Inport"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					-- Skipping output Out1
+
+
+				endgroup -- block-group "Consequents"
+
+				group "Weight" -- block-group
+				{
+				 block: "Constant"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					-- Skipping output Out1
+					p_FuzzyNeuro_P_real_T_0[515]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Value"
+					 flags:   PARAM
+					}
+
+
+				endgroup -- block-group "Weight"
+
+				group "andorMethod" -- block-group
+				{
+				 block: "MinMax"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[625]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "andorMethod"
+
+				group "impMethod" -- block-group
+				{
+				 block: "MinMax"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[627]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_101*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "impMethod"
+
+				group "Weighting" -- block-group
+				{
+				 block: "Product"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[626]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "Weighting"
+
+
+
+			endgroup -- subsystem-group "Rule5"
+  
+  
+			group "Rule6" -- subsystem-group
+			{
+			 flags: COLLAPSED
+			 desc:  ""
+			}
+
+				p_FuzzyNeuro_B_real_T_0[731]
+				{
+				 type:    FuzzyNeuro_ArrayDT0_101*
+				 alias:   "Output"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+				p_FuzzyNeuro_B_real_T_0[730]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Firing Strength"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+				group "Antecedents" -- block-group
+				{
+				 block: "Inport"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[728]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "Antecedents"
+
+				group "Consequents" -- block-group
+				{
+				 block: "Inport"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					-- Skipping output Out1
+
+
+				endgroup -- block-group "Consequents"
+
+				group "Weight" -- block-group
+				{
+				 block: "Constant"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					-- Skipping output Out1
+					p_FuzzyNeuro_P_real_T_0[617]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Value"
+					 flags:   PARAM
+					}
+
+
+				endgroup -- block-group "Weight"
+
+				group "andorMethod" -- block-group
+				{
+				 block: "MinMax"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[729]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "andorMethod"
+
+				group "impMethod" -- block-group
+				{
+				 block: "MinMax"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[731]
+					{
+					 type:    FuzzyNeuro_ArrayDT0_101*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "impMethod"
+
+				group "Weighting" -- block-group
+				{
+				 block: "Product"
+				 desc:  ""
+				 flags: BLOCK|COLLAPSED
+				}
+					p_FuzzyNeuro_B_real_T_0[730]
+					{
+					 type:    flt(64,IEEE)*
+					 alias:   "Out1"
+					 desc:    ""
+					 flags:   OUTPUT|READONLY
+					}
+
+
+				endgroup -- block-group "Weighting"
+
+
+
+			endgroup -- subsystem-group "Rule6"
+
+
+		endgroup -- subsystem-group "FIS Wizard"
+
+
+	endgroup -- subsystem-group "Fuzzy Logic \nController"
+  
+  
+	group "Neural Network" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+
+
+
+	endgroup -- subsystem-group "Neural Network"
+  
+  
+	group "RTI Data" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+	endgroup -- subsystem-group "RTI Data"
+  
+  
+	group "T3Anlage" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+		p_FuzzyNeuro_B_real_T_0[1141]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "u1"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+		p_FuzzyNeuro_B_real_T_0[1142]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "u2"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+		p_FuzzyNeuro_B_real_T_0[1143]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "u3"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+		p_FuzzyNeuro_B_real_T_0[1144]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "uq1"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+		p_FuzzyNeuro_B_real_T_0[1145]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "uq2"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+		group "Pumpe1Vorgabe" -- block-group
+		{
+		 block: "Inport"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_FuzzyNeuro_B_real_T_0[1147]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Pumpe1Vorgabe"
+
+		group "Pumpe2Vorgabe" -- block-group
+		{
+		 block: "Inport"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_FuzzyNeuro_B_real_T_0[1149]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Pumpe2Vorgabe"
+
+		group "Ventil1" -- block-group
+		{
+		 block: "Inport"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "Ventil1"
+
+		group "Ventil13o" -- block-group
+		{
+		 block: "Inport"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "Ventil13o"
+
+		group "Ventil13u" -- block-group
+		{
+		 block: "Inport"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "Ventil13u"
+
+		group "Ventil3" -- block-group
+		{
+		 block: "Inport"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "Ventil3"
+
+		group "Ventil32o" -- block-group
+		{
+		 block: "Inport"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "Ventil32o"
+
+		group "Ventil32u" -- block-group
+		{
+		 block: "Inport"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "Ventil32u"
+
+		group "Ventil2" -- block-group
+		{
+		 block: "Inport"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "Ventil2"
+
+		group "Ventil0" -- block-group
+		{
+		 block: "Inport"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "Ventil0"
+
+		group "Data Type Conversion" -- block-group
+		{
+		 block: "DataTypeConversion"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_FuzzyNeuro_B_boolean_T_1[0]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 desc:    ""
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Data Type Conversion"
+
+		group "Data Type Conversion1" -- block-group
+		{
+		 block: "DataTypeConversion"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_FuzzyNeuro_B_boolean_T_1[1]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 desc:    ""
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Data Type Conversion1"
+
+		group "Data Type Conversion2" -- block-group
+		{
+		 block: "DataTypeConversion"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_FuzzyNeuro_B_boolean_T_1[2]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 desc:    ""
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Data Type Conversion2"
+
+		group "Data Type Conversion3" -- block-group
+		{
+		 block: "DataTypeConversion"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_FuzzyNeuro_B_boolean_T_1[3]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 desc:    ""
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Data Type Conversion3"
+
+		group "Data Type Conversion4" -- block-group
+		{
+		 block: "DataTypeConversion"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_FuzzyNeuro_B_boolean_T_1[4]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 desc:    ""
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Data Type Conversion4"
+
+		group "Data Type Conversion5" -- block-group
+		{
+		 block: "DataTypeConversion"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_FuzzyNeuro_B_boolean_T_1[5]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 desc:    ""
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Data Type Conversion5"
+
+		group "Data Type Conversion6" -- block-group
+		{
+		 block: "DataTypeConversion"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_FuzzyNeuro_B_boolean_T_1[6]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 desc:    ""
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Data Type Conversion6"
+
+		group "Data Type Conversion7" -- block-group
+		{
+		 block: "DataTypeConversion"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_FuzzyNeuro_B_boolean_T_1[7]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 desc:    ""
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Data Type Conversion7"
+
+		group "Demux1" -- block-group
+		{
+		 block: "Demux"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_FuzzyNeuro_B_real_T_0[1141]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_FuzzyNeuro_B_real_T_0[1142]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out2"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_FuzzyNeuro_B_real_T_0[1143]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out3"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Demux1"
+
+  
+  
+		group "DS1104ADC_C5" -- subsystem-group
+		{
+		 flags: COLLAPSED
+		 desc:  ""
+		}
+
+			p_FuzzyNeuro_B_real_T_0[1144]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "ADC"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+		endgroup -- subsystem-group "DS1104ADC_C5"
+  
+  
+		group "DS1104ADC_C6" -- subsystem-group
+		{
+		 flags: COLLAPSED
+		 desc:  ""
+		}
+
+			p_FuzzyNeuro_B_real_T_0[1145]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "ADC"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+		endgroup -- subsystem-group "DS1104ADC_C6"
+  
+  
+		group "DS1104BIT_OUT_C0" -- subsystem-group
+		{
+		 flags: COLLAPSED
+		 desc:  ""
+		}
+
+		endgroup -- subsystem-group "DS1104BIT_OUT_C0"
+  
+  
+		group "DS1104BIT_OUT_C1" -- subsystem-group
+		{
+		 flags: COLLAPSED
+		 desc:  ""
+		}
+
+		endgroup -- subsystem-group "DS1104BIT_OUT_C1"
+  
+  
+		group "DS1104BIT_OUT_C2" -- subsystem-group
+		{
+		 flags: COLLAPSED
+		 desc:  ""
+		}
+
+		endgroup -- subsystem-group "DS1104BIT_OUT_C2"
+  
+  
+		group "DS1104BIT_OUT_C3" -- subsystem-group
+		{
+		 flags: COLLAPSED
+		 desc:  ""
+		}
+
+		endgroup -- subsystem-group "DS1104BIT_OUT_C3"
+  
+  
+		group "DS1104BIT_OUT_C4" -- subsystem-group
+		{
+		 flags: COLLAPSED
+		 desc:  ""
+		}
+
+		endgroup -- subsystem-group "DS1104BIT_OUT_C4"
+  
+  
+		group "DS1104BIT_OUT_C5" -- subsystem-group
+		{
+		 flags: COLLAPSED
+		 desc:  ""
+		}
+
+		endgroup -- subsystem-group "DS1104BIT_OUT_C5"
+  
+  
+		group "DS1104BIT_OUT_C6" -- subsystem-group
+		{
+		 flags: COLLAPSED
+		 desc:  ""
+		}
+
+		endgroup -- subsystem-group "DS1104BIT_OUT_C6"
+  
+  
+		group "DS1104BIT_OUT_C7" -- subsystem-group
+		{
+		 flags: COLLAPSED
+		 desc:  ""
+		}
+
+		endgroup -- subsystem-group "DS1104BIT_OUT_C7"
+  
+  
+		group "DS1104DAC_C1" -- subsystem-group
+		{
+		 flags: COLLAPSED
+		 desc:  ""
+		}
+
+		endgroup -- subsystem-group "DS1104DAC_C1"
+  
+  
+		group "DS1104DAC_C2" -- subsystem-group
+		{
+		 flags: COLLAPSED
+		 desc:  ""
+		}
+
+		endgroup -- subsystem-group "DS1104DAC_C2"
+  
+  
+		group "DS1104MUX_ADC" -- subsystem-group
+		{
+		 flags: COLLAPSED
+		 desc:  ""
+		}
+
+			p_FuzzyNeuro_B_real_T_0[1141]
+			{
+			 type:    FuzzyNeuro_ArrayDT0_3*
+			 alias:   "ADC"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+		endgroup -- subsystem-group "DS1104MUX_ADC"
+
+		p_FuzzyNeuro_B_real_T_0[1141]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "u1"
+		 origin:  "FuzzyNeuro/T3Anlage/Demux1/Out1"
+		 flags:   LABEL|READONLY
+		}
+		p_FuzzyNeuro_B_real_T_0[1142]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "u2"
+		 origin:  "FuzzyNeuro/T3Anlage/Demux1/Out2"
+		 flags:   LABEL|READONLY
+		}
+		p_FuzzyNeuro_B_real_T_0[1143]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "u3"
+		 origin:  "FuzzyNeuro/T3Anlage/Demux1/Out3"
+		 flags:   LABEL|READONLY
+		}
+		p_FuzzyNeuro_B_real_T_0[1144]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "uq1"
+		 origin:  "FuzzyNeuro/T3Anlage/DS1104ADC_C5/ADC"
+		 flags:   LABEL|READONLY
+		}
+		p_FuzzyNeuro_B_real_T_0[1145]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "uq2"
+		 origin:  "FuzzyNeuro/T3Anlage/DS1104ADC_C6/ADC"
+		 flags:   LABEL|READONLY
+		}
+
+	endgroup -- subsystem-group "T3Anlage"
+  
+  
+	group "Umrechnung2" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+		p_FuzzyNeuro_B_real_T_0[1147]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+		p_FuzzyNeuro_B_real_T_0[1149]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out2"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+		group "In1" -- block-group
+		{
+		 block: "Inport"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_FuzzyNeuro_B_real_T_0[1139]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "In1"
+
+		group "In2" -- block-group
+		{
+		 block: "Inport"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_FuzzyNeuro_B_real_T_0[1140]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "In2"
+
+		group "q1->uv1" -- block-group
+		{
+		 block: "Fcn"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_FuzzyNeuro_B_real_T_0[1146]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "q1->uv1"
+
+		group "q2->uv2" -- block-group
+		{
+		 block: "Fcn"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_FuzzyNeuro_B_real_T_0[1148]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "q2->uv2"
+
+		group "Saturation" -- block-group
+		{
+		 block: "Saturate"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_FuzzyNeuro_B_real_T_0[1147]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_FuzzyNeuro_P_real_T_0[1128]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "UpperLimit"
+			 flags:   PARAM
+			}
+			p_FuzzyNeuro_P_real_T_0[1129]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "LowerLimit"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Saturation"
+
+		group "Saturation1" -- block-group
+		{
+		 block: "Saturate"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_FuzzyNeuro_B_real_T_0[1149]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_FuzzyNeuro_P_real_T_0[1130]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "UpperLimit"
+			 flags:   PARAM
+			}
+			p_FuzzyNeuro_P_real_T_0[1131]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "LowerLimit"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Saturation1"
+
+
+		p_FuzzyNeuro_B_real_T_0[1139]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "q1Vorgabe"
+		 origin:  "FuzzyNeuro/Umrechnung2/In1/Out1"
+		 flags:   LABEL|READONLY
+		}
+		p_FuzzyNeuro_B_real_T_0[1140]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "q2Vorgabe"
+		 origin:  "FuzzyNeuro/Umrechnung2/In2/Out1"
+		 flags:   LABEL|READONLY
+		}
+		p_FuzzyNeuro_B_real_T_0[1146]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "uq1Vorgabe"
+		 origin:  "FuzzyNeuro/Umrechnung2/q1->uv1/Out1"
+		 flags:   LABEL|READONLY
+		}
+		p_FuzzyNeuro_B_real_T_0[1148]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "uq2Vorgabe"
+		 origin:  "FuzzyNeuro/Umrechnung2/q2->uv2/Out1"
+		 flags:   LABEL|READONLY
+		}
+
+	endgroup -- subsystem-group "Umrechnung2"
+  
+  
+	group "Umrechnunguh" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+		p_FuzzyNeuro_B_real_T_0[2]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "h1"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+		p_FuzzyNeuro_B_real_T_0[6]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "h2"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+		p_FuzzyNeuro_B_real_T_0[1152]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "h3"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+		group "u1" -- block-group
+		{
+		 block: "Inport"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_FuzzyNeuro_B_real_T_0[1141]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "u1"
+
+		group "u2" -- block-group
+		{
+		 block: "Inport"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_FuzzyNeuro_B_real_T_0[1142]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "u2"
+
+		group "u3" -- block-group
+		{
+		 block: "Inport"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_FuzzyNeuro_B_real_T_0[1143]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "u3"
+
+		group "Faktorh1" -- block-group
+		{
+		 block: "Constant"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			-- Skipping output Out1
+			p_FuzzyNeuro_P_real_T_0[52]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Value"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Faktorh1"
+
+		group "Faktorh2" -- block-group
+		{
+		 block: "Constant"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			-- Skipping output Out1
+			p_FuzzyNeuro_P_real_T_0[57]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Value"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Faktorh2"
+
+		group "Faktorh3" -- block-group
+		{
+		 block: "Constant"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			-- Skipping output Out1
+			p_FuzzyNeuro_P_real_T_0[1140]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Value"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Faktorh3"
+
+		group "Offseth1" -- block-group
+		{
+		 block: "Constant"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			-- Skipping output Out1
+			p_FuzzyNeuro_P_real_T_0[51]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Value"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Offseth1"
+
+		group "Offseth2" -- block-group
+		{
+		 block: "Constant"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			-- Skipping output Out1
+			p_FuzzyNeuro_P_real_T_0[56]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Value"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Offseth2"
+
+		group "Offseth3" -- block-group
+		{
+		 block: "Constant"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			-- Skipping output Out1
+			p_FuzzyNeuro_P_real_T_0[1141]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Value"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Offseth3"
+
+		group "Product" -- block-group
+		{
+		 block: "Product"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_FuzzyNeuro_B_real_T_0[1]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Product"
+
+		group "Product1" -- block-group
+		{
+		 block: "Product"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_FuzzyNeuro_B_real_T_0[5]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Product1"
+
+		group "Product2" -- block-group
+		{
+		 block: "Product"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_FuzzyNeuro_B_real_T_0[1151]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Product2"
+
+		group "Sum" -- block-group
+		{
+		 block: "Sum"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_FuzzyNeuro_B_real_T_0[2]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Sum"
+
+		group "Sum1" -- block-group
+		{
+		 block: "Sum"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_FuzzyNeuro_B_real_T_0[6]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Sum1"
+
+		group "Sum2" -- block-group
+		{
+		 block: "Sum"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_FuzzyNeuro_B_real_T_0[1152]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Sum2"
+
+		group "TP 5Hz" -- block-group
+		{
+		 block: "TransferFcn"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_FuzzyNeuro_B_real_T_0[0]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_FuzzyNeuro_P_real_T_0[53]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "A"
+			 flags:   PARAM
+			}
+			p_FuzzyNeuro_P_real_T_0[54]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "C"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "TP 5Hz"
+
+		group "TP 5Hz1" -- block-group
+		{
+		 block: "TransferFcn"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_FuzzyNeuro_B_real_T_0[4]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_FuzzyNeuro_P_real_T_0[58]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "A"
+			 flags:   PARAM
+			}
+			p_FuzzyNeuro_P_real_T_0[59]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "C"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "TP 5Hz1"
+
+		group "TP 5Hz2" -- block-group
+		{
+		 block: "TransferFcn"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_FuzzyNeuro_B_real_T_0[1150]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_FuzzyNeuro_P_real_T_0[1142]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "A"
+			 flags:   PARAM
+			}
+			p_FuzzyNeuro_P_real_T_0[1143]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "C"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "TP 5Hz2"
+
+
+		p_FuzzyNeuro_B_real_T_0[0]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "i1{Occurence1}"
+		 origin:  "FuzzyNeuro/Umrechnunguh/TP 5Hz/Out1"
+		 flags:   LABEL|READONLY
+		}
+		p_FuzzyNeuro_B_real_T_0[4]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "i1{Occurence2}"
+		 origin:  "FuzzyNeuro/Umrechnunguh/TP 5Hz1/Out1"
+		 flags:   LABEL|READONLY
+		}
+		p_FuzzyNeuro_B_real_T_0[1150]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "i1{Occurence3}"
+		 origin:  "FuzzyNeuro/Umrechnunguh/TP 5Hz2/Out1"
+		 flags:   LABEL|READONLY
+		}
+
+	endgroup -- subsystem-group "Umrechnunguh"
+
+	p_FuzzyNeuro_B_real_T_0[3]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Diff1"
+	 origin:  "FuzzyNeuro/Sum1/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[7]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Diff2"
+	 origin:  "FuzzyNeuro/Sum2/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[2]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "h1"
+	 origin:  "FuzzyNeuro/Umrechnunguh/h1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[6]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "h2"
+	 origin:  "FuzzyNeuro/Umrechnunguh/h2"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1152]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "h3"
+	 origin:  "FuzzyNeuro/Umrechnunguh/h3"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1153]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "q1mess"
+	 origin:  "FuzzyNeuro/um1->q1mess/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1154]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "q2mess"
+	 origin:  "FuzzyNeuro/um2->q2mess/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1141]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "u1"
+	 origin:  "FuzzyNeuro/T3Anlage/u1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1142]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "u2"
+	 origin:  "FuzzyNeuro/T3Anlage/u2"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1143]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "u3"
+	 origin:  "FuzzyNeuro/T3Anlage/u3"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1144]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "uq1"
+	 origin:  "FuzzyNeuro/T3Anlage/uq1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1145]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "uq2"
+	 origin:  "FuzzyNeuro/T3Anlage/uq2"
+	 flags:   LABEL|READONLY
+	}
+
+
+
+endgroup -- "Model Root"
+-- ******** Tunable Parameters ************************************************
+
+-- InlineParameters is off: no separate group for Tunable Parameters
+
+
+-- ******** State Machine Data ************************************************
+
+-- No Stateflow chart within the model.
+
+
+-- ******** Data Store Memories ***********************************************
+
+-- No Data Store Memories within the model.
+
+
+-- ******** Labels ************************************************************
+
+group "Labels"
+{
+ flags: COLLAPSED
+}
+	p_FuzzyNeuro_B_real_T_0[3]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Diff1"
+	 origin:  "FuzzyNeuro/Sum1/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[7]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Diff2"
+	 origin:  "FuzzyNeuro/Sum2/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[210]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "(c-x)/(c-b){Occurence1}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/richtig/If Action\nSubsystem2/Product cd\n(trimf)/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[624]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "(c-x)/(c-b){Occurence2}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/richtig/If Action\nSubsystem2/Product cd\n(trimf)/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[106]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "(d-x)/(d-c){Occurence1}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/zuhoch/If Action\nSubsystem3/Product cd\n(trimf)/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[314]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "(d-x)/(d-c){Occurence2}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/zuniedrig/If Action\nSubsystem3/Product cd\n(trimf)/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[520]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "(d-x)/(d-c){Occurence3}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/zuhoch/If Action\nSubsystem3/Product cd\n(trimf)/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[728]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "(d-x)/(d-c){Occurence4}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/zuniedrig/If Action\nSubsystem3/Product cd\n(trimf)/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[210]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "(x-a)/(b-a){Occurence1}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/richtig/If Action\nSubsystem3/Product ab\n(trimf)/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[106]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "(x-a)/(b-a){Occurence2}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/zuhoch/If Action\nSubsystem1/Product ab\n(trimf)/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[314]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "(x-a)/(b-a){Occurence3}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/zuniedrig/If Action\nSubsystem1/Product ab\n(trimf)/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[624]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "(x-a)/(b-a){Occurence4}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/richtig/If Action\nSubsystem3/Product ab\n(trimf)/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[520]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "(x-a)/(b-a){Occurence5}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/zuhoch/If Action\nSubsystem1/Product ab\n(trimf)/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[728]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "(x-a)/(b-a){Occurence6}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/zuniedrig/If Action\nSubsystem1/Product ab\n(trimf)/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_13[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "b-a{Occurence1}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/richtig/If Action\nSubsystem3/Sum1/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_11[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "b-a{Occurence2}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/zuhoch/If Action\nSubsystem1/Sum1/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_9[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "b-a{Occurence3}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/zuniedrig/If Action\nSubsystem1/Sum1/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_7[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "b-a{Occurence4}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/richtig/If Action\nSubsystem3/Sum1/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_5[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "b-a{Occurence5}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/zuhoch/If Action\nSubsystem1/Sum1/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_3[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "b-a{Occurence6}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/zuniedrig/If Action\nSubsystem1/Sum1/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_12[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "c-b{Occurence1}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/richtig/If Action\nSubsystem2/Sum2/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_6[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "c-b{Occurence2}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/richtig/If Action\nSubsystem2/Sum2/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_12[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "c-x{Occurence1}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/richtig/If Action\nSubsystem2/Sum3/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_6[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "c-x{Occurence2}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/richtig/If Action\nSubsystem2/Sum3/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_10[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "d-c{Occurence1}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/zuhoch/If Action\nSubsystem3/Sum2/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_8[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "d-c{Occurence2}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/zuniedrig/If Action\nSubsystem3/Sum2/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_4[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "d-c{Occurence3}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/zuhoch/If Action\nSubsystem3/Sum2/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_2[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "d-c{Occurence4}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/zuniedrig/If Action\nSubsystem3/Sum2/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_10[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "d-x{Occurence1}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/zuhoch/If Action\nSubsystem3/Sum3/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_8[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "d-x{Occurence2}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/zuniedrig/If Action\nSubsystem3/Sum3/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_4[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "d-x{Occurence3}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/zuhoch/If Action\nSubsystem3/Sum3/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_2[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "d-x{Occurence4}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/zuniedrig/If Action\nSubsystem3/Sum3/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[2]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "h1"
+	 origin:  "FuzzyNeuro/Umrechnunguh/h1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[6]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "h2"
+	 origin:  "FuzzyNeuro/Umrechnunguh/h2"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1152]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "h3"
+	 origin:  "FuzzyNeuro/Umrechnunguh/h3"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "i1{Occurence1}"
+	 origin:  "FuzzyNeuro/Umrechnunguh/TP 5Hz/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[4]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "i1{Occurence2}"
+	 origin:  "FuzzyNeuro/Umrechnunguh/TP 5Hz1/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1150]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "i1{Occurence3}"
+	 origin:  "FuzzyNeuro/Umrechnunguh/TP 5Hz2/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1139]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "q1Vorgabe"
+	 origin:  "FuzzyNeuro/Umrechnung2/In1/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1153]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "q1mess"
+	 origin:  "FuzzyNeuro/um1->q1mess/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1140]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "q2Vorgabe"
+	 origin:  "FuzzyNeuro/Umrechnung2/In2/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1154]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "q2mess"
+	 origin:  "FuzzyNeuro/um2->q2mess/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1141]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "u1{Occurence1}"
+	 origin:  "FuzzyNeuro/T3Anlage/u1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1141]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "u1{Occurence2}"
+	 origin:  "FuzzyNeuro/T3Anlage/Demux1/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1142]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "u2{Occurence1}"
+	 origin:  "FuzzyNeuro/T3Anlage/u2"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1142]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "u2{Occurence2}"
+	 origin:  "FuzzyNeuro/T3Anlage/Demux1/Out2"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1143]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "u3{Occurence1}"
+	 origin:  "FuzzyNeuro/T3Anlage/u3"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1143]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "u3{Occurence2}"
+	 origin:  "FuzzyNeuro/T3Anlage/Demux1/Out3"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1144]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "uq1{Occurence1}"
+	 origin:  "FuzzyNeuro/T3Anlage/uq1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1144]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "uq1{Occurence2}"
+	 origin:  "FuzzyNeuro/T3Anlage/DS1104ADC_C5/ADC"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1146]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "uq1Vorgabe"
+	 origin:  "FuzzyNeuro/Umrechnung2/q1->uv1/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1145]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "uq2{Occurence1}"
+	 origin:  "FuzzyNeuro/T3Anlage/uq2"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1145]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "uq2{Occurence2}"
+	 origin:  "FuzzyNeuro/T3Anlage/DS1104ADC_C6/ADC"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1148]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "uq2Vorgabe"
+	 origin:  "FuzzyNeuro/Umrechnung2/q2->uv2/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_13[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "x-a{Occurence1}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/richtig/If Action\nSubsystem3/Sum/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_11[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "x-a{Occurence2}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/zuhoch/If Action\nSubsystem1/Sum/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_9[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "x-a{Occurence3}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/zuniedrig/If Action\nSubsystem1/Sum/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_7[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "x-a{Occurence4}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/richtig/If Action\nSubsystem3/Sum/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_5[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "x-a{Occurence5}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/zuhoch/If Action\nSubsystem1/Sum/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_3[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "x-a{Occurence6}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/zuniedrig/If Action\nSubsystem1/Sum/Out1"
+	 flags:   LABEL|READONLY
+	}
+
+endgroup
+
+-- ******** RTT Dynamic Variables *********************************************
+
+-- Generation of RTT Dynamic Variables turned off with EnableRealTimeTesting option.
+
+-- ******** User variables from model_usr.trc *********************************
+
+-- RTI_USR_TRC_BEGIN
+
+-- No user file FuzzyNeuro_usr.trc found.
+
+-- RTI_USR_TRC_END
+
+-- ******** Task Information variables ****************************************
+
+group "Task Info"
+{
+ flags: COLLAPSED
+}
+  group "Timer Task 1"
+  {
+   flags: COLLAPSED
+  }
+
+  pRti_TIMERA_STime
+  {
+   type:  flt(64,IEEE)*
+   alias: "sampleTime"
+   flags: SYSTEM|READONLY
+  }
+  pRti_TIMERA_TTime
+  {
+   type:  flt(64,IEEE)*
+   alias: "turnaroundTime"
+   flags: SYSTEM|READONLY
+  }
+  pRti_TIMERA_TState
+  {
+   type:  int(32)*
+   alias: "state"
+   flags: SYSTEM|READONLY
+  }
+  pRti_TIMERA_OType
+  {
+   type:  int(32)*
+   alias: "overrunCheckType"
+   flags: SYSTEM|READONLY
+  }
+  pRti_TIMERA_OMax
+  {
+   type:  int(32)*
+   alias: "overrunQueueMax"
+   flags: SYSTEM|READONLY
+  }
+  pRti_TIMERA_ORpt
+  {
+   type:  int(32)*
+   alias: "overrunQueueCount"
+   flags: SYSTEM|READONLY
+  }
+  pRti_TIMERA_OCnt
+  {
+   type:  int(32)*
+   alias: "overrunCount"
+   flags: SYSTEM|READONLY
+  }
+  pRti_TIMERA_TCnt
+  {
+   type:  flt(64,IEEE)*
+   alias: "taskCallCount"
+   flags: SYSTEM|READONLY
+  }
+  pRti_TIMERA_Prio
+  {
+   type:  int(32)*
+   alias: "priority"
+   flags: SYSTEM|READONLY
+  }
+  endgroup
+
+endgroup
+
+-- ******** [EOF] *************************************************************
+
+
+

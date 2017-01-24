@@ -1,0 +1,9 @@
+function newtonv(x0,fkt,dfkt)
+
+
+x=x0;
+
+
+if abs(x)>0.001;
+x=x-(fkt/dfkt),
+end

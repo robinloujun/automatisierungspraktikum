@@ -1,0 +1,115 @@
+%implements s30_b0_tr35p_Start "C"
+
+%function Start(block, system) Output
+%assign tlcStartFcnOfS20B72 = OpaqueTLCBlockFcn("Start", 20, 72)
+%assign tlcStartFcnOfS20B73 = OpaqueTLCBlockFcn("Start", 20, 73)
+%assign tlcStartFcnOfS20B74 = OpaqueTLCBlockFcn("Start", 20, 74)
+%assign tlcStartFcnOfS20B75 = OpaqueTLCBlockFcn("Start", 20, 75)
+%assign tlcStartFcnOfS20B76 = OpaqueTLCBlockFcn("Start", 20, 76)
+%assign tlcStartFcnOfS20B78 = OpaqueTLCBlockFcn("Start", 20, 78)
+%assign tlcStartFcnOfS20B80 = OpaqueTLCBlockFcn("Start", 20, 80)
+%assign tlcStartFcnOfS20B82 = OpaqueTLCBlockFcn("Start", 20, 82)
+%assign tlcStartFcnOfS20B84 = OpaqueTLCBlockFcn("Start", 20, 84)
+%assign tlcStartFcnOfS20B86 = OpaqueTLCBlockFcn("Start", 20, 86)
+%assign tlcStartFcnOfS20B88 = OpaqueTLCBlockFcn("Start", 20, 88)
+%assign tlcStartFcnOfS20B90 = OpaqueTLCBlockFcn("Start", 20, 90)
+%assign tlcStartFcnOfS20B92 = OpaqueTLCBlockFcn("Start", 20, 92)
+/* Start for If: '<S25>/If' */
+%<SLibCG_SetDWV(0, 0, 20, 1, "", -1, "", 0, "-1")>\
+/* Start for IfAction SubSystem: '<S25>/If Action Subsystem' */
+/* VirtualOutportStart for Outport: '<S31>/Out1' */
+%<SLibCG_SetBOV(5, 0, 20, 1, "", -1, "", 0, "%<(SLibCGIR_PV(9, 0, 20, 1, "", -1, "", 0))>")>\
+/* End of Start for SubSystem: '<S25>/If Action Subsystem' */
+
+/* Start for IfAction SubSystem: '<S25>/If Action Subsystem2' */
+/* VirtualOutportStart for Outport: '<S33>/Out1' */
+%<SLibCG_SetBOV(5, 0, 20, 1, "", -1, "", 0, "%<(SLibCGIR_PV(11, 0, 20, 1, "", -1, "", 0))>")>\
+/* End of Start for SubSystem: '<S25>/If Action Subsystem2' */
+
+/* Start for If: '<S24>/If' */
+%<SLibCG_SetDWV(3, 0, 20, 1, "", -1, "", 0, "-1")>\
+/* Start for IfAction SubSystem: '<S24>/If Action Subsystem' */
+/* VirtualOutportStart for Outport: '<S27>/Out1' */
+%<SLibCG_SetBOV(9, 0, 20, 1, "", -1, "", 0, "%<(SLibCGIR_PV(5, 0, 20, 1, "", -1, "", 0))>")>\
+/* End of Start for SubSystem: '<S24>/If Action Subsystem' */
+
+/* Start for IfAction SubSystem: '<S24>/If Action Subsystem1' */
+/* VirtualOutportStart for Outport: '<S28>/Out1' */
+%<SLibCG_SetBOV(9, 0, 20, 1, "", -1, "", 0, "%<(SLibCGIR_PV(7, 0, 20, 1, "", -1, "", 0))>")>\
+/* End of Start for SubSystem: '<S24>/If Action Subsystem1' */
+
+/* Start for If: '<S26>/If' */
+%<SLibCG_SetDWV(6, 0, 20, 1, "", -1, "", 0, "-1")>\
+/* Start for IfAction SubSystem: '<S26>/If Action Subsystem' */
+/* VirtualOutportStart for Outport: '<S35>/Out1' */
+%<SLibCG_SetBOV(13, 0, 20, 1, "", -1, "", 0, "%<(SLibCGIR_PV(13, 0, 20, 1, "", -1, "", 0))>")>\
+/* End of Start for SubSystem: '<S26>/If Action Subsystem' */
+
+/* Start for IfAction SubSystem: '<S26>/If Action Subsystem2' */
+/* VirtualOutportStart for Outport: '<S37>/Out1' */
+%<SLibCG_SetBOV(13, 0, 20, 1, "", -1, "", 0, "%<(SLibCGIR_PV(15, 0, 20, 1, "", -1, "", 0))>")>\
+/* End of Start for SubSystem: '<S26>/If Action Subsystem2' */
+
+/* Start for If: '<S40>/If' */
+%<SLibCG_SetDWV(9, 0, 20, 1, "", -1, "", 0, "-1")>\
+/* Start for IfAction SubSystem: '<S40>/If Action Subsystem' */
+/* VirtualOutportStart for Outport: '<S46>/Out1' */
+%<SLibCG_SetBOV(23, 0, 20, 1, "", -1, "", 0, "%<(SLibCGIR_PV(21, 0, 20, 1, "", -1, "", 0))>")>\
+/* End of Start for SubSystem: '<S40>/If Action Subsystem' */
+
+/* Start for IfAction SubSystem: '<S40>/If Action Subsystem2' */
+/* VirtualOutportStart for Outport: '<S48>/Out1' */
+%<SLibCG_SetBOV(23, 0, 20, 1, "", -1, "", 0, "%<(SLibCGIR_PV(23, 0, 20, 1, "", -1, "", 0))>")>\
+/* End of Start for SubSystem: '<S40>/If Action Subsystem2' */
+
+/* Start for If: '<S39>/If' */
+%<SLibCG_SetDWV(12, 0, 20, 1, "", -1, "", 0, "-1")>\
+/* Start for IfAction SubSystem: '<S39>/If Action Subsystem' */
+/* VirtualOutportStart for Outport: '<S42>/Out1' */
+%<SLibCG_SetBOV(27, 0, 20, 1, "", -1, "", 0, "%<(SLibCGIR_PV(17, 0, 20, 1, "", -1, "", 0))>")>\
+/* End of Start for SubSystem: '<S39>/If Action Subsystem' */
+
+/* Start for IfAction SubSystem: '<S39>/If Action Subsystem1' */
+/* VirtualOutportStart for Outport: '<S43>/Out1' */
+%<SLibCG_SetBOV(27, 0, 20, 1, "", -1, "", 0, "%<(SLibCGIR_PV(19, 0, 20, 1, "", -1, "", 0))>")>\
+/* End of Start for SubSystem: '<S39>/If Action Subsystem1' */
+
+/* Start for If: '<S41>/If' */
+%<SLibCG_SetDWV(15, 0, 20, 1, "", -1, "", 0, "-1")>\
+/* Start for IfAction SubSystem: '<S41>/If Action Subsystem' */
+/* VirtualOutportStart for Outport: '<S50>/Out1' */
+%<SLibCG_SetBOV(31, 0, 20, 1, "", -1, "", 0, "%<(SLibCGIR_PV(25, 0, 20, 1, "", -1, "", 0))>")>\
+/* End of Start for SubSystem: '<S41>/If Action Subsystem' */
+
+/* Start for IfAction SubSystem: '<S41>/If Action Subsystem2' */
+/* VirtualOutportStart for Outport: '<S52>/Out1' */
+%<SLibCG_SetBOV(31, 0, 20, 1, "", -1, "", 0, "%<(SLibCGIR_PV(27, 0, 20, 1, "", -1, "", 0))>")>\
+/* End of Start for SubSystem: '<S41>/If Action Subsystem2' */
+
+/* Start for If: '<S8>/If' */
+%<SLibCG_SetDWV(18, 0, 20, 1, "", -1, "", 0, "-1")>\
+/* Start for IfAction SubSystem: '<S8>/Action: One' */
+/* VirtualOutportStart for Outport: '<S20>/Out1' */
+%<SLibCG_SetBOV(37, 0, 20, 1, "", -1, "", 0, "%<(SLibCGIR_PV(1, 0, 20, 1, "", -1, "", 0))>")>\
+/* End of Start for SubSystem: '<S8>/Action: One' */
+
+/* Start for If: '<S9>/If' */
+%<SLibCG_SetDWV(20, 0, 20, 1, "", -1, "", 0, "-1")>\
+/* Start for IfAction SubSystem: '<S9>/Action: One' */
+/* VirtualOutportStart for Outport: '<S22>/Out1' */
+%<SLibCG_SetBOV(39, 0, 20, 1, "", -1, "", 0, "%<(SLibCGIR_PV(3, 0, 20, 1, "", -1, "", 0))>")>\
+/* End of Start for SubSystem: '<S9>/Action: One' */
+%<tlcStartFcnOfS20B72>\
+%<tlcStartFcnOfS20B73>\
+%<tlcStartFcnOfS20B74>\
+%<tlcStartFcnOfS20B75>\
+%<tlcStartFcnOfS20B76>\
+%<tlcStartFcnOfS20B78>\
+%<tlcStartFcnOfS20B80>\
+%<tlcStartFcnOfS20B82>\
+%<tlcStartFcnOfS20B84>\
+%<tlcStartFcnOfS20B86>\
+%<tlcStartFcnOfS20B88>\
+%<tlcStartFcnOfS20B90>\
+%<tlcStartFcnOfS20B92>\
+%endfunction

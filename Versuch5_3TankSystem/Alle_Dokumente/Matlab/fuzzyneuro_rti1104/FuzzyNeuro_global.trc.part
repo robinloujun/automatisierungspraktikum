@@ -1,0 +1,448 @@
+-- ******** Tunable Parameters ************************************************
+
+-- InlineParameters is off: no separate group for Tunable Parameters
+
+
+-- ******** State Machine Data ************************************************
+
+-- No Stateflow chart within the model.
+
+
+-- ******** Data Store Memories ***********************************************
+
+-- No Data Store Memories within the model.
+
+
+-- ******** Labels ************************************************************
+
+group "Labels"
+{
+ flags: COLLAPSED
+}
+	p_FuzzyNeuro_B_real_T_0[3]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Diff1"
+	 origin:  "FuzzyNeuro/Sum1/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[7]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Diff2"
+	 origin:  "FuzzyNeuro/Sum2/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[210]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "(c-x)/(c-b){Occurence1}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/richtig/If Action\nSubsystem2/Product cd\n(trimf)/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[624]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "(c-x)/(c-b){Occurence2}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/richtig/If Action\nSubsystem2/Product cd\n(trimf)/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[106]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "(d-x)/(d-c){Occurence1}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/zuhoch/If Action\nSubsystem3/Product cd\n(trimf)/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[314]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "(d-x)/(d-c){Occurence2}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/zuniedrig/If Action\nSubsystem3/Product cd\n(trimf)/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[520]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "(d-x)/(d-c){Occurence3}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/zuhoch/If Action\nSubsystem3/Product cd\n(trimf)/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[728]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "(d-x)/(d-c){Occurence4}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/zuniedrig/If Action\nSubsystem3/Product cd\n(trimf)/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[210]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "(x-a)/(b-a){Occurence1}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/richtig/If Action\nSubsystem3/Product ab\n(trimf)/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[106]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "(x-a)/(b-a){Occurence2}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/zuhoch/If Action\nSubsystem1/Product ab\n(trimf)/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[314]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "(x-a)/(b-a){Occurence3}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/zuniedrig/If Action\nSubsystem1/Product ab\n(trimf)/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[624]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "(x-a)/(b-a){Occurence4}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/richtig/If Action\nSubsystem3/Product ab\n(trimf)/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[520]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "(x-a)/(b-a){Occurence5}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/zuhoch/If Action\nSubsystem1/Product ab\n(trimf)/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[728]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "(x-a)/(b-a){Occurence6}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/zuniedrig/If Action\nSubsystem1/Product ab\n(trimf)/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_13[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "b-a{Occurence1}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/richtig/If Action\nSubsystem3/Sum1/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_11[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "b-a{Occurence2}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/zuhoch/If Action\nSubsystem1/Sum1/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_9[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "b-a{Occurence3}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/zuniedrig/If Action\nSubsystem1/Sum1/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_7[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "b-a{Occurence4}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/richtig/If Action\nSubsystem3/Sum1/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_5[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "b-a{Occurence5}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/zuhoch/If Action\nSubsystem1/Sum1/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_3[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "b-a{Occurence6}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/zuniedrig/If Action\nSubsystem1/Sum1/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_12[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "c-b{Occurence1}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/richtig/If Action\nSubsystem2/Sum2/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_6[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "c-b{Occurence2}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/richtig/If Action\nSubsystem2/Sum2/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_12[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "c-x{Occurence1}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/richtig/If Action\nSubsystem2/Sum3/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_6[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "c-x{Occurence2}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/richtig/If Action\nSubsystem2/Sum3/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_10[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "d-c{Occurence1}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/zuhoch/If Action\nSubsystem3/Sum2/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_8[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "d-c{Occurence2}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/zuniedrig/If Action\nSubsystem3/Sum2/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_4[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "d-c{Occurence3}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/zuhoch/If Action\nSubsystem3/Sum2/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_2[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "d-c{Occurence4}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/zuniedrig/If Action\nSubsystem3/Sum2/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_10[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "d-x{Occurence1}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/zuhoch/If Action\nSubsystem3/Sum3/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_8[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "d-x{Occurence2}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/zuniedrig/If Action\nSubsystem3/Sum3/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_4[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "d-x{Occurence3}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/zuhoch/If Action\nSubsystem3/Sum3/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_2[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "d-x{Occurence4}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/zuniedrig/If Action\nSubsystem3/Sum3/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[2]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "h1"
+	 origin:  "FuzzyNeuro/Umrechnunguh/h1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[6]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "h2"
+	 origin:  "FuzzyNeuro/Umrechnunguh/h2"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1152]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "h3"
+	 origin:  "FuzzyNeuro/Umrechnunguh/h3"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "i1{Occurence1}"
+	 origin:  "FuzzyNeuro/Umrechnunguh/TP 5Hz/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[4]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "i1{Occurence2}"
+	 origin:  "FuzzyNeuro/Umrechnunguh/TP 5Hz1/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1150]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "i1{Occurence3}"
+	 origin:  "FuzzyNeuro/Umrechnunguh/TP 5Hz2/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1139]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "q1Vorgabe"
+	 origin:  "FuzzyNeuro/Umrechnung2/In1/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1153]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "q1mess"
+	 origin:  "FuzzyNeuro/um1->q1mess/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1140]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "q2Vorgabe"
+	 origin:  "FuzzyNeuro/Umrechnung2/In2/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1154]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "q2mess"
+	 origin:  "FuzzyNeuro/um2->q2mess/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1141]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "u1{Occurence1}"
+	 origin:  "FuzzyNeuro/T3Anlage/u1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1141]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "u1{Occurence2}"
+	 origin:  "FuzzyNeuro/T3Anlage/Demux1/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1142]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "u2{Occurence1}"
+	 origin:  "FuzzyNeuro/T3Anlage/u2"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1142]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "u2{Occurence2}"
+	 origin:  "FuzzyNeuro/T3Anlage/Demux1/Out2"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1143]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "u3{Occurence1}"
+	 origin:  "FuzzyNeuro/T3Anlage/u3"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1143]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "u3{Occurence2}"
+	 origin:  "FuzzyNeuro/T3Anlage/Demux1/Out3"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1144]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "uq1{Occurence1}"
+	 origin:  "FuzzyNeuro/T3Anlage/uq1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1144]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "uq1{Occurence2}"
+	 origin:  "FuzzyNeuro/T3Anlage/DS1104ADC_C5/ADC"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1146]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "uq1Vorgabe"
+	 origin:  "FuzzyNeuro/Umrechnung2/q1->uv1/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1145]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "uq2{Occurence1}"
+	 origin:  "FuzzyNeuro/T3Anlage/uq2"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1145]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "uq2{Occurence2}"
+	 origin:  "FuzzyNeuro/T3Anlage/DS1104ADC_C6/ADC"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_0[1148]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "uq2Vorgabe"
+	 origin:  "FuzzyNeuro/Umrechnung2/q2->uv2/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_13[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "x-a{Occurence1}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/richtig/If Action\nSubsystem3/Sum/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_11[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "x-a{Occurence2}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/zuhoch/If Action\nSubsystem1/Sum/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_9[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "x-a{Occurence3}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe1/zuniedrig/If Action\nSubsystem1/Sum/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_7[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "x-a{Occurence4}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/richtig/If Action\nSubsystem3/Sum/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_5[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "x-a{Occurence5}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/zuhoch/If Action\nSubsystem1/Sum/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_FuzzyNeuro_B_real_T_3[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "x-a{Occurence6}"
+	 origin:  "FuzzyNeuro/Fuzzy Logic \nController/FIS Wizard/Hoehe2/zuniedrig/If Action\nSubsystem1/Sum/Out1"
+	 flags:   LABEL|READONLY
+	}
+
+endgroup
+
+-- ******** RTT Dynamic Variables *********************************************
+
+-- Generation of RTT Dynamic Variables turned off with EnableRealTimeTesting option.
+

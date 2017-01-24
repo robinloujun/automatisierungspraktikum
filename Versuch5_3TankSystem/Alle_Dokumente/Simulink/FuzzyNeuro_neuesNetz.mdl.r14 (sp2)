@@ -1,0 +1,3868 @@
+Model {
+  Name			  "FuzzyNeuro_neuesNetz"
+  Version		  6.2
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.123"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "ibm-5348_P100-1997"
+  PostLoadFcn		  ",try, rti_mdl_postloadfcn(bdroot, 'UpdateModel', 16"
+"0, 'rti1104'); catch, disp(lasterr); end, "
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  CloseFcn		  "rtwprivate ssgencode ModelCloseRequest FuzzyNeuro"
+  Created		  "Wed Sep 18 16:48:05 2002"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "faltinski"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Mon Nov 29 16:52:55 2010"
+  ModelVersionFormat	  "1.%<AutoIncrement:123>"
+  ConfigurationManager	  "None"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  off
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  off
+  StrictBusMsg		  "ErrorLevel1"
+  ProdHWDeviceType	  "Specified"
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.1.0"
+      Array {
+	Type			"Handle"
+	Dimension		7
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.1.0"
+	  StartTime		  "0.0"
+	  StopTime		  "inf"
+	  AbsTol		  "auto"
+	  FixedStep		  "0.01"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  Solver		  "ode1"
+	  SolverName		  "ode1"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  RateTranMode		  "Deterministic"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.1.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  SaveTime		  on
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    5
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "InitFltsAndDblsToZero"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.1.0"
+	  BlockReduction	  off
+	  BooleanDataType	  off
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  off
+	  BufferReuse		  off
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  off
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  off
+	  ParameterPooling	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  on
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  BufferReusableBoundary  on
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.1.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  CheckSSInitialOutputMsg on
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "TryResolveAllWithWarning"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  SolverPrmCheckMsg	  "none"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "warning"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterPrecisionLossMsg "warning"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  ModelReferenceSimTargetVerbose off
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.1.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Zero"
+	  ProdEndianess		  "BigEndian"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "Specified"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Zero"
+	  TargetEndianess	  "BigEndian"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.1.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  8
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    "IncludeHyperlinkInReport"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.1.0"
+	  SystemTargetFile	  "rti1104.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rti"
+	  TemplateMakefile	  "rti1104.tmf"
+	  Description		  "dSPACE DS1104 Hardware Platform"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  off
+	  RetainRTWFile		  on
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ProcessScript		  "rti1104_make_rtw_hook"
+	  ConfigAtBuild		  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      9
+	      Array {
+		Type			"Cell"
+		Dimension		9
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.1.0"
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IncHierarchyInIds	      on
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement on
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      PrefixModelToSubsysFcnNames on
+	      CustomSymbolStr	      "$R$N$M"
+	      MangleLength	      1
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	    }
+	    Simulink.STFCustomTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      10
+	      Array {
+		Type			"Cell"
+		Dimension		15
+		Cell			"TimeScaleFactor"
+		Cell			"CCompilerOptimizationOpts"
+		Cell			"BoardName"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportNonFinite"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.1.0"
+	      TargetFcnLib	      "ansi_tfl_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      GenFloatMathFcnCalls    "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant off
+	      IncludeMdlTerminateFcn  on
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SystemTargetFile	      "rti1104.tlc"
+	      DialogCategory	      0
+	      Array {
+		Type			"Handle"
+		Dimension		1
+		Simulink.GRTTargetCC {
+		  $BackupClass		  "Simulink.TargetCC"
+		  $ObjectID		  11
+		  Array {
+		    Type		    "Cell"
+		    Dimension		    12
+		    Cell		    "IncludeMdlTerminateFcn"
+		    Cell		    "CombineOutputUpdateFcns"
+		    Cell		    "SuppressErrorStatus"
+		    Cell		    "ERTCustomFileBanners"
+		    Cell		    "GenerateSampleERTMain"
+		    Cell		    "MultiInstanceERTCode"
+		    Cell		    "PurelyIntegerCode"
+		    Cell		    "SupportNonFinite"
+		    Cell		    "SupportComplex"
+		    Cell		    "SupportAbsoluteTime"
+		    Cell		    "SupportContinuousTime"
+		    Cell		    "SupportNonInlinedSFcns"
+		    PropName		    "DisabledProps"
+		  }
+		  Version		  "1.1.0"
+		  TargetFcnLib		  "ansi_tfl_tmw.mat"
+		  TargetLibSuffix	  ""
+		  TargetPreCompLibLocation ""
+		  GenFloatMathFcnCalls	  "ANSI_C"
+		  UtilityFuncGeneration	  "Auto"
+		  GenerateFullHeader	  on
+		  GenerateSampleERTMain	  off
+		  IsPILTarget		  off
+		  ModelReferenceCompliant off
+		  IncludeMdlTerminateFcn  on
+		  CombineOutputUpdateFcns off
+		  SuppressErrorStatus	  off
+		  IncludeFileDelimiter	  "Auto"
+		  ERTCustomFileBanners	  off
+		  SupportAbsoluteTime	  on
+		  LogVarNameModifier	  "rt_"
+		  MatFileLogging	  on
+		  MultiInstanceERTCode	  off
+		  SupportNonFinite	  on
+		  SupportComplex	  on
+		  PurelyIntegerCode	  off
+		  SupportContinuousTime	  on
+		  SupportNonInlinedSFcns  on
+		  ExtMode		  on
+		  ExtModeStaticAlloc	  off
+		  ExtModeTesting	  off
+		  ExtModeStaticAllocSize  1000000
+		  ExtModeTransport	  0
+		  ExtModeMexFile	  "rti_comm"
+		  RTWCAPISignals	  off
+		  RTWCAPIParams		  off
+		  RTWCAPIStates		  off
+		  GenerateASAP2		  off
+		}
+		PropName		"Components"
+	      }
+	      CustomProperty {
+		DataType		"RTWOptions_EnumType_c__dspace_matlab_"
+"rti1104_tlc_rti1104_InitialSimState"
+		EnumStrPairs {
+		  Value			  0
+		  String		  "RUN"
+		  Value			  1
+		  String		  "PAUSE"
+		  Value			  2
+		  String		  "STOP"
+		}
+		Name			"InitialSimState"
+		Value			"RUN"
+	      }
+	      CustomProperty {
+		DataType		"RTWOptions_EnumType_c__dspace_matlab_"
+"rti1104_tlc_rti1104_ExecutionMode"
+		EnumStrPairs {
+		  Value			  0
+		  String		  "real-time"
+		  Value			  1
+		  String		  "time-scaled"
+		  Value			  2
+		  String		  "as fast as possible"
+		}
+		Name			"ExecutionMode"
+		Value			"real-time"
+	      }
+	      CustomProperty {
+		DataType		"string"
+		Name			"ExecutionModeNonUI"
+		Value			"RTSIM"
+	      }
+	      CustomProperty {
+		DataType		"string"
+		Name			"TimeScaleFactor"
+		Value			"1.0"
+	      }
+	      CustomProperty {
+		DataType		"string"
+		Name			"TimeScaleFactorNonUI"
+		Value			"OPTION_DISABLED"
+	      }
+	      CustomProperty {
+		DataType		"RTWOptions_EnumType_c__dspace_matlab_"
+"rti1104_tlc_rti1104_AssertionMode"
+		EnumStrPairs {
+		  Value			  0
+		  String		  "OFF"
+		  Value			  1
+		  String		  "WARN"
+		  Value			  2
+		  String		  "STOP"
+		}
+		Name			"AssertionMode"
+		Value			"OFF"
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"TAStimulusEngineEnable"
+		Value			off
+	      }
+	      CustomProperty {
+		DataType		"RTWOptions_EnumType_c__dspace_matlab_"
+"rti1104_tlc_rti1104_CCompilerOptimizationOptsPopup"
+		EnumStrPairs {
+		  Value			  0
+		  String		  "Default (-O5 -D_INLINE)"
+		  Value			  1
+		  String		  "User-defined"
+		}
+		Name			"CCompilerOptimizationOptsPopup"
+		Value			"Default (-O5 -D_INLINE)"
+	      }
+	      CustomProperty {
+		DataType		"string"
+		Name			"CCompilerOptimizationOptsNonUI"
+		Value			"USE_DEFAULT"
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"LoadAfterBuild"
+		Value			on
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"LoadToFlash"
+		Value			off
+	      }
+	      CustomProperty {
+		DataType		"string"
+		Name			"LoadApplNonUI"
+		Value			"ON"
+	      }
+	      CustomProperty {
+		DataType		"RTWOptions_EnumType_c__dspace_matlab_"
+"rti1104_tlc_rti1104_PlatformSelectionPopup"
+		EnumStrPairs {
+		  Value			  0
+		  String		  "Auto"
+		  Value			  1
+		  String		  "User-defined (bus)"
+		}
+		Name			"PlatformSelectionPopup"
+		Value			"Auto"
+	      }
+	      CustomProperty {
+		DataType		"string"
+		Name			"BoardNameNonUI"
+		Value			"OPTION_DISABLED"
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"TRCMaskParameters"
+		Value			off
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"TRCGenerateLabels"
+		Value			on
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"TRCGenerateVirtualBlocks"
+		Value			on
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"TRCGenerateStates"
+		Value			off
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"TRCGenerateDerivatives"
+		Value			off
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"TRCApplySubsystemPermissions"
+		Value			off
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"TRCGenerateParamValues"
+		Value			off
+	      }
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      SimulationMode	      "normal"
+      CurrentDlgPage	      "Real-Time Workshop/RTI simulation options"
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      ActionPort
+      InitializeStates	      "held"
+      ActionType	      "unset"
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "sfix(16)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "2^0"
+      SampleTime	      "inf"
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      OutDataTypeMode	      "Inherit via back propagation"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      ConvertRealWorld	      "Real World Value (RWV)"
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      ElementaryMath
+      Operator		      "sin"
+    }
+    Block {
+      BlockType		      From
+      IconDisplay	      "Tag"
+    }
+    Block {
+      BlockType		      Fcn
+      Expr		      "sin(u[1])"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ParameterDataTypeMode   "Same as input"
+      ParameterDataType	      "sfix(16)"
+      ParameterScalingMode    "Best Precision: Matrix-wise"
+      ParameterScaling	      "2^0"
+      OutDataTypeMode	      "Same as input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Goto
+      IconDisplay	      "Tag"
+    }
+    Block {
+      BlockType		      If
+      NumInputs		      "1"
+      IfExpression	      "u1 > 0"
+      ShowElse		      on
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Inport
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Merge
+      Inputs		      "2"
+      InitialOutput	      "[]"
+      AllowUnequalInputPortWidths off
+      InputPortOffsets	      "[]"
+    }
+    Block {
+      BlockType		      MinMax
+      Function		      "min"
+      Inputs		      "1"
+      InputSameDT	      on
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      MultiPortSwitch
+      Inputs		      "4"
+      zeroidx		      off
+      InputSameDT	      on
+      OutDataTypeMode	      "Inherit via internal rule"
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Product
+      Inputs		      "2"
+      Multiplication	      "Element-wise(.*)"
+      InputSameDT	      on
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      RelationalOperator
+      Operator		      ">="
+      InputSameDT	      on
+      LogicOutDataTypeMode    "Logical (see Configuration Parameters: Optimiza"
+"tion)"
+      LogicDataType	      "uint(8)"
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Saturate
+      UpperLimit	      "0.5"
+      LowerLimit	      "-0.5"
+      LinearizeAsGain	      on
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      on
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      InputSameDT	      on
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Switch
+      Criteria		      "u2 >= Threshold"
+      Threshold		      "0"
+      InputSameDT	      on
+      OutDataTypeMode	      "Inherit via internal rule"
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Terminator
+    }
+    Block {
+      BlockType		      TransferFcn
+      Numerator		      "[1]"
+      Denominator	      "[1 2 1]"
+      AbsoluteTolerance	      "auto"
+      Realization	      "auto"
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "FuzzyNeuro_neuesNetz"
+    Location		    [130, 164, 1214, 849]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Constant
+      Name		      "Automatik"
+      Position		      [710, 85, 730, 105]
+    }
+    Block {
+      BlockType		      Demux
+      Name		      "Demux"
+      Ports		      [1, 2]
+      Position		      [870, 207, 875, 303]
+      BackgroundColor	      "black"
+      ShowName		      off
+      Outputs		      "2"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Fuzzy Logic \nController"
+      Ports		      [1, 1]
+      Position		      [680, 363, 755, 427]
+      SourceBlock	      "fuzblock/Fuzzy Logic \nController"
+      SourceType	      "FIS"
+      ShowPortLabels	      on
+      fis		      "Schmid"
+    }
+    Block {
+      BlockType		      MultiPortSwitch
+      Name		      "Multiport\nSwitch"
+      Ports		      [4, 1]
+      Position		      [800, 46, 830, 459]
+      Inputs		      "3"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux"
+      Ports		      [2, 1]
+      Position		      [735, 158, 740, 242]
+      ShowName		      off
+      Inputs		      "2"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux1"
+      Ports		      [2, 1]
+      Position		      [625, 248, 630, 397]
+      ShowName		      off
+      Inputs		      "2"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Neural Network"
+      Ports		      [1, 1]
+      Position		      [685, 270, 745, 310]
+      BackgroundColor	      "lightBlue"
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      System {
+	Name			"Neural Network"
+	Location		[480, 93, 1060, 386]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "p{1}"
+	  Position		  [40, 40, 60, 60]
+	  BackgroundColor	  "magenta"
+	  Port			  "1"
+	  IconDisplay		  "Port number"
+	  PortDimensions	  "2"
+	  SampleTime		  "0.01"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  From
+	  Name			  " a{1} "
+	  Position		  [40, 120, 60, 140]
+	  GotoTag		  "feedback1"
+	  MaskDisplay		  "plot(cos(0:.1:2*pi),sin(0:.1:2*pi))"
+	  MaskIconFrame		  off
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Layer 1"
+	  Ports			  [1, 1]
+	  Position		  [190, 40, 250, 60]
+	  BackgroundColor	  "lightBlue"
+	  TreatAsAtomicUnit	  off
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  System {
+	    Name		    "Layer 1"
+	    Location		    [480, 93, 1060, 386]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "p{1}"
+	      Position		      [40, 40, 60, 60]
+	      BackgroundColor	      "magenta"
+	      Port		      "1"
+	      IconDisplay	      "Port number"
+	      PortDimensions	      "2"
+	      SampleTime	      "0.01"
+	      LatchInput	      off
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Delays 1"
+	      Ports		      [1, 1]
+	      Position		      [100, 40, 120, 60]
+	      BackgroundColor	      "lightBlue"
+	      TreatAsAtomicUnit	      off
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      MaskDisplay	      "disp('TDL')"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"Delays 1"
+		Location		[480, 93, 1060, 386]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "p{1}"
+		  Position		  [60, 40, 80, 60]
+		  Orientation		  "down"
+		  BackgroundColor	  "magenta"
+		  NamePlacement		  "alternate"
+		  Port			  "1"
+		  IconDisplay		  "Port number"
+		  PortDimensions	  "2"
+		  SampleTime		  "0.01"
+		  LatchInput		  off
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "mux"
+		  Ports			  [1, 1]
+		  Position		  [200, 60, 240, 80]
+		  BackgroundColor	  "lightBlue"
+		  Inputs		  "1"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "pd{1,1}"
+		  Position		  [300, 60, 320, 80]
+		  BackgroundColor	  "magenta"
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  "p{1}"
+		  SrcPort		  1
+		  DstBlock		  "mux"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "mux"
+		  SrcPort		  1
+		  DstBlock		  "pd{1,1}"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "IW{1,1}"
+	      Ports		      [1, 1]
+	      Position		      [160, 40, 200, 60]
+	      BackgroundColor	      "lightBlue"
+	      TreatAsAtomicUnit	      off
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      MaskDisplay	      "disp('weight')"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"IW{1,1}"
+		Location		[480, 93, 1060, 386]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "pd{1,1}"
+		  Position		  [40, 330, 60, 350]
+		  BackgroundColor	  "magenta"
+		  Port			  "1"
+		  IconDisplay		  "Port number"
+		  PortDimensions	  "2"
+		  SampleTime		  "0.01"
+		  LatchInput		  off
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "IW{1,1}(1,:)'"
+		  Position		  [140, 40, 180, 60]
+		  BackgroundColor	  "lightBlue"
+		  Value			  "[1.4350812730013165;0.3698263783808"
+"1583]"
+		  MaskDisplay		  "disp('weights')"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskIconUnits		  "autoscale"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "IW{1,1}(10,:)'"
+		  Position		  [140, 580, 180, 600]
+		  BackgroundColor	  "lightBlue"
+		  Value			  "[-0.2072597122421084;1.475820717234"
+"636]"
+		  MaskDisplay		  "disp('weights')"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskIconUnits		  "autoscale"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "IW{1,1}(2,:)'"
+		  Position		  [140, 100, 180, 120]
+		  BackgroundColor	  "lightBlue"
+		  Value			  "[-0.99993750318269126;1.08570896833"
+"04775]"
+		  MaskDisplay		  "disp('weights')"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskIconUnits		  "autoscale"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "IW{1,1}(3,:)'"
+		  Position		  [140, 160, 180, 180]
+		  BackgroundColor	  "lightBlue"
+		  Value			  "[0.36076993678749514;1.431669730495"
+"4116]"
+		  MaskDisplay		  "disp('weights')"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskIconUnits		  "autoscale"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "IW{1,1}(4,:)'"
+		  Position		  [140, 220, 180, 240]
+		  BackgroundColor	  "lightBlue"
+		  Value			  "[-0.086804668652516723;1.4736166498"
+"679069]"
+		  MaskDisplay		  "disp('weights')"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskIconUnits		  "autoscale"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "IW{1,1}(5,:)'"
+		  Position		  [140, 280, 180, 300]
+		  BackgroundColor	  "lightBlue"
+		  Value			  "[1.1362798989988234;-0.939777615359"
+"73003]"
+		  MaskDisplay		  "disp('weights')"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskIconUnits		  "autoscale"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "IW{1,1}(6,:)'"
+		  Position		  [140, 340, 180, 360]
+		  BackgroundColor	  "lightBlue"
+		  Value			  "[1.388270248975592;-0.4993660833001"
+"1195]"
+		  MaskDisplay		  "disp('weights')"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskIconUnits		  "autoscale"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "IW{1,1}(7,:)'"
+		  Position		  [140, 400, 180, 420]
+		  BackgroundColor	  "lightBlue"
+		  Value			  "[-0.14644537512169173;1.46441450061"
+"52187]"
+		  MaskDisplay		  "disp('weights')"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskIconUnits		  "autoscale"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "IW{1,1}(8,:)'"
+		  Position		  [140, 460, 180, 480]
+		  BackgroundColor	  "lightBlue"
+		  Value			  "[-1.1140022295779455;0.964061291054"
+"2028]"
+		  MaskDisplay		  "disp('weights')"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskIconUnits		  "autoscale"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "IW{1,1}(9,:)'"
+		  Position		  [140, 520, 180, 540]
+		  BackgroundColor	  "lightBlue"
+		  Value			  "[1.4194161616233616;-0.396018917088"
+"48608]"
+		  MaskDisplay		  "disp('weights')"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskIconUnits		  "autoscale"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux"
+		  Ports			  [10, 1]
+		  Position		  [340, 320, 380, 365]
+		  Inputs		  "10"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "dotprod1"
+		  Ports			  [2, 1]
+		  Position		  [240, 40, 260, 80]
+		  BackgroundColor	  "lightBlue"
+		  SourceBlock		  "neural/Weight Functions/dotprod"
+		  SourceType		  ""
+		  ShowPortLabels	  on
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "dotprod10"
+		  Ports			  [2, 1]
+		  Position		  [240, 580, 260, 620]
+		  BackgroundColor	  "lightBlue"
+		  SourceBlock		  "neural/Weight Functions/dotprod"
+		  SourceType		  ""
+		  ShowPortLabels	  on
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "dotprod2"
+		  Ports			  [2, 1]
+		  Position		  [240, 100, 260, 140]
+		  BackgroundColor	  "lightBlue"
+		  SourceBlock		  "neural/Weight Functions/dotprod"
+		  SourceType		  ""
+		  ShowPortLabels	  on
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "dotprod3"
+		  Ports			  [2, 1]
+		  Position		  [240, 160, 260, 200]
+		  BackgroundColor	  "lightBlue"
+		  SourceBlock		  "neural/Weight Functions/dotprod"
+		  SourceType		  ""
+		  ShowPortLabels	  on
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "dotprod4"
+		  Ports			  [2, 1]
+		  Position		  [240, 220, 260, 260]
+		  BackgroundColor	  "lightBlue"
+		  SourceBlock		  "neural/Weight Functions/dotprod"
+		  SourceType		  ""
+		  ShowPortLabels	  on
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "dotprod5"
+		  Ports			  [2, 1]
+		  Position		  [240, 280, 260, 320]
+		  BackgroundColor	  "lightBlue"
+		  SourceBlock		  "neural/Weight Functions/dotprod"
+		  SourceType		  ""
+		  ShowPortLabels	  on
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "dotprod6"
+		  Ports			  [2, 1]
+		  Position		  [240, 340, 260, 380]
+		  BackgroundColor	  "lightBlue"
+		  SourceBlock		  "neural/Weight Functions/dotprod"
+		  SourceType		  ""
+		  ShowPortLabels	  on
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "dotprod7"
+		  Ports			  [2, 1]
+		  Position		  [240, 400, 260, 440]
+		  BackgroundColor	  "lightBlue"
+		  SourceBlock		  "neural/Weight Functions/dotprod"
+		  SourceType		  ""
+		  ShowPortLabels	  on
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "dotprod8"
+		  Ports			  [2, 1]
+		  Position		  [240, 460, 260, 500]
+		  BackgroundColor	  "lightBlue"
+		  SourceBlock		  "neural/Weight Functions/dotprod"
+		  SourceType		  ""
+		  ShowPortLabels	  on
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "dotprod9"
+		  Ports			  [2, 1]
+		  Position		  [240, 520, 260, 560]
+		  BackgroundColor	  "lightBlue"
+		  SourceBlock		  "neural/Weight Functions/dotprod"
+		  SourceType		  ""
+		  ShowPortLabels	  on
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "iz{1,1}"
+		  Position		  [420, 330, 440, 350]
+		  BackgroundColor	  "magenta"
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  "IW{1,1}(1,:)'"
+		  SrcPort		  1
+		  DstBlock		  "dotprod1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "pd{1,1}"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  Branch {
+		    DstBlock		    "dotprod1"
+		    DstPort		    2
+		  }
+		  Branch {
+		    DstBlock		    "dotprod2"
+		    DstPort		    2
+		  }
+		  Branch {
+		    DstBlock		    "dotprod3"
+		    DstPort		    2
+		  }
+		  Branch {
+		    DstBlock		    "dotprod4"
+		    DstPort		    2
+		  }
+		  Branch {
+		    DstBlock		    "dotprod5"
+		    DstPort		    2
+		  }
+		  Branch {
+		    DstBlock		    "dotprod6"
+		    DstPort		    2
+		  }
+		  Branch {
+		    DstBlock		    "dotprod7"
+		    DstPort		    2
+		  }
+		  Branch {
+		    DstBlock		    "dotprod8"
+		    DstPort		    2
+		  }
+		  Branch {
+		    DstBlock		    "dotprod9"
+		    DstPort		    2
+		  }
+		  Branch {
+		    DstBlock		    "dotprod10"
+		    DstPort		    2
+		  }
+		}
+		Line {
+		  SrcBlock		  "dotprod1"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "IW{1,1}(2,:)'"
+		  SrcPort		  1
+		  DstBlock		  "dotprod2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "dotprod2"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "IW{1,1}(3,:)'"
+		  SrcPort		  1
+		  DstBlock		  "dotprod3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "dotprod3"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "IW{1,1}(4,:)'"
+		  SrcPort		  1
+		  DstBlock		  "dotprod4"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "dotprod4"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  4
+		}
+		Line {
+		  SrcBlock		  "IW{1,1}(5,:)'"
+		  SrcPort		  1
+		  DstBlock		  "dotprod5"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "dotprod5"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  5
+		}
+		Line {
+		  SrcBlock		  "IW{1,1}(6,:)'"
+		  SrcPort		  1
+		  DstBlock		  "dotprod6"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "dotprod6"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  6
+		}
+		Line {
+		  SrcBlock		  "IW{1,1}(7,:)'"
+		  SrcPort		  1
+		  DstBlock		  "dotprod7"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "dotprod7"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  7
+		}
+		Line {
+		  SrcBlock		  "IW{1,1}(8,:)'"
+		  SrcPort		  1
+		  DstBlock		  "dotprod8"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "dotprod8"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  8
+		}
+		Line {
+		  SrcBlock		  "IW{1,1}(9,:)'"
+		  SrcPort		  1
+		  DstBlock		  "dotprod9"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "dotprod9"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  9
+		}
+		Line {
+		  SrcBlock		  "IW{1,1}(10,:)'"
+		  SrcPort		  1
+		  DstBlock		  "dotprod10"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "dotprod10"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  10
+		}
+		Line {
+		  SrcBlock		  "Mux"
+		  SrcPort		  1
+		  DstBlock		  "iz{1,1}"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "b{1}"
+	      Position		      [160, 80, 200, 100]
+	      BackgroundColor	      "lightBlue"
+	      Value		      "[-9.8545985505022529;3.1869783820136055"
+";-7.8385048556717223;-2.6842174078204861;-1.0793676125527614;-2.1740694877769"
+"813;-5.427515514459051;-2.0106026099595997;0.36933408755053759;-8.26815610320"
+"45394]"
+	      MaskDisplay	      "disp('bias')"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "netsum"
+	      Ports		      [2, 1]
+	      Position		      [240, 60, 260, 80]
+	      BackgroundColor	      "lightBlue"
+	      Inputs		      "2"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "tansig"
+	      Ports		      [1, 1]
+	      Position		      [300, 60, 320, 80]
+	      BackgroundColor	      "lightBlue"
+	      SourceBlock	      "neural/Transfer Functions/tansig"
+	      SourceType	      ""
+	      ShowPortLabels	      on
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "a{1}"
+	      Position		      [360, 60, 380, 80]
+	      BackgroundColor	      "magenta"
+	      IconDisplay	      "Port number"
+	      InitialOutput	      "[0;0;0;0;0;0;0;0;0;0]"
+	    }
+	    Line {
+	      SrcBlock		      "p{1}"
+	      SrcPort		      1
+	      DstBlock		      "Delays 1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Delays 1"
+	      SrcPort		      1
+	      DstBlock		      "IW{1,1}"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "IW{1,1}"
+	      SrcPort		      1
+	      DstBlock		      "netsum"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "b{1}"
+	      SrcPort		      1
+	      DstBlock		      "netsum"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "netsum"
+	      SrcPort		      1
+	      DstBlock		      "tansig"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "tansig"
+	      SrcPort		      1
+	      DstBlock		      "a{1}"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Layer 2"
+	  Ports			  [1, 1]
+	  Position		  [190, 80, 250, 100]
+	  BackgroundColor	  "lightBlue"
+	  TreatAsAtomicUnit	  off
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  System {
+	    Name		    "Layer 2"
+	    Location		    [480, 93, 1060, 386]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "a{1} "
+	      Position		      [40, 40, 60, 60]
+	      BackgroundColor	      "magenta"
+	      Port		      "1"
+	      IconDisplay	      "Port number"
+	      PortDimensions	      "10"
+	      SampleTime	      "0.01"
+	      LatchInput	      off
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Delays 1"
+	      Ports		      [1, 1]
+	      Position		      [100, 40, 120, 60]
+	      BackgroundColor	      "lightBlue"
+	      TreatAsAtomicUnit	      off
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      MaskDisplay	      "disp('TDL')"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"Delays 1"
+		Location		[480, 93, 1060, 386]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "p{2}"
+		  Position		  [60, 40, 80, 60]
+		  Orientation		  "down"
+		  BackgroundColor	  "magenta"
+		  NamePlacement		  "alternate"
+		  Port			  "1"
+		  IconDisplay		  "Port number"
+		  PortDimensions	  "10"
+		  SampleTime		  "0.01"
+		  LatchInput		  off
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "mux"
+		  Ports			  [1, 1]
+		  Position		  [200, 60, 240, 80]
+		  BackgroundColor	  "lightBlue"
+		  Inputs		  "1"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "pd{2,1}"
+		  Position		  [300, 60, 320, 80]
+		  BackgroundColor	  "magenta"
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  "p{2}"
+		  SrcPort		  1
+		  DstBlock		  "mux"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "mux"
+		  SrcPort		  1
+		  DstBlock		  "pd{2,1}"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "LW{2,1}"
+	      Ports		      [1, 1]
+	      Position		      [160, 40, 200, 60]
+	      BackgroundColor	      "lightBlue"
+	      TreatAsAtomicUnit	      off
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      MaskDisplay	      "disp('weight')"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"LW{2,1}"
+		Location		[480, 93, 1060, 386]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "ad{2,1}"
+		  Position		  [40, 90, 60, 110]
+		  BackgroundColor	  "magenta"
+		  Port			  "1"
+		  IconDisplay		  "Port number"
+		  PortDimensions	  "10"
+		  SampleTime		  "0.01"
+		  LatchInput		  off
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "IW{2,1}(1,:)'"
+		  Position		  [140, 40, 180, 60]
+		  BackgroundColor	  "lightBlue"
+		  Value			  "[0.010007011480956507;9.75595403017"
+"72607e-005;-0.00045943194759578976;0.00026549758885008323;-0.0003770426175734"
+"8645;-0.00023329615755329769;-0.0010107765113510359;3.7562430615145637e-005;0"
+".00083885674521977371;0.0073884446713381458]"
+		  MaskDisplay		  "disp('weights')"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskIconUnits		  "autoscale"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "IW{2,1}(2,:)'"
+		  Position		  [140, 100, 180, 120]
+		  BackgroundColor	  "lightBlue"
+		  Value			  "[0.0048539083367129532;7.6872455937"
+"682105e-005;-0.0013566498908624824;9.8465439347106276e-006;-0.000333949099739"
+"16143;6.8337800822604322e-005;0.0018117902613594694;-0.00024838071057661781;0"
+".00040060754880270888;-0.0050191161396336836]"
+		  MaskDisplay		  "disp('weights')"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskIconUnits		  "autoscale"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux"
+		  Ports			  [2, 1]
+		  Position		  [340, 90, 380, 110]
+		  Inputs		  "2"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "dotprod1"
+		  Ports			  [2, 1]
+		  Position		  [240, 40, 260, 80]
+		  BackgroundColor	  "lightBlue"
+		  SourceBlock		  "neural/Weight Functions/dotprod"
+		  SourceType		  ""
+		  ShowPortLabels	  on
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "dotprod2"
+		  Ports			  [2, 1]
+		  Position		  [240, 100, 260, 140]
+		  BackgroundColor	  "lightBlue"
+		  SourceBlock		  "neural/Weight Functions/dotprod"
+		  SourceType		  ""
+		  ShowPortLabels	  on
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "lz{2,1}"
+		  Position		  [420, 90, 440, 110]
+		  BackgroundColor	  "magenta"
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  "IW{2,1}(1,:)'"
+		  SrcPort		  1
+		  DstBlock		  "dotprod1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "ad{2,1}"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  Branch {
+		    DstBlock		    "dotprod1"
+		    DstPort		    2
+		  }
+		  Branch {
+		    DstBlock		    "dotprod2"
+		    DstPort		    2
+		  }
+		}
+		Line {
+		  SrcBlock		  "dotprod1"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "IW{2,1}(2,:)'"
+		  SrcPort		  1
+		  DstBlock		  "dotprod2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "dotprod2"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux"
+		  SrcPort		  1
+		  DstBlock		  "lz{2,1}"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "b{2}"
+	      Position		      [160, 80, 200, 100]
+	      BackgroundColor	      "lightBlue"
+	      Value		      "[-2.0187466227910615;-1.922300189425423"
+"]"
+	      MaskDisplay	      "disp('bias')"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "netsum"
+	      Ports		      [2, 1]
+	      Position		      [240, 60, 260, 80]
+	      BackgroundColor	      "lightBlue"
+	      Inputs		      "2"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "purelin"
+	      Ports		      [1, 1]
+	      Position		      [300, 60, 320, 80]
+	      BackgroundColor	      "lightBlue"
+	      SourceBlock	      "neural/Transfer Functions/purelin"
+	      SourceType	      ""
+	      ShowPortLabels	      on
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "a{2}"
+	      Position		      [360, 60, 380, 80]
+	      BackgroundColor	      "magenta"
+	      IconDisplay	      "Port number"
+	      InitialOutput	      "[0;0]"
+	    }
+	    Line {
+	      SrcBlock		      "a{1} "
+	      SrcPort		      1
+	      DstBlock		      "Delays 1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Delays 1"
+	      SrcPort		      1
+	      DstBlock		      "LW{2,1}"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "LW{2,1}"
+	      SrcPort		      1
+	      DstBlock		      "netsum"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "b{2}"
+	      SrcPort		      1
+	      DstBlock		      "netsum"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "netsum"
+	      SrcPort		      1
+	      DstBlock		      "purelin"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "purelin"
+	      SrcPort		      1
+	      DstBlock		      "a{2}"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "a{1}"
+	  Position		  [380, 40, 400, 60]
+	  GotoTag		  "feedback1"
+	  TagVisibility		  "local"
+	  MaskDisplay		  "plot(cos(0:.1:2*pi),sin(0:.1:2*pi))"
+	  MaskIconFrame		  off
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "y{1}"
+	  Position		  [380, 120, 400, 140]
+	  BackgroundColor	  "magenta"
+	  IconDisplay		  "Port number"
+	  InitialOutput		  "[0;0]"
+	}
+	Line {
+	  SrcBlock		  "p{1}"
+	  SrcPort		  1
+	  DstBlock		  "Layer 1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Layer 1"
+	  SrcPort		  1
+	  DstBlock		  "a{1}"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " a{1} "
+	  SrcPort		  1
+	  DstBlock		  "Layer 2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Layer 2"
+	  SrcPort		  1
+	  DstBlock		  "y{1}"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Pumpe1"
+      Position		      [680, 170, 700, 190]
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Pumpe2"
+      Position		      [680, 210, 700, 230]
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "RTI Data"
+      Tag		      "struct('RTIDataServer',struct('RTIDataServerVs'"
+",'2','RTIModelDescription','struct(''main'',''FuzzyNeuro_neuesNetz'',''sub'',"
+"''FuzzyNeuro_neuesNetz'',''isMp'',0)'))"
+      Ports		      []
+      Position		      [15, 20, 66, 32]
+      ForegroundColor	      "[0.501961, 0.501961, 0.501961]"
+      BackgroundColor	      "[0.752941, 0.752941, 0.752941]"
+      DropShadow	      on
+      ShowName		      off
+      CopyFcn		      "if exist('rtidc'), try,  rtidc('DataHostBlockCl"
+"bCopy', gcbh); catch, disp(['Warning: ''CopyFcn'' for RTI Data block failed: "
+"' lasterr]); end, end, "
+      DeleteFcn		      "if exist('rtidc'), try,  rtidc('DataHostBlockCl"
+"bDelete', gcbh); catch, disp(['Warning: ''DeleteFcn'' for RTI Data block fail"
+"ed: ' lasterr]); end, end, "
+      LoadFcn		      "if exist('rtidc'), try,  rtidc('DataHostBlockCl"
+"bLoad', gcbh); catch, disp(['Warning: ''LoadFcn'' for RTI Data block failed: "
+"' lasterr]); end, end, "
+      ModelCloseFcn	      "if exist('rtidc'), try,  rtidc('DataHostBlockCl"
+"bModelClose', gcbh); catch, disp(['Warning: ''ModelCloseFcn'' for RTI Data bl"
+"ock failed: ' lasterr]); end, end, "
+      PreSaveFcn	      "if exist('rtidc'), try,  rtidc('DataHostBlockCl"
+"bPreSave', gcbh); catch, disp(['Warning: ''PreSaveFcn'' for RTI Data block fa"
+"iled: ' lasterr]); end, end, "
+      PostSaveFcn	      "if exist('rtidc'), try,  rtidc('DataHostBlockCl"
+"bPostSave', gcbh); catch, disp(['Warning: ''PostSaveFcn'' for RTI Data block "
+"failed: ' lasterr]); end, end, "
+      NameChangeFcn	      "if exist('rtidc'), try,  rtidc('DataHostBlockCl"
+"bNameChange', gcbh); catch, disp(['Warning: ''NameChangeFcn'' for RTI Data bl"
+"ock failed: ' lasterr]); end, end, "
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      MaskType		      "RTI_DATA_HOST"
+      MaskDescription	      "RTI Data Block.\nThis block is used by RTI to s"
+"tore internal model-dependent data.\nPlease keep this block on the root level"
+" of the model. Deleting this block will result in data loss.\n\nNEVER DELETE "
+"OR COPY THIS BLOCK!"
+      MaskHelp		      "RTI Data Block.\nThis block is used by RTI to s"
+"tore internal model-dependent data.\nPlease keep this block on the root level"
+" of the model. Deleting this block will result in data loss.\n\nNEVER DELETE "
+"OR COPY THIS BLOCK!"
+      MaskDisplay	      "text(0.5, 0.5, 'RTI Data', 'HorizontalAlignment"
+"', 'center');\nplot([1 0]);"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "normalized"
+      System {
+	Name			"RTI Data"
+	Location		[450, 250, 640, 300]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "RTI Data Store"
+	  Tag			  "struct('private',struct('version',struct('d"
+"sVer',uint32(2),'dsVerCreation',uint32(2),'RTI',struct('ver','4.2','type','RT"
+"I1103')),'access',struct('type','Model','isPerm',1,'created',['14-Aug-2002 15"
+":51:47'],'modified',['29-Nov-2010 16:52:55'],'location','')),'public',struct("
+"'main',struct('data',[]),'sub',struct('name',{{'FuzzyNeuro_neuesNetz'}},'data"
+"',{{struct('TH',struct('thTaskInfo',struct('taskType',{'TIMER','HWINT','TMRIN"
+"T','SWINT'},'tasksNumOf',{1,0,0,0},'srcIds',{{'TIMERA'},{},{},{}},'taskNames'"
+",{{['Timer Task 1']},{},{},{}})),'th_tc',struct('dataType','TASK','taskGroupI"
+"d','','taskGroupList',{{}},'taskSchedulingPolicy','FCFS','taskType','TIMER','"
+"blkh',-1,'srcId','TIMERA','srcSgnName',['Timer A interrupt'],'srcCpuName','',"
+"'taskName',['Timer Task 1  [0.01] s'],'taskNameDisplayExt','','smplTime',0.01"
+",'smplTimeOffs',0,'hasFixedPriority',0,'priority',1,'hasFixedOvc',0,'ovcType'"
+",1,'ovcMax',0),'tc_th',struct('dataType','TASK','taskGroupId','','taskGroupLi"
+"st',{{}},'taskSchedulingPolicy','FCFS','taskType','TIMER','blkh',-1,'srcId','"
+"TIMERA','srcSgnName',['Timer A interrupt'],'srcCpuName','','taskName',['Timer"
+" Task 1  [0.01] s'],'taskNameDisplayExt','','smplTime',0.01,'smplTimeOffs',0,"
+"'hasFixedPriority',0,'priority',1,'hasFixedOvc',0,'ovcType',1,'ovcMax',0))}})"
+"))"
+	  Ports			  []
+	  Position		  [146, 15, 181, 28]
+	  ForegroundColor	  "white"
+	  ShowName		  off
+	  TreatAsAtomicUnit	  off
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  MaskType		  "RTI_DATA_STORE"
+	  MaskDescription	  "RTI Data Store Block. This block is used by"
+" RTI to store internal model dependent data. Deleting this block will result "
+"in data loss.\n\nNEVER DELETE, COPY, OR MODIFY THIS BLOCK!"
+	  MaskHelp		  "RTI Data Store Block. This block is used by"
+" RTI to store internal model dependent data. Deleting this block will result "
+"in data loss.\n\nNEVER DELETE, COPY, OR MODIFY THIS BLOCK!"
+	  MaskDisplay		  "text(0.5, 0.5, ' ', 'HorizontalAlignment', "
+"'center');"
+	  MaskIconFrame		  off
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "normalized"
+	  System {
+	    Name		    "RTI Data Store"
+	    Location		    [450, 250, 640, 300]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "RTI Data Store"
+	      Ports		      []
+	      Position		      [146, 15, 181, 28]
+	      ForegroundColor	      "white"
+	      ShowName		      off
+	      TreatAsAtomicUnit	      off
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      MaskType		      "RTI_DATA_STORE"
+	      MaskDescription	      "RTI Data Store Block. This block is use"
+"d by RTI to store internal model dependent data. Deleting this block will res"
+"ult in data loss.\n\nNEVER DELETE, COPY, OR MODIFY THIS BLOCK!"
+	      MaskHelp		      "RTI Data Store Block. This block is use"
+"d by RTI to store internal model dependent data. Deleting this block will res"
+"ult in data loss.\n\nNEVER DELETE, COPY, OR MODIFY THIS BLOCK!"
+	      MaskDisplay	      "text(0.5, 0.5, ' ', 'HorizontalAlignmen"
+"t', 'center');"
+	      MaskIconFrame	      off
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "normalized"
+	      System {
+		Name			"RTI Data Store"
+		Location		[450, 250, 640, 300]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "RTI Data Store"
+		  Ports			  []
+		  Position		  [146, 15, 181, 28]
+		  ForegroundColor	  "white"
+		  ShowName		  off
+		  TreatAsAtomicUnit	  off
+		  MinAlgLoopOccurrences	  off
+		  RTWSystemCode		  "Auto"
+		  MaskType		  "RTI_DATA_STORE"
+		  MaskDescription	  "RTI Data Store Block. This block is"
+" used by RTI to store internal model dependent data. Deleting this block will"
+" result in data loss.\n\nNEVER DELETE, COPY, OR MODIFY THIS BLOCK!"
+		  MaskHelp		  "RTI Data Store Block. This block is"
+" used by RTI to store internal model dependent data. Deleting this block will"
+" result in data loss.\n\nNEVER DELETE, COPY, OR MODIFY THIS BLOCK!"
+		  MaskDisplay		  "text(0.5, 0.5, ' ', 'HorizontalAlig"
+"nment', 'center');"
+		  MaskIconFrame		  off
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskIconUnits		  "normalized"
+		  System {
+		    Name		    "RTI Data Store"
+		    Location		    [450, 250, 640, 300]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    SubSystem
+		    Name		    "RTI Data Store"
+		    Ports		    []
+		    Position		    [146, 15, 181, 28]
+		    ForegroundColor	    "white"
+		    ShowName		    off
+		    TreatAsAtomicUnit	    off
+		    MinAlgLoopOccurrences   off
+		    RTWSystemCode	    "Auto"
+		    MaskType		    "RTI_DATA_STORE"
+		    MaskDescription	    "RTI Data Store Block. This block "
+"is used by RTI to store internal model dependent data. Deleting this block wi"
+"ll result in data loss.\n\nNEVER DELETE, COPY, OR MODIFY THIS BLOCK!"
+		    MaskHelp		    "RTI Data Store Block. This block "
+"is used by RTI to store internal model dependent data. Deleting this block wi"
+"ll result in data loss.\n\nNEVER DELETE, COPY, OR MODIFY THIS BLOCK!"
+		    MaskDisplay		    "text(0.5, 0.5, ' ', 'HorizontalAl"
+"ignment', 'center');"
+		    MaskIconFrame	    off
+		    MaskIconOpaque	    on
+		    MaskIconRotate	    "none"
+		    MaskIconUnits	    "normalized"
+		    System {
+		    Name		    "RTI Data Store"
+		    Location		    [450, 250, 640, 300]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    ZoomFactor		    "100"
+		    }
+		    }
+		  }
+		}
+	      }
+	    }
+	  }
+	}
+      }
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum1"
+      Ports		      [2, 1]
+      Position		      [510, 275, 530, 295]
+      IconShape		      "round"
+      Inputs		      "+-|"
+      Port {
+	PortNumber		1
+	Name			"Diff1"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+	ShowSigGenPortName	on
+      }
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum2"
+      Ports		      [2, 1]
+      Position		      [555, 350, 575, 370]
+      IconShape		      "round"
+      Inputs		      "+-|"
+      Port {
+	PortNumber		1
+	Name			"Diff2"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+	ShowSigGenPortName	on
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "T3Anlage"
+      Ports		      [10, 5]
+      Position		      [225, 243, 385, 622]
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      Port {
+	PortNumber		1
+	Name			"u1"
+	PropagatedSignals	"u1"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+	ShowSigGenPortName	on
+      }
+      Port {
+	PortNumber		2
+	Name			"u2"
+	PropagatedSignals	"u2"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+	ShowSigGenPortName	on
+      }
+      Port {
+	PortNumber		3
+	Name			"u3"
+	PropagatedSignals	"u3"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+	ShowSigGenPortName	on
+      }
+      Port {
+	PortNumber		4
+	Name			"uq1"
+	PropagatedSignals	"uq1"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+	ShowSigGenPortName	on
+      }
+      Port {
+	PortNumber		5
+	Name			"uq2"
+	PropagatedSignals	"uq2"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+	ShowSigGenPortName	on
+      }
+      System {
+	Name			"T3Anlage"
+	Location		[28, 83, 696, 707]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Pumpe1Vorgabe"
+	  Position		  [190, 33, 220, 47]
+	  Port			  "1"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Pumpe2Vorgabe"
+	  Position		  [190, 83, 220, 97]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Ventil1"
+	  Position		  [100, 178, 130, 192]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Ventil13o"
+	  Position		  [100, 238, 130, 252]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Ventil13u"
+	  Position		  [100, 293, 130, 307]
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Ventil3"
+	  Position		  [100, 348, 130, 362]
+	  Port			  "6"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Ventil32o"
+	  Position		  [100, 403, 130, 417]
+	  Port			  "7"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Ventil32u"
+	  Position		  [100, 458, 130, 472]
+	  Port			  "8"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Ventil2"
+	  Position		  [100, 513, 130, 527]
+	  Port			  "9"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Ventil0"
+	  Position		  [100, 568, 130, 582]
+	  Port			  "10"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "DS1104ADC_C5"
+	  Ports			  [0, 1]
+	  Position		  [475, 391, 565, 429]
+	  SourceBlock		  "rtilib1104/DS1104 MASTER PPC/DS1104ADC_C5"
+	  SourceType		  "RTI"
+	  ShowPortLabels	  on
+	  ChannelNo		  "5"
+	  TriggerMode		  "0"
+	  Reserved1		  "[]"
+	  Reserved2		  "[]"
+	  Reserved3		  "[]"
+	  Reserved4		  "[]"
+	  DialogFcn		  "gui1104adc"
+	  UnitName		  "{ 'DS1104ADC_C' }"
+	  UnitValues		  "{ 5 }"
+	  DSProperties		  "struct('RTI',struct('Version',uint32(1),'Bl"
+"ockType',struct('isSLSource',uint8(1),'isSLSink',uint8(0),'isHWSource',uint8("
+"1),'isHWSink',uint8(0),'isSetup',uint8(0),'isInline',uint8(1),'isNonInline',u"
+"int8(0),'isInterrupt',uint8(0),'isChannelwise',uint8(1)),'IOBoardType','DS110"
+"4MASTER','UnitType','ADC','Identifier','ADC','DialogType','ML','BlockSet','NO"
+"NE','SlaveProcessor','NONE'))"
+	  Port {
+	    PortNumber		    1
+	    Name		    "uq1"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	    ShowSigGenPortName	    on
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "DS1104ADC_C6"
+	  Ports			  [0, 1]
+	  Position		  [475, 456, 565, 494]
+	  SourceBlock		  "rtilib1104/DS1104 MASTER PPC/DS1104ADC_C5"
+	  SourceType		  "RTI"
+	  ShowPortLabels	  on
+	  ChannelNo		  "6"
+	  TriggerMode		  "0"
+	  Reserved1		  "[]"
+	  Reserved2		  "[]"
+	  Reserved3		  "[]"
+	  Reserved4		  "[]"
+	  DialogFcn		  "gui1104adc"
+	  UnitName		  "{ 'DS1104ADC_C' }"
+	  UnitValues		  "{ 6 }"
+	  DSProperties		  "struct('RTI',struct('Version',uint32(1),'Bl"
+"ockType',struct('isSLSource',uint8(1),'isSLSink',uint8(0),'isHWSource',uint8("
+"1),'isHWSink',uint8(0),'isSetup',uint8(0),'isInline',uint8(1),'isNonInline',u"
+"int8(0),'isInterrupt',uint8(0),'isChannelwise',uint8(1)),'IOBoardType','DS110"
+"4MASTER','UnitType','ADC','Identifier','ADC','DialogType','ML','BlockSet','NO"
+"NE','SlaveProcessor','NONE'))"
+	  Port {
+	    PortNumber		    1
+	    Name		    "uq2"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	    ShowSigGenPortName	    on
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "DS1104BIT_OUT_C0"
+	  Ports			  [1]
+	  Position		  [260, 166, 365, 204]
+	  SourceBlock		  "rtilib1104/DS1104 MASTER PPC/DS1104BIT_OUT_"
+"C0"
+	  SourceType		  "RTI"
+	  ShowPortLabels	  on
+	  ChannelNo		  "0"
+	  InitValue		  "0"
+	  TermMode		  "0"
+	  TermValue		  "0"
+	  Reserved1		  "[]"
+	  Reserved2		  "[]"
+	  Reserved3		  "[]"
+	  Reserved		  "[]"
+	  DialogFcn		  "gui1104bit_out"
+	  UnitName		  "{'DS1104BIT_OUT_C'}"
+	  UnitValues		  "{ 0 }"
+	  DSProperties		  "struct('RTI',struct('Version',uint32(1),'Bl"
+"ockType',struct('isSLSource',uint8(0),'isSLSink',uint8(1),'isHWSource',uint8("
+"0),'isHWSink',uint8(1),'isSetup',uint8(0),'isInline',uint8(1),'isNonInline',u"
+"int8(0),'isInterrupt',uint8(0),'isChannelwise',uint8(1)),'IOBoardType','DS110"
+"4MASTER','UnitType','BIT','Identifier','BITOUTCH','DialogType','ML','BlockSet"
+"','NONE','SlaveProcessor','NONE'))"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "DS1104BIT_OUT_C1"
+	  Ports			  [1]
+	  Position		  [260, 226, 365, 264]
+	  SourceBlock		  "rtilib1104/DS1104 MASTER PPC/DS1104BIT_OUT_"
+"C0"
+	  SourceType		  "RTI"
+	  ShowPortLabels	  on
+	  ChannelNo		  "1"
+	  InitValue		  "0"
+	  TermMode		  "0"
+	  TermValue		  "0"
+	  Reserved1		  "[]"
+	  Reserved2		  "[]"
+	  Reserved3		  "[]"
+	  Reserved		  "[]"
+	  DialogFcn		  "gui1104bit_out"
+	  UnitName		  "{'DS1104BIT_OUT_C'}"
+	  UnitValues		  "{1}"
+	  DSProperties		  "struct('RTI',struct('Version',uint32(1),'Bl"
+"ockType',struct('isSLSource',uint8(0),'isSLSink',uint8(1),'isHWSource',uint8("
+"0),'isHWSink',uint8(1),'isSetup',uint8(0),'isInline',uint8(1),'isNonInline',u"
+"int8(0),'isInterrupt',uint8(0),'isChannelwise',uint8(1)),'IOBoardType','DS110"
+"4MASTER','UnitType','BIT','Identifier','BITOUTCH','DialogType','ML','BlockSet"
+"','NONE','SlaveProcessor','NONE'))"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "DS1104BIT_OUT_C2"
+	  Ports			  [1]
+	  Position		  [260, 281, 365, 319]
+	  SourceBlock		  "rtilib1104/DS1104 MASTER PPC/DS1104BIT_OUT_"
+"C0"
+	  SourceType		  "RTI"
+	  ShowPortLabels	  on
+	  ChannelNo		  "2"
+	  InitValue		  "0"
+	  TermMode		  "0"
+	  TermValue		  "0"
+	  Reserved1		  "[]"
+	  Reserved2		  "[]"
+	  Reserved3		  "[]"
+	  Reserved		  "[]"
+	  DialogFcn		  "gui1104bit_out"
+	  UnitName		  "{'DS1104BIT_OUT_C'}"
+	  UnitValues		  "{2}"
+	  DSProperties		  "struct('RTI',struct('Version',uint32(1),'Bl"
+"ockType',struct('isSLSource',uint8(0),'isSLSink',uint8(1),'isHWSource',uint8("
+"0),'isHWSink',uint8(1),'isSetup',uint8(0),'isInline',uint8(1),'isNonInline',u"
+"int8(0),'isInterrupt',uint8(0),'isChannelwise',uint8(1)),'IOBoardType','DS110"
+"4MASTER','UnitType','BIT','Identifier','BITOUTCH','DialogType','ML','BlockSet"
+"','NONE','SlaveProcessor','NONE'))"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "DS1104BIT_OUT_C3"
+	  Ports			  [1]
+	  Position		  [260, 336, 365, 374]
+	  SourceBlock		  "rtilib1104/DS1104 MASTER PPC/DS1104BIT_OUT_"
+"C0"
+	  SourceType		  "RTI"
+	  ShowPortLabels	  on
+	  ChannelNo		  "3"
+	  InitValue		  "0"
+	  TermMode		  "0"
+	  TermValue		  "0"
+	  Reserved1		  "[]"
+	  Reserved2		  "[]"
+	  Reserved3		  "[]"
+	  Reserved		  "[]"
+	  DialogFcn		  "gui1104bit_out"
+	  UnitName		  "{'DS1104BIT_OUT_C'}"
+	  UnitValues		  "{3}"
+	  DSProperties		  "struct('RTI',struct('Version',uint32(1),'Bl"
+"ockType',struct('isSLSource',uint8(0),'isSLSink',uint8(1),'isHWSource',uint8("
+"0),'isHWSink',uint8(1),'isSetup',uint8(0),'isInline',uint8(1),'isNonInline',u"
+"int8(0),'isInterrupt',uint8(0),'isChannelwise',uint8(1)),'IOBoardType','DS110"
+"4MASTER','UnitType','BIT','Identifier','BITOUTCH','DialogType','ML','BlockSet"
+"','NONE','SlaveProcessor','NONE'))"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "DS1104BIT_OUT_C4"
+	  Ports			  [1]
+	  Position		  [260, 391, 365, 429]
+	  SourceBlock		  "rtilib1104/DS1104 MASTER PPC/DS1104BIT_OUT_"
+"C0"
+	  SourceType		  "RTI"
+	  ShowPortLabels	  on
+	  ChannelNo		  "4"
+	  InitValue		  "0"
+	  TermMode		  "0"
+	  TermValue		  "0"
+	  Reserved1		  "[]"
+	  Reserved2		  "[]"
+	  Reserved3		  "[]"
+	  Reserved		  "[]"
+	  DialogFcn		  "gui1104bit_out"
+	  UnitName		  "{'DS1104BIT_OUT_C'}"
+	  UnitValues		  "{4}"
+	  DSProperties		  "struct('RTI',struct('Version',uint32(1),'Bl"
+"ockType',struct('isSLSource',uint8(0),'isSLSink',uint8(1),'isHWSource',uint8("
+"0),'isHWSink',uint8(1),'isSetup',uint8(0),'isInline',uint8(1),'isNonInline',u"
+"int8(0),'isInterrupt',uint8(0),'isChannelwise',uint8(1)),'IOBoardType','DS110"
+"4MASTER','UnitType','BIT','Identifier','BITOUTCH','DialogType','ML','BlockSet"
+"','NONE','SlaveProcessor','NONE'))"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "DS1104BIT_OUT_C5"
+	  Ports			  [1]
+	  Position		  [260, 446, 365, 484]
+	  SourceBlock		  "rtilib1104/DS1104 MASTER PPC/DS1104BIT_OUT_"
+"C0"
+	  SourceType		  "RTI"
+	  ShowPortLabels	  on
+	  ChannelNo		  "5"
+	  InitValue		  "0"
+	  TermMode		  "0"
+	  TermValue		  "0"
+	  Reserved1		  "[]"
+	  Reserved2		  "[]"
+	  Reserved3		  "[]"
+	  Reserved		  "[]"
+	  DialogFcn		  "gui1104bit_out"
+	  UnitName		  "{'DS1104BIT_OUT_C'}"
+	  UnitValues		  "{5}"
+	  DSProperties		  "struct('RTI',struct('Version',uint32(1),'Bl"
+"ockType',struct('isSLSource',uint8(0),'isSLSink',uint8(1),'isHWSource',uint8("
+"0),'isHWSink',uint8(1),'isSetup',uint8(0),'isInline',uint8(1),'isNonInline',u"
+"int8(0),'isInterrupt',uint8(0),'isChannelwise',uint8(1)),'IOBoardType','DS110"
+"4MASTER','UnitType','BIT','Identifier','BITOUTCH','DialogType','ML','BlockSet"
+"','NONE','SlaveProcessor','NONE'))"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "DS1104BIT_OUT_C6"
+	  Ports			  [1]
+	  Position		  [260, 501, 365, 539]
+	  SourceBlock		  "rtilib1104/DS1104 MASTER PPC/DS1104BIT_OUT_"
+"C0"
+	  SourceType		  "RTI"
+	  ShowPortLabels	  on
+	  ChannelNo		  "6"
+	  InitValue		  "0"
+	  TermMode		  "0"
+	  TermValue		  "0"
+	  Reserved1		  "[]"
+	  Reserved2		  "[]"
+	  Reserved3		  "[]"
+	  Reserved		  "[]"
+	  DialogFcn		  "gui1104bit_out"
+	  UnitName		  "{'DS1104BIT_OUT_C'}"
+	  UnitValues		  "{6}"
+	  DSProperties		  "struct('RTI',struct('Version',uint32(1),'Bl"
+"ockType',struct('isSLSource',uint8(0),'isSLSink',uint8(1),'isHWSource',uint8("
+"0),'isHWSink',uint8(1),'isSetup',uint8(0),'isInline',uint8(1),'isNonInline',u"
+"int8(0),'isInterrupt',uint8(0),'isChannelwise',uint8(1)),'IOBoardType','DS110"
+"4MASTER','UnitType','BIT','Identifier','BITOUTCH','DialogType','ML','BlockSet"
+"','NONE','SlaveProcessor','NONE'))"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "DS1104BIT_OUT_C7"
+	  Ports			  [1]
+	  Position		  [260, 556, 365, 594]
+	  SourceBlock		  "rtilib1104/DS1104 MASTER PPC/DS1104BIT_OUT_"
+"C0"
+	  SourceType		  "RTI"
+	  ShowPortLabels	  on
+	  ChannelNo		  "7"
+	  InitValue		  "0"
+	  TermMode		  "0"
+	  TermValue		  "0"
+	  Reserved1		  "[]"
+	  Reserved2		  "[]"
+	  Reserved3		  "[]"
+	  Reserved		  "[]"
+	  DialogFcn		  "gui1104bit_out"
+	  UnitName		  "{'DS1104BIT_OUT_C'}"
+	  UnitValues		  "{7}"
+	  DSProperties		  "struct('RTI',struct('Version',uint32(1),'Bl"
+"ockType',struct('isSLSource',uint8(0),'isSLSink',uint8(1),'isHWSource',uint8("
+"0),'isHWSink',uint8(1),'isSetup',uint8(0),'isInline',uint8(1),'isNonInline',u"
+"int8(0),'isInterrupt',uint8(0),'isChannelwise',uint8(1)),'IOBoardType','DS110"
+"4MASTER','UnitType','BIT','Identifier','BITOUTCH','DialogType','ML','BlockSet"
+"','NONE','SlaveProcessor','NONE'))"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "DS1104DAC_C1"
+	  Ports			  [1]
+	  Position		  [245, 22, 335, 58]
+	  SourceBlock		  "rtilib1104/DS1104 MASTER PPC/DS1104DAC_C1"
+	  SourceType		  "RTI"
+	  ShowPortLabels	  on
+	  ChannelNo		  "1"
+	  InitValue		  "0"
+	  TermMode		  "0"
+	  TermValue		  "0"
+	  Reserved1		  "[]"
+	  Reserved2		  "[]"
+	  Reserved3		  "[]"
+	  Reserved4		  "[]"
+	  DialogFcn		  "gui1104dac"
+	  UnitName		  "{ 'DS1104DAC_C'}"
+	  UnitValues		  "{ 1 }"
+	  DSProperties		  "struct('RTI',struct('Version',uint32(1),'Bl"
+"ockType',struct('isSLSource',uint8(0),'isSLSink',uint8(1),'isHWSource',uint8("
+"0),'isHWSink',uint8(1),'isSetup',uint8(0),'isInline',uint8(1),'isNonInline',u"
+"int8(0),'isInterrupt',uint8(0),'isChannelwise',uint8(1)),'IOBoardType','DS110"
+"4MASTER','UnitType','DAC','Identifier','DAC','DialogType','ML','BlockSet','NO"
+"NE','SlaveProcessor','NONE'))"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "DS1104DAC_C2"
+	  Ports			  [1]
+	  Position		  [245, 72, 335, 108]
+	  SourceBlock		  "rtilib1104/DS1104 MASTER PPC/DS1104DAC_C1"
+	  SourceType		  "RTI"
+	  ShowPortLabels	  on
+	  ChannelNo		  "2"
+	  InitValue		  "0"
+	  TermMode		  "0"
+	  TermValue		  "0"
+	  Reserved1		  "[]"
+	  Reserved2		  "[]"
+	  Reserved3		  "[]"
+	  Reserved4		  "[]"
+	  DialogFcn		  "gui1104dac"
+	  UnitName		  "{ 'DS1104DAC_C'}"
+	  UnitValues		  "{2}"
+	  DSProperties		  "struct('RTI',struct('Version',uint32(1),'Bl"
+"ockType',struct('isSLSource',uint8(0),'isSLSink',uint8(1),'isHWSource',uint8("
+"0),'isHWSink',uint8(1),'isSetup',uint8(0),'isInline',uint8(1),'isNonInline',u"
+"int8(0),'isInterrupt',uint8(0),'isChannelwise',uint8(1)),'IOBoardType','DS110"
+"4MASTER','UnitType','DAC','Identifier','DAC','DialogType','ML','BlockSet','NO"
+"NE','SlaveProcessor','NONE'))"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "DS1104MUX_ADC"
+	  Ports			  [0, 1]
+	  Position		  [465, 186, 555, 224]
+	  SourceBlock		  "rtilib1104/DS1104 MASTER PPC/DS1104MUX_ADC"
+	  SourceType		  "RTI"
+	  ShowPortLabels	  on
+	  ChannelNos		  "[1 2 3]"
+	  TriggerMode		  "0"
+	  Reserved1		  "[]"
+	  Reserved2		  "[]"
+	  Reserved3		  "[]"
+	  Reserved4		  "[]"
+	  DialogFcn		  "gui1104mux_adc"
+	  UnitName		  "{ 'DS1104MUX_ADC' }"
+	  UnitValues		  "{ [] }"
+	  DSProperties		  "struct('RTI',struct('Version',uint32(1),'Bl"
+"ockType',struct('isSLSource',uint8(1),'isSLSink',uint8(0),'isHWSource',uint8("
+"1),'isHWSink',uint8(0),'isSetup',uint8(0),'isInline',uint8(1),'isNonInline',u"
+"int8(0),'isInterrupt',uint8(0),'isChannelwise',uint8(0)),'IOBoardType','DS110"
+"4MASTER','UnitType','ADC','Identifier','ADCMUX','DialogType','ML','BlockSet',"
+"'NONE','SlaveProcessor','NONE'))"
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion"
+	  Position		  [155, 171, 210, 199]
+	  OutDataTypeMode	  "boolean"
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion1"
+	  Position		  [155, 231, 210, 259]
+	  OutDataTypeMode	  "boolean"
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion2"
+	  Position		  [155, 286, 210, 314]
+	  OutDataTypeMode	  "boolean"
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion3"
+	  Position		  [155, 341, 210, 369]
+	  OutDataTypeMode	  "boolean"
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion4"
+	  Position		  [155, 396, 210, 424]
+	  OutDataTypeMode	  "boolean"
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion5"
+	  Position		  [155, 451, 210, 479]
+	  OutDataTypeMode	  "boolean"
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion6"
+	  Position		  [155, 506, 210, 534]
+	  OutDataTypeMode	  "boolean"
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion7"
+	  Position		  [155, 561, 210, 589]
+	  OutDataTypeMode	  "boolean"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux1"
+	  Ports			  [1, 3]
+	  Position		  [580, 102, 585, 308]
+	  BackgroundColor	  "black"
+	  ShowName		  off
+	  Outputs		  "3"
+	  Port {
+	    PortNumber		    1
+	    Name		    "u1"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	    ShowSigGenPortName	    on
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "u2"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	    ShowSigGenPortName	    on
+	  }
+	  Port {
+	    PortNumber		    3
+	    Name		    "u3"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	    ShowSigGenPortName	    on
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "u1"
+	  Position		  [610, 128, 640, 142]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "u2"
+	  Position		  [610, 198, 640, 212]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "u3"
+	  Position		  [610, 268, 640, 282]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "uq1"
+	  Position		  [590, 403, 620, 417]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "uq2"
+	  Position		  [590, 468, 620, 482]
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion"
+	  SrcPort		  1
+	  DstBlock		  "DS1104BIT_OUT_C0"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion1"
+	  SrcPort		  1
+	  DstBlock		  "DS1104BIT_OUT_C1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion2"
+	  SrcPort		  1
+	  DstBlock		  "DS1104BIT_OUT_C2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion3"
+	  SrcPort		  1
+	  DstBlock		  "DS1104BIT_OUT_C3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion4"
+	  SrcPort		  1
+	  DstBlock		  "DS1104BIT_OUT_C4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion5"
+	  SrcPort		  1
+	  DstBlock		  "DS1104BIT_OUT_C5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion6"
+	  SrcPort		  1
+	  DstBlock		  "DS1104BIT_OUT_C6"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion7"
+	  SrcPort		  1
+	  DstBlock		  "DS1104BIT_OUT_C7"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "DS1104MUX_ADC"
+	  SrcPort		  1
+	  DstBlock		  "Demux1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Pumpe1Vorgabe"
+	  SrcPort		  1
+	  DstBlock		  "DS1104DAC_C1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Pumpe2Vorgabe"
+	  SrcPort		  1
+	  DstBlock		  "DS1104DAC_C2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Ventil1"
+	  SrcPort		  1
+	  DstBlock		  "Data Type Conversion"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "u1"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  1
+	  DstBlock		  "u1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Ventil13o"
+	  SrcPort		  1
+	  DstBlock		  "Data Type Conversion1"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "u2"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  2
+	  DstBlock		  "u2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Ventil13u"
+	  SrcPort		  1
+	  DstBlock		  "Data Type Conversion2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Ventil3"
+	  SrcPort		  1
+	  DstBlock		  "Data Type Conversion3"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "u3"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  3
+	  DstBlock		  "u3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Ventil32o"
+	  SrcPort		  1
+	  DstBlock		  "Data Type Conversion4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Ventil32u"
+	  SrcPort		  1
+	  DstBlock		  "Data Type Conversion5"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "uq1"
+	  Labels		  [0, 0]
+	  SrcBlock		  "DS1104ADC_C5"
+	  SrcPort		  1
+	  DstBlock		  "uq1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Ventil2"
+	  SrcPort		  1
+	  DstBlock		  "Data Type Conversion6"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "uq2"
+	  Labels		  [0, 0]
+	  SrcBlock		  "DS1104ADC_C6"
+	  SrcPort		  1
+	  DstBlock		  "uq2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Ventil0"
+	  SrcPort		  1
+	  DstBlock		  "Data Type Conversion7"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Terminator
+      Name		      "Terminator"
+      Position		      [535, 425, 555, 445]
+    }
+    Block {
+      BlockType		      Terminator
+      Name		      "Terminator10"
+      Position		      [635, 575, 655, 595]
+    }
+    Block {
+      BlockType		      Terminator
+      Name		      "Terminator9"
+      Position		      [635, 500, 655, 520]
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Umrechnung2"
+      Ports		      [2, 2]
+      Position		      [920, 203, 975, 307]
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      System {
+	Name			"Umrechnung2"
+	Location		[358, 362, 838, 523]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  Position		  [15, 33, 45, 47]
+	  Port			  "1"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "q1Vorgabe"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	    ShowSigGenPortName	    on
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "In2"
+	  Position		  [15, 83, 45, 97]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "q2Vorgabe"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	    ShowSigGenPortName	    on
+	  }
+	}
+	Block {
+	  BlockType		  Saturate
+	  Name			  "Saturation"
+	  Position		  [305, 25, 335, 55]
+	  UpperLimit		  "1"
+	  LowerLimit		  "-1"
+	}
+	Block {
+	  BlockType		  Saturate
+	  Name			  "Saturation1"
+	  Position		  [305, 75, 335, 105]
+	  UpperLimit		  "1"
+	  LowerLimit		  "-1"
+	}
+	Block {
+	  BlockType		  Fcn
+	  Name			  "q1->uv1"
+	  Position		  [120, 26, 215, 54]
+	  Expr			  "0.279*u - 0.786"
+	  Port {
+	    PortNumber		    1
+	    Name		    "uq1Vorgabe"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	    ShowSigGenPortName	    on
+	  }
+	}
+	Block {
+	  BlockType		  Fcn
+	  Name			  "q2->uv2"
+	  Position		  [120, 73, 215, 107]
+	  Expr			  "0.288*u - 0.769"
+	  Port {
+	    PortNumber		    1
+	    Name		    "uq2Vorgabe"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	    ShowSigGenPortName	    on
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  Position		  [400, 33, 430, 47]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	  InitialOutput		  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out2"
+	  Position		  [400, 83, 430, 97]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	  InitialOutput		  "0"
+	}
+	Line {
+	  Name			  "q1Vorgabe"
+	  Labels		  [0, 0]
+	  SrcBlock		  "In1"
+	  SrcPort		  1
+	  DstBlock		  "q1->uv1"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "q2Vorgabe"
+	  Labels		  [0, 0]
+	  SrcBlock		  "In2"
+	  SrcPort		  1
+	  DstBlock		  "q2->uv2"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "uq1Vorgabe"
+	  Labels		  [0, 0]
+	  SrcBlock		  "q1->uv1"
+	  SrcPort		  1
+	  DstBlock		  "Saturation"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "uq2Vorgabe"
+	  Labels		  [0, 0]
+	  SrcBlock		  "q2->uv2"
+	  SrcPort		  1
+	  DstBlock		  "Saturation1"
+	  DstPort		  1
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "Saturation"
+	  SrcPort		  1
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Saturation1"
+	  SrcPort		  1
+	  DstBlock		  "Out2"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Umrechnunguh"
+      Ports		      [3, 3]
+      Position		      [410, 246, 460, 474]
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      Port {
+	PortNumber		1
+	Name			"h1"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+	ShowSigGenPortName	on
+      }
+      Port {
+	PortNumber		2
+	Name			"h2"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+	ShowSigGenPortName	on
+      }
+      Port {
+	PortNumber		3
+	Name			"h3"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+	ShowSigGenPortName	on
+      }
+      System {
+	Name			"Umrechnunguh"
+	Location		[665, 427, 1144, 810]
+	Open			on
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "u1"
+	  Position		  [15, 88, 45, 102]
+	  Port			  "1"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "u2"
+	  Position		  [15, 193, 45, 207]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "u3"
+	  Position		  [15, 298, 45, 312]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Faktorh1"
+	  Position		  [185, 30, 215, 60]
+	  Value			  "Faktorh1"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Faktorh2"
+	  Position		  [185, 135, 215, 165]
+	  Value			  "Faktorh2"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Faktorh3"
+	  Position		  [185, 240, 215, 270]
+	  Value			  "Faktorh3"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Offseth1"
+	  Position		  [290, 30, 320, 60]
+	  Value			  "Offseth1"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Offseth2"
+	  Position		  [290, 135, 320, 165]
+	  Value			  "Offseth2"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Offseth3"
+	  Position		  [290, 240, 320, 270]
+	  Value			  "Offseth3"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  Ports			  [2, 1]
+	  Position		  [245, 72, 275, 103]
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product1"
+	  Ports			  [2, 1]
+	  Position		  [245, 177, 275, 208]
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product2"
+	  Ports			  [2, 1]
+	  Position		  [245, 282, 275, 313]
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  Ports			  [2, 1]
+	  Position		  [330, 80, 350, 100]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "++|"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum1"
+	  Ports			  [2, 1]
+	  Position		  [330, 185, 350, 205]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "++|"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum2"
+	  Ports			  [2, 1]
+	  Position		  [330, 290, 350, 310]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "++|"
+	}
+	Block {
+	  BlockType		  TransferFcn
+	  Name			  "TP 5Hz"
+	  Position		  [115, 77, 170, 113]
+	  Numerator		  "[5]"
+	  Denominator		  "[1 5]"
+	  Port {
+	    PortNumber		    1
+	    Name		    "i1"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	    ShowSigGenPortName	    on
+	  }
+	}
+	Block {
+	  BlockType		  TransferFcn
+	  Name			  "TP 5Hz1"
+	  Position		  [115, 182, 170, 218]
+	  Numerator		  "[5]"
+	  Denominator		  "[1 5]"
+	  Port {
+	    PortNumber		    1
+	    Name		    "i1"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	    ShowSigGenPortName	    on
+	  }
+	}
+	Block {
+	  BlockType		  TransferFcn
+	  Name			  "TP 5Hz2"
+	  Position		  [115, 287, 170, 323]
+	  Numerator		  "[5]"
+	  Denominator		  "[1 5]"
+	  Port {
+	    PortNumber		    1
+	    Name		    "i1"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	    ShowSigGenPortName	    on
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "h1"
+	  Position		  [395, 83, 425, 97]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	  InitialOutput		  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "h2"
+	  Position		  [395, 188, 425, 202]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	  InitialOutput		  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "h3"
+	  Position		  [395, 293, 425, 307]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	  InitialOutput		  "0"
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  DstBlock		  "h1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Faktorh1"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Offseth1"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  DstBlock		  "Sum"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "i1"
+	  SrcBlock		  "TP 5Hz"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Product2"
+	  SrcPort		  1
+	  DstBlock		  "Sum2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Sum2"
+	  SrcPort		  1
+	  DstBlock		  "h3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Faktorh3"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  DstBlock		  "Product2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Offseth3"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  DstBlock		  "Sum2"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "i1"
+	  Labels		  [0, 0]
+	  SrcBlock		  "TP 5Hz2"
+	  SrcPort		  1
+	  DstBlock		  "Product2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Product1"
+	  SrcPort		  1
+	  DstBlock		  "Sum1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Sum1"
+	  SrcPort		  1
+	  DstBlock		  "h2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Faktorh2"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  DstBlock		  "Product1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Offseth2"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  DstBlock		  "Sum1"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "i1"
+	  Labels		  [0, 0]
+	  SrcBlock		  "TP 5Hz1"
+	  SrcPort		  1
+	  DstBlock		  "Product1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "u2"
+	  SrcPort		  1
+	  DstBlock		  "TP 5Hz1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "u1"
+	  SrcPort		  1
+	  DstBlock		  "TP 5Hz"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "u3"
+	  SrcPort		  1
+	  DstBlock		  "TP 5Hz2"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "V0"
+      Position		      [15, 580, 35, 600]
+      Value		      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "V1"
+      Position		      [15, 335, 35, 355]
+      Value		      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "V13o"
+      Position		      [15, 370, 35, 390]
+      Value		      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "V13u"
+      Position		      [15, 405, 35, 425]
+      Value		      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "V2"
+      Position		      [15, 545, 35, 565]
+      Value		      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "V3"
+      Position		      [15, 440, 35, 460]
+      Value		      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "V32o"
+      Position		      [15, 475, 35, 495]
+      Value		      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "V32u"
+      Position		      [15, 510, 35, 530]
+      Value		      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "soll1"
+      Position		      [485, 170, 505, 190]
+      Value		      "30"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "soll2"
+      Position		      [535, 170, 555, 190]
+      Value		      "20"
+    }
+    Block {
+      BlockType		      Fcn
+      Name		      "um1->q1mess"
+      Position		      [465, 493, 550, 527]
+      Expr		      "8.13*u"
+      Port {
+	PortNumber		1
+	Name			"q1mess"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+	ShowSigGenPortName	on
+      }
+    }
+    Block {
+      BlockType		      Fcn
+      Name		      "um2->q2mess"
+      Position		      [465, 569, 550, 601]
+      Expr		      "8.2*u+0.132"
+      Port {
+	PortNumber		1
+	Name			"q2mess"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+	ShowSigGenPortName	on
+      }
+    }
+    Line {
+      SrcBlock		      "Automatik"
+      SrcPort		      1
+      DstBlock		      "Multiport\nSwitch"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Multiport\nSwitch"
+      SrcPort		      1
+      DstBlock		      "Demux"
+      DstPort		      1
+    }
+    Line {
+      Name		      "u2"
+      Labels		      [0, 0]
+      SrcBlock		      "T3Anlage"
+      SrcPort		      2
+      DstBlock		      "Umrechnunguh"
+      DstPort		      2
+    }
+    Line {
+      Name		      "u3"
+      Labels		      [0, 0]
+      SrcBlock		      "T3Anlage"
+      SrcPort		      3
+      DstBlock		      "Umrechnunguh"
+      DstPort		      3
+    }
+    Line {
+      Name		      "h3"
+      Labels		      [0, 0]
+      SrcBlock		      "Umrechnunguh"
+      SrcPort		      3
+      DstBlock		      "Terminator"
+      DstPort		      1
+    }
+    Line {
+      Name		      "Diff2"
+      Labels		      [0, 0]
+      SrcBlock		      "Sum2"
+      SrcPort		      1
+      DstBlock		      "Mux1"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "soll1"
+      SrcPort		      1
+      Points		      [10, 0]
+      DstBlock		      "Sum1"
+      DstPort		      1
+    }
+    Line {
+      Name		      "h1"
+      Labels		      [0, 0]
+      SrcBlock		      "Umrechnunguh"
+      SrcPort		      1
+      DstBlock		      "Sum1"
+      DstPort		      2
+    }
+    Line {
+      Name		      "h2"
+      Labels		      [0, 0]
+      SrcBlock		      "Umrechnunguh"
+      SrcPort		      2
+      DstBlock		      "Sum2"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "soll2"
+      SrcPort		      1
+      Points		      [5, 0]
+      DstBlock		      "Sum2"
+      DstPort		      1
+    }
+    Line {
+      Name		      "Diff1"
+      Labels		      [0, 0]
+      SrcBlock		      "Sum1"
+      SrcPort		      1
+      DstBlock		      "Mux1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Neural Network"
+      SrcPort		      1
+      Points		      [5, 0; 0, 15]
+      DstBlock		      "Multiport\nSwitch"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Mux1"
+      SrcPort		      1
+      Points		      [10, 0]
+      Branch {
+	Points			[0, 70]
+	DstBlock		"Fuzzy Logic \nController"
+	DstPort			1
+      }
+      Branch {
+	Points			[20, 0; 0, -35]
+	DstBlock		"Neural Network"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Pumpe1"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Pumpe2"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Mux"
+      SrcPort		      1
+      DstBlock		      "Multiport\nSwitch"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      1
+      DstBlock		      "Umrechnung2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      2
+      DstBlock		      "Umrechnung2"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Umrechnung2"
+      SrcPort		      1
+      Points		      [0, -195; -790, 0; 0, 240]
+      DstBlock		      "T3Anlage"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Umrechnung2"
+      SrcPort		      2
+      Points		      [15, 0; 0, -275; -850, 0; 0, 305]
+      DstBlock		      "T3Anlage"
+      DstPort		      2
+    }
+    Line {
+      Name		      "uq1"
+      Labels		      [0, 0]
+      SrcBlock		      "T3Anlage"
+      SrcPort		      4
+      DstBlock		      "um1->q1mess"
+      DstPort		      1
+    }
+    Line {
+      Name		      "q1mess"
+      Labels		      [0, 0]
+      SrcBlock		      "um1->q1mess"
+      SrcPort		      1
+      DstBlock		      "Terminator9"
+      DstPort		      1
+    }
+    Line {
+      Name		      "uq2"
+      Labels		      [0, 0]
+      SrcBlock		      "T3Anlage"
+      SrcPort		      5
+      DstBlock		      "um2->q2mess"
+      DstPort		      1
+    }
+    Line {
+      Name		      "q2mess"
+      Labels		      [0, 0]
+      SrcBlock		      "um2->q2mess"
+      SrcPort		      1
+      DstBlock		      "Terminator10"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "V1"
+      SrcPort		      1
+      DstBlock		      "T3Anlage"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "V13o"
+      SrcPort		      1
+      DstBlock		      "T3Anlage"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "V13u"
+      SrcPort		      1
+      DstBlock		      "T3Anlage"
+      DstPort		      5
+    }
+    Line {
+      SrcBlock		      "V3"
+      SrcPort		      1
+      DstBlock		      "T3Anlage"
+      DstPort		      6
+    }
+    Line {
+      SrcBlock		      "V32o"
+      SrcPort		      1
+      DstBlock		      "T3Anlage"
+      DstPort		      7
+    }
+    Line {
+      SrcBlock		      "V32u"
+      SrcPort		      1
+      DstBlock		      "T3Anlage"
+      DstPort		      8
+    }
+    Line {
+      SrcBlock		      "V2"
+      SrcPort		      1
+      DstBlock		      "T3Anlage"
+      DstPort		      9
+    }
+    Line {
+      SrcBlock		      "V0"
+      SrcPort		      1
+      DstBlock		      "T3Anlage"
+      DstPort		      10
+    }
+    Line {
+      Name		      "u1"
+      Labels		      [0, 0]
+      SrcBlock		      "T3Anlage"
+      SrcPort		      1
+      DstBlock		      "Umrechnunguh"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Fuzzy Logic \nController"
+      SrcPort		      1
+      Points		      [0, 15]
+      DstBlock		      "Multiport\nSwitch"
+      DstPort		      4
+    }
+  }
+}
