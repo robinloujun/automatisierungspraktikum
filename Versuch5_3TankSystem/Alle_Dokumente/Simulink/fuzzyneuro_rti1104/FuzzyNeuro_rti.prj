@@ -1,0 +1,23 @@
+Real-Time Interface project marker file.
+
+BuildDir:           yes
+Model:              FuzzyNeuro
+TMF:                C:\dSPACE RCPHIL 7.2\matlab\rti1104\m\rti1104.tmf
+MATLAB:             7.13.0.564 (R2011b)
+Simulink:           Simulink 7.8 (R2011b) 08-Jul-2011
+SimStruct:          11-Jul-2011 20:59:52
+RTW:                Simulink Coder 8.1 (R2011b) 08-Jul-2011
+RTI:                RTI1104 6.8 (02-Nov-2011)
+RTI-MP:             n.a.
+RTICAN:             n.a.
+RTICANMM:           n.a.
+RTI4301:            n.a.
+RTILIN:             n.a.
+RTILINMM:           n.a.
+RTIBYPASS1:         n.a.
+RTIBYPASS:          n.a.
+RTIFLEXRAY:         n.a.
+RTIFLEXRAYCONFIG:   n.a.
+RTIRPCU:            n.a.
+MDBS:               n.a.
+TALIB:              n.a.

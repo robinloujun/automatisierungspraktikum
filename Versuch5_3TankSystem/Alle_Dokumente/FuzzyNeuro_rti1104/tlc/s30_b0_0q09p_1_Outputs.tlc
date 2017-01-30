@@ -1,0 +1,18 @@
+%implements s30_b0_0q09p_1_Outputs "C"
+
+%function Outputs(block, system) Output
+%<SLibGenerateExtModeOutput(system)>
+/* Sum: '<S33>/Sum' incorporates:
+ *  Constant: '<S33>/a'
+ */
+%<SLibCG_SetBOV(196, 0, 7, 1, "", -1, "", 0, "rtu_x - %<(SLibCG_SE(SLibCGIR_PV(197, 0, 7, 1, "", -1, "", 0)))>")>\
+/* Sum: '<S33>/Sum1' incorporates:
+ *  Constant: '<S33>/a'
+ *  Constant: '<S33>/b'
+ */
+%<SLibCG_SetBOV(197, 0, 7, 1, "", -1, "", 0, "%<(SLibCG_SE(SLibCGIR_PV(198, 0, 7, 1, "", -1, "", 0)))> - %<(SLibCG_SE(SLibCGIR_PV(197, 0, 7, 1, "", -1, "", 0)))>")>\
+/* Product: '<S33>/Product ab (trimf)' */
+*rty_Out1 = %<(SLibCG_SE(SLibCG_BOV(196, 0, 7, 1, "", -1, "", 0)))> / %<(SLibCG_SE(SLibCG_BOV(197, 0, 7, 1, "", -1, "", 0)))>;
+%<SLibCG_TrackOArg(7, 0, 0, "")>\
+%<SLibCG_TrackIArg(7, 0, 0, "")>\
+%endfunction

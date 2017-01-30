@@ -1,0 +1,1 @@
+   FuzzyNeuro_neuesNetz.c  FuzzyNeuro_neuesNetz_trc_ptr.c 

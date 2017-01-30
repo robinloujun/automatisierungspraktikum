@@ -1,0 +1,40 @@
+%implements s30_b0_ly2hb_ZeroCrossings "C"
+
+%function ZeroCrossings(block, system) Output
+/* ZeroCrossings for If: '<S24>/If' */
+%<SLibCGIRZeroOutZeroCrossingsForSystem(20, 20, 6)>\
+%<SLibCGIRZeroOutZeroCrossingsForSystem(20, 20, 7)>\
+%<SLibCGIRZeroOutZeroCrossingsForSystem(20, 20, 8)>\
+%<SLibCGIRZeroOutZeroCrossingsForSystem(20, 20, 9)>\
+/* ZeroCrossings for If: '<S23>/If' */
+%<SLibCGIRZeroOutZeroCrossingsForSystem(20, 20, 12)>\
+%<SLibCGIRZeroOutZeroCrossingsForSystem(20, 20, 13)>\
+%<SLibCGIRZeroOutZeroCrossingsForSystem(20, 20, 14)>\
+%<SLibCGIRZeroOutZeroCrossingsForSystem(20, 20, 15)>\
+/* ZeroCrossings for If: '<S25>/If' */
+%<SLibCGIRZeroOutZeroCrossingsForSystem(20, 20, 18)>\
+%<SLibCGIRZeroOutZeroCrossingsForSystem(20, 20, 19)>\
+%<SLibCGIRZeroOutZeroCrossingsForSystem(20, 20, 20)>\
+%<SLibCGIRZeroOutZeroCrossingsForSystem(20, 20, 21)>\
+/* ZeroCrossings for If: '<S39>/If' */
+%<SLibCGIRZeroOutZeroCrossingsForSystem(20, 20, 28)>\
+%<SLibCGIRZeroOutZeroCrossingsForSystem(20, 20, 29)>\
+%<SLibCGIRZeroOutZeroCrossingsForSystem(20, 20, 30)>\
+%<SLibCGIRZeroOutZeroCrossingsForSystem(20, 20, 31)>\
+/* ZeroCrossings for If: '<S38>/If' */
+%<SLibCGIRZeroOutZeroCrossingsForSystem(20, 20, 34)>\
+%<SLibCGIRZeroOutZeroCrossingsForSystem(20, 20, 35)>\
+%<SLibCGIRZeroOutZeroCrossingsForSystem(20, 20, 36)>\
+%<SLibCGIRZeroOutZeroCrossingsForSystem(20, 20, 37)>\
+/* ZeroCrossings for If: '<S40>/If' */
+%<SLibCGIRZeroOutZeroCrossingsForSystem(20, 20, 40)>\
+%<SLibCGIRZeroOutZeroCrossingsForSystem(20, 20, 41)>\
+%<SLibCGIRZeroOutZeroCrossingsForSystem(20, 20, 42)>\
+%<SLibCGIRZeroOutZeroCrossingsForSystem(20, 20, 43)>\
+/* ZeroCrossings for If: '<S7>/If' */
+%<SLibCGIRZeroOutZeroCrossingsForSystem(20, 20, 45)>\
+%<SLibCGIRZeroOutZeroCrossingsForSystem(20, 20, 46)>\
+/* ZeroCrossings for If: '<S8>/If' */
+%<SLibCGIRZeroOutZeroCrossingsForSystem(20, 20, 48)>\
+%<SLibCGIRZeroOutZeroCrossingsForSystem(20, 20, 49)>\
+%endfunction

@@ -1,0 +1,30 @@
+%implements s30_b0_ly2hb_Terminate "C"
+
+%function Terminate(block, system) Output
+%assign tlcTerminateFcnOfS20B56 = OpaqueTLCBlockFcn("Terminate", 20, 56)
+%assign tlcTerminateFcnOfS20B57 = OpaqueTLCBlockFcn("Terminate", 20, 57)
+%assign tlcTerminateFcnOfS20B58 = OpaqueTLCBlockFcn("Terminate", 20, 58)
+%assign tlcTerminateFcnOfS20B59 = OpaqueTLCBlockFcn("Terminate", 20, 59)
+%assign tlcTerminateFcnOfS20B60 = OpaqueTLCBlockFcn("Terminate", 20, 60)
+%assign tlcTerminateFcnOfS20B62 = OpaqueTLCBlockFcn("Terminate", 20, 62)
+%assign tlcTerminateFcnOfS20B64 = OpaqueTLCBlockFcn("Terminate", 20, 64)
+%assign tlcTerminateFcnOfS20B66 = OpaqueTLCBlockFcn("Terminate", 20, 66)
+%assign tlcTerminateFcnOfS20B68 = OpaqueTLCBlockFcn("Terminate", 20, 68)
+%assign tlcTerminateFcnOfS20B70 = OpaqueTLCBlockFcn("Terminate", 20, 70)
+%assign tlcTerminateFcnOfS20B72 = OpaqueTLCBlockFcn("Terminate", 20, 72)
+%assign tlcTerminateFcnOfS20B74 = OpaqueTLCBlockFcn("Terminate", 20, 74)
+%assign tlcTerminateFcnOfS20B76 = OpaqueTLCBlockFcn("Terminate", 20, 76)
+%<tlcTerminateFcnOfS20B56>\
+%<tlcTerminateFcnOfS20B57>\
+%<tlcTerminateFcnOfS20B58>\
+%<tlcTerminateFcnOfS20B59>\
+%<tlcTerminateFcnOfS20B60>\
+%<tlcTerminateFcnOfS20B62>\
+%<tlcTerminateFcnOfS20B64>\
+%<tlcTerminateFcnOfS20B66>\
+%<tlcTerminateFcnOfS20B68>\
+%<tlcTerminateFcnOfS20B70>\
+%<tlcTerminateFcnOfS20B72>\
+%<tlcTerminateFcnOfS20B74>\
+%<tlcTerminateFcnOfS20B76>\
+%endfunction

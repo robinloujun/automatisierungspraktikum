@@ -1,0 +1,20 @@
+%implements s30_b0_wabup_Disable "C"
+
+%function Disable(block, system) Output
+/* Disable for If: '<S25>/If' */
+%<SLibCG_SetDWV(0, 0, 20, 1, "", -1, "", 0, "-1")>\
+/* Disable for If: '<S24>/If' */
+%<SLibCG_SetDWV(3, 0, 20, 1, "", -1, "", 0, "-1")>\
+/* Disable for If: '<S26>/If' */
+%<SLibCG_SetDWV(6, 0, 20, 1, "", -1, "", 0, "-1")>\
+/* Disable for If: '<S40>/If' */
+%<SLibCG_SetDWV(9, 0, 20, 1, "", -1, "", 0, "-1")>\
+/* Disable for If: '<S39>/If' */
+%<SLibCG_SetDWV(12, 0, 20, 1, "", -1, "", 0, "-1")>\
+/* Disable for If: '<S41>/If' */
+%<SLibCG_SetDWV(15, 0, 20, 1, "", -1, "", 0, "-1")>\
+/* Disable for If: '<S8>/If' */
+%<SLibCG_SetDWV(18, 0, 20, 1, "", -1, "", 0, "-1")>\
+/* Disable for If: '<S9>/If' */
+%<SLibCG_SetDWV(20, 0, 20, 1, "", -1, "", 0, "-1")>\
+%endfunction
