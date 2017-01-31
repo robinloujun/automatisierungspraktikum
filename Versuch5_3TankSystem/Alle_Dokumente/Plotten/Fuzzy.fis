@@ -1,0 +1,52 @@
+[System]
+Name='Fuzzy'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=2
+NumRules=6
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Differenz1'
+Range=[-60 60]
+NumMFs=3
+MF1='zuviel':'trimf',[-108 -60 -8]
+MF2='mittel':'trimf',[-10 0 10]
+MF3='zuwenig':'trimf',[8 60 108]
+
+[Input2]
+Name='Differenz2'
+Range=[-60 60]
+NumMFs=3
+MF1='zuviel':'trimf',[-108 -60 -8]
+MF2='mittel':'trimf',[-10 0 10]
+MF3='zuwenig':'trimf',[8 60 108]
+
+[Output1]
+Name='Pumpe1'
+Range=[0 6]
+NumMFs=3
+MF1='aus':'trimf',[-2.4 0 0.1]
+MF2='halten':'trimf',[0.9 1 1.1]
+MF3='ein':'trimf',[3.6 4 4.1]
+
+[Output2]
+Name='Pumpe2'
+Range=[0 6]
+NumMFs=3
+MF1='aus':'trimf',[-2.4 0 0.1]
+MF2='halten':'trimf',[1.9 2 2.1]
+MF3='ein':'trimf',[3.9 4 4.1]
+
+[Rules]
+1 0, 1 0 (1) : 1
+0 1, 0 1 (1) : 1
+3 0, 3 0 (1) : 1
+0 3, 0 3 (1) : 1
+2 0, 2 0 (1) : 1
+0 2, 0 2 (1) : 1
